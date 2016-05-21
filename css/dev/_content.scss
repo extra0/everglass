@@ -1,6 +1,6 @@
 .content {
-	position: relative;
-	z-index: 2;
+	// position: relative;
+	// z-index: 2;
 }
 // слайдер на главной
 .slider {
@@ -20,6 +20,9 @@
 			width: 16%;
 			&.active {
 				width: 68%;
+				.slider__product-preview { opacity: 0;}
+				.slider__product-list-block { opacity: 1;}
+				.slider__description {margin-left: 0;}
 			}
 			&:not(.active):hover{
 				width: 18%;
@@ -42,6 +45,9 @@
 	}
 	&__description {
 		width: 790px;
+		z-index: 1;
+		margin-left: -1030px;
+		@include transition(all 0.4s ease-in-out);
 		&-title {
 			background: url(../img/main-title-bg.png) center 0 no-repeat;
 			padding-top: 23px;
@@ -71,11 +77,107 @@
 			}
 		}
 	}
-}
-.dots-bg {
-	@include position(absolute, 0 0 0 0);
-	width: 100%;
-	height: 100%;
-	background: url(../img/map_bg.png);
-	z-index: -1;
+	&__product {
+		// превью товара в слайдере
+		&-preview {
+			width: 245px;
+			text-align: center;
+			position: relative;
+			padding: 0 10px 23px 10px;
+			@include position(absolute, null 0 50px 0);
+			@include transition(all 0.2s ease-in-out);
+			margin: 0 auto;
+			&.bg-style-1 {background: url(../img/slider-product-bg-1.png) bottom center no-repeat;}
+			&.bg-style-2 {background: url(../img/slider-product-bg-2.png) bottom center no-repeat;}
+			&-img {
+				margin-bottom: 18px;
+			}
+			&-name {
+				font-weight: bold;
+				color: #fff;
+				text-transform: uppercase;
+				font-size: 18px;
+				margin: 0 0 13px 0;
+			}
+			&-description {
+				font-family: Arial;
+				color: #fff;
+				opacity: 0.6;
+			}
+		}
+		// список товаров в слайдере
+		&-list {
+			margin: 64px 0 0px 0;
+			padding: 0;
+			list-style-type: none;
+			text-align: center;
+			&-block {
+				opacity: 0;
+				// @include position(absolute, null 0 0 0);
+				margin:  15% auto 0 auto;
+				position: relative;
+				width: 1170px;
+				@include transition(opacity 0.2s ease-in-out);
+			}
+			&-item {
+				position: relative;
+				text-align: left;
+				display: inline-block;
+				vertical-align: top;
+				width: 30%;
+				margin: 0 1% 50px;
+				background: url(../img/product-bg-2.png) 100% 50% no-repeat;
+			}
+			&-img {
+				position: relative;
+			}
+			&-img-wrap {
+				float: left;
+				text-align: center;
+				width: 85px;
+				position: relative;
+				&:before {
+					content: '';
+					@include position(absolute, -28px 0 0 -36px);
+					margin: 0 auto;
+					background: url(../img/red-shadow.png) 0 0 no-repeat;
+					width: 156px;
+					height: 277px;
+				}
+			}
+			&-description {
+				&-wrap {
+					margin: 52px 0 0 106px;
+				}
+				&-name {
+					text-transform: uppercase;
+					color: #fff;
+					font-weight: bold;
+					font-size: 18px;
+					margin: 0 0 15px 0;
+				}
+				&-text {
+					opacity: 0.4;
+					color: #fff;
+					font-family: "Arial";
+					margin: 0 0 19px 0;
+				}
+				&-link {
+					opacity: 0.4;
+					color: #fff;
+					text-transform: uppercase;
+					@include transition(all 0.4s ease-in-out);
+					border-bottom: 1px solid transparent;
+					@include position(absolute,  null null 10px 107px);
+					z-index: 2;
+					&:hover {
+						text-decoration: none;
+						opacity: 1;
+						color: #fff;
+						border-bottom: 1px solid;
+					}
+				}
+			}
+		}
+	}
 }

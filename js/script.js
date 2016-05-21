@@ -49,9 +49,6 @@ $(function(){
 	// меняем высоту слайдера
 	$(window).on('load resize', function(){
 		$('.slider__list').height($(window).height() - $('.header').innerHeight()); // динамически изменяем высоту слайдера на главной
-		// $('.slider__list-video').height($('.slider__list-item').height() + 15);
-		// $('.slider__list-video').width($('.slider__list-item').width() + 10);
-
 	});
 
 });
