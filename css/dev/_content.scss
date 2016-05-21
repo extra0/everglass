@@ -1,0 +1,81 @@
+.content {
+	position: relative;
+	z-index: 2;
+}
+// слайдер на главной
+.slider {
+	&__list {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		@include display(flex);
+		&-item {
+			position: relative;
+			overflow: hidden;
+			@include transition(width 0.4s ease);
+			@include display(flex);
+			@include justify-content(center);
+			@include align-items(center);
+			// background-size: cover!important;
+			width: 16%;
+			&.active {
+				width: 68%;
+			}
+			&:not(.active):hover{
+				width: 18%;
+				cursor: pointer;
+			}
+			&-bg {
+				@include position(absolute, 0 0 0 0);
+				width: 100%;
+				height: 100%;
+				z-index: -2;
+			}
+		}
+		&-video {
+			@include position(absolute, 0 0 0 0);
+			width: 100vw;
+			height:100vh;
+			@include transform(scale(1.2));
+			z-index: -3;
+		}
+	}
+	&__description {
+		width: 790px;
+		&-title {
+			background: url(../img/main-title-bg.png) center 0 no-repeat;
+			padding-top: 23px;
+			margin-bottom: 68px;
+			&-text {
+				text-transform: uppercase;
+				color: #fff;
+				font-family: Arial;
+				font-size: 21px;
+				position: relative;
+				top: -13px;
+			}
+		}
+		&-block {
+			position: relative;
+		}
+		&-text {
+			color: #fff;
+			font-size: 16px;
+			font-family: Arial;
+			line-height: 26px;
+			margin-bottom: 37px;
+			&-block {
+				text-align: left;
+				width: 620px;
+				margin: 0 auto 0 110px;
+			}
+		}
+	}
+}
+.dots-bg {
+	@include position(absolute, 0 0 0 0);
+	width: 100%;
+	height: 100%;
+	background: url(../img/map_bg.png);
+	z-index: -1;
+}

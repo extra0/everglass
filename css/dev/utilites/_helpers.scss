@@ -1,0 +1,72 @@
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+
+.pull-right {float: right;}
+.pull-left {float: left;}
+
+
+
+
+// Elements
+
+.btn {
+	text-transform: uppercase;
+	color: #fff;
+	border-radius: 3px;
+	display: inline-block;
+	background: $red;
+	position: relative;
+	font-weight: bold;
+	padding: 16px 53px;
+	position: relative;
+	@include transition(all 0.4s ease-in-out);
+	&:active,
+	&:focus,
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+		background: darken($red, 5%);
+	}
+	&:before {
+		content: '';
+		margin: 0 auto;
+		width: 53%;
+		height: 30px;
+		box-shadow: 0 0 54px $red;
+		border-radius: 50%;
+		@include position(absolute, null 0 0 0);
+		z-index: -1;
+	}
+}
+
+.title {
+	font-size: 66px;
+	margin: 0;
+	color: #fff;
+	position: relative;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+// custom triangle 
+.block-top-left-triangle {
+	position: relative;
+	&:before {
+		content: '';
+		@include position(absolute, -38px null null -38px);
+		width: 40px;
+		height: 40px;
+		background: url(../img/top-left-triangle.png) 0 0 no-repeat;
+	}
+}
+// red line
+.bottom-red-line {
+	position: relative;
+	&:after {
+		content: '';
+		background: $red;
+		width: 105px;
+		height: 2px;
+		@include position(absolute, null null 52px 0);
+	}
+}

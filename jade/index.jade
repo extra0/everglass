@@ -4,4 +4,24 @@ block append head
 	meta(keywords="")
 	title Главная страница
 block content
-	p .
+	.slider
+		ul.slider__list
+			li.slider__list-item.active
+				.dots-bg
+				//- .slider__list-item-bg(style="background: url(../img/sl-bg-1.png) 0 0 no-repeat;")
+				video.slider__list-video(loop autoplay muted)
+					source(src="video/video2.mp4" type="video/mp4")
+					source(src="video/video2.webm" type="video/webm")
+					source(src="video/video2.ogg" type="video/ogg")
+				.slider__description.text-center
+					.slider__description-title
+						h2.title Everglass detailing
+						p.slider__description-title-text Лучшее или ничего
+					.slider__description-text-block.block-top-left-triangle.bottom-red-line
+						p.slider__description-text Защитные покрытия эвергласс могут наноситься на автомобиль с применением технологии сращивания слоёв,то есть говоря простым языком мы обрабатываем автомобиль нескольо раз составом Everglass Platinum Procoat а затем наносим финишный слой Everglass Topcoat. Данная технология обработки автомобиля позволяет увеличить твёрдость заводского ЛКП до 9H по шкале Мосса.
+						.text-right
+							a.btn(href="#!") О компании
+			li.slider__list-item
+				.slider__list-item-bg(style="background: url(../img/sl-bg-2.png) 0 0 no-repeat;")
+			li.slider__list-item
+				.slider__list-item-bg(style="background: url(../img/sl-bg-1.png) 0 0 no-repeat;")

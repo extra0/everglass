@@ -6,6 +6,7 @@ body {
     font-weight: normal;
     height: 100%;
     color: $main_color;
+    background: #1c1c1d;
 }
 
 label {
@@ -22,9 +23,6 @@ button, input, textarea {
 }
 
 .container-fluid {
-    min-width: 1000px;
-    max-width: 1200px;
     position: relative;
-    font-size: 14px;
     @include box-sizing(border-box);
 }

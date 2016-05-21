@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&amp;subset=latin,cyrillic" type="text/css" rel="stylesheet" media="all">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <meta description="">
+    <meta keywords="">
+    <title>Главная страница</title>
+  </head>
+  <body id="canvas-wrapper">
+    <canvas id="demo-canvas"></canvas>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="container">
+          <!-- логотип--><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a>
+          <!-- конец логотипа-->
+          <!-- главное меню-->
+          <div class="main-menu">
+            <button type="button" class="main-menu__mob-btn visible-xs">Кнопка</button>
+            <ul class="main-menu__list">
+              <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">О компании</a>
+              </li>
+              <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Продукция</a>
+              </li>
+              <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link current">Партнерство</a>
+              </li>
+              <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Дилеры</a>
+              </li>
+              <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Центры нанесения</a>
+              </li>
+              <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Тесты</a>
+              </li>
+              <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Галерея</a>
+              </li>
+              <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Магазин</a>
+              </li>
+              <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <!-- конец меню-->
+          <!-- блок с инофрмацией-->
+          <div class="header__info">
+            <!-- корзина в шапке-->
+            <div class="header__info-basket"><a href="#!" class="header__info-basket-link"></a></div>
+            <!-- конец корзины в шапке-->
+            <!-- блок с выбором языка-->
+            <div class="header__info-languages">
+              <div href="javascript:void(0);" class="header__info-languages-current"><img src="img/rus.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">RU</span></div>
+              <ul class="header__info-languages-list">
+                <li class="header__info-languages-item active"><img src="img/rus.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">RU</span></li>
+                <li class="header__info-languages-item"><img src="img/ukr.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">UA</span></li>
+                <li class="header__info-languages-item"><img src="img/eng.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">EN</span></li>
+              </ul>
+            </div>
+            <!-- конец блок с выбором языка-->
+          </div>
+          <!-- конец блока с информацией-->
+        </div>
+      </header>
+      <div class="content">
+        <div class="slider">
+          <ul class="slider__list">
+            <li class="slider__list-item active">
+              <div class="dots-bg"></div>
+              <video loop autoplay muted class="slider__list-video">
+                <source src="video/video2.mp4" type="video/mp4">
+                <source src="video/video2.webm" type="video/webm">
+                <source src="video/video2.ogg" type="video/ogg">
+              </video>
+              <div class="slider__description text-center">
+                <div class="slider__description-title">
+                  <h2 class="title">Everglass detailing</h2>
+                  <p class="slider__description-title-text">Лучшее или ничего</p>
+                </div>
+                <div class="slider__description-text-block block-top-left-triangle bottom-red-line">
+                  <p class="slider__description-text">Защитные покрытия эвергласс могут наноситься на автомобиль с применением технологии сращивания слоёв,то есть говоря простым языком мы обрабатываем автомобиль нескольо раз составом Everglass Platinum Procoat а затем наносим финишный слой Everglass Topcoat. Данная технология обработки автомобиля позволяет увеличить твёрдость заводского ЛКП до 9H по шкале Мосса.</p>
+                  <div class="text-right"><a href="#!" class="btn">О компании</a></div>
+                </div>
+              </div>
+            </li>
+            <li class="slider__list-item">
+              <div style="background: url(../img/sl-bg-2.png) 0 0 no-repeat;" class="slider__list-item-bg"></div>
+            </li>
+            <li class="slider__list-item">
+              <div style="background: url(../img/sl-bg-1.png) 0 0 no-repeat;" class="slider__list-item-bg"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid"></div>
+    </footer>
+    <script src="js/canvas.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
