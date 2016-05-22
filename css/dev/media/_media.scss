@@ -178,8 +178,12 @@
 		}
 	}
 	.main-menu {
+		text-align: center;
 		float: right;
 		margin-right: 12px;
+		&__list-item-link {
+			display: block;
+		}
 	}
 	.priority-nav__dropdown.show {
 		width: 100vw;
