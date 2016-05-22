@@ -682,5 +682,3 @@
     return priorityNav;
 
 });
-
-var nav = priorityNav.init();

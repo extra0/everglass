@@ -27,33 +27,35 @@ block content
 				// конец описания
 			// конец слайда
 			li.slider__list-item.dots-bg(style="background: url(../img/sl-bg-1.png) 0 0 no-repeat;")
-				// блок с превью товара
-				.slider__product-preview.bg-style-1
-					img.slider__product-preview-img(src="/img/content/botel.png", alt="")
-					p.slider__product-preview-name Уход за кузовом
-					p.slider__product-preview-description Последнее слово в защите лакокрасочного покрытия автомобиля
-				// конец блок с превью товара
-				// блок со списком товаров
-				.slider__product-list-block
-					h2.title.text-center Уход за Кузовом
-					block product
-						ul.slider__product-list
-							- for (i=1; i<6; i++) {
-								li.slider__product-list-item
-									.slider__product-list-img-wrap
-										a(href="#!")
-											img.slider__product-list-img(src="/img/content/product.png", alt="")
-									.slider__product-list-description-wrap
-										p.slider__product-list-description-name Platinum
-										p.slider__product-list-description-text Последнее слово в защите лакокрасочного покрытия автомобиля
-										a.slider__product-list-description-link(href="#!") Подробнее
-							- }
-				// конец блок со списком товаров
+				.container
+					// блок с превью товара
+					.slider__product-preview.bg-style-1
+						img.slider__product-preview-img(src="/img/content/botel.png", alt="")
+						p.slider__product-preview-name Уход за кузовом
+						p.slider__product-preview-description Последнее слово в защите лакокрасочного покрытия автомобиля
+					// конец блок с превью товара
+					// блок со списком товаров
+					.slider__product-list-block
+						h2.title.text-center Уход за Кузовом
+						block product
+							ul.slider__product-list
+								- for (i=1; i<6; i++) {
+									li.slider__product-list-item
+										.slider__product-list-img-wrap
+											a(href="#!")
+												img.slider__product-list-img(src="/img/content/product.png", alt="")
+										.slider__product-list-description-wrap
+											p.slider__product-list-description-name Platinum
+											p.slider__product-list-description-text Последнее слово в защите лакокрасочного покрытия автомобиля
+											a.slider__product-list-description-link(href="#!") Подробнее
+								- }
+					// конец блок со списком товаров
 			li.slider__list-item.dots-bg(style="background: url(../img/sl-bg-2.png) 0 0 no-repeat;")
-				.slider__product-preview.bg-style-2
-					img.slider__product-preview-img(src="/img/content/botel-2.png", alt="")
-					p.slider__product-preview-name Уход за салоном
-					p.slider__product-preview-description Последнее слово в защите лакокрасочного покрытия автомобиля
-				.slider__product-list-block
-					h2.title.text-center Уход за Салоном
-					block product
+				.container
+					.slider__product-preview.bg-style-2
+						img.slider__product-preview-img(src="/img/content/botel-2.png", alt="")
+						p.slider__product-preview-name Уход за салоном
+						p.slider__product-preview-description Последнее слово в защите лакокрасочного покрытия автомобиля
+					.slider__product-list-block
+						h2.title.text-center Уход за Салоном
+						block product

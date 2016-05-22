@@ -8,6 +8,11 @@ $(function(){
 		nav.outerWidth(header - logo - infoBlock - 120); // добавлена константа 120 как сумма всех отступов хедера
 	}
 
+	setTimeout(function(){
+		var nav = priorityNav.init();
+	}, 200);
+	
+
 	// меняем высоту слайдера
 	$(window).on('load resize', function(){
 		if ($(this).width() > 992 ) {
