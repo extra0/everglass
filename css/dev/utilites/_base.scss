@@ -21,7 +21,9 @@ a img {
 button, input, textarea {
 	outline: none;
 }
-
+.main-wrapper {
+    overflow: hidden;
+}
 .container-fluid {
     position: relative;
     @include box-sizing(border-box);

@@ -18,6 +18,18 @@
 				height: 24px;
 				position: relative;
 			}
+			&-count {
+				color: #fff;
+				font-size: 11px;
+				border-radius: 50%;
+				@include position(absolute, -10px -10px null null);
+				background: $red;
+				text-align: center;
+				width: 19px;
+				height: 17px;
+				padding: 1px;
+
+			}
 		}
 		&-languages {
 			margin-left: 43px;
@@ -98,7 +110,10 @@
 .main-menu {
 	display: inline-block;
 	vertical-align: top;
-	margin: 6px 0 0 48px;
+	
+	&__wrapper {
+		margin: 6px 0 0 48px;
+	}
 	&__list {
 		list-style-type: none;
 		padding: 0;
@@ -107,9 +122,7 @@
 		&-item {
 			display: inline-block;
 			vertical-align: top;
-			&:not(:last-child) {
-				margin-right: 32px;
-			}
+			margin-right: 32px;
 			&-link {
 				text-transform: uppercase;
 				color: #a8adaf;
@@ -136,6 +149,46 @@
 
 					}
 				}
+			}
+		}
+	}
+	&__mob-btn {
+		top: 3px;
+		width: 19px;
+	    height: 17px;
+	    background: none;
+	    border: none;
+	    border-top: 2px solid #fff;
+	    z-index: 100;
+	    position: relative;
+		@include transition(all 0.4s ease-in-out);
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background: #fff;
+			@include position(absolute, 12px null null 0);
+			@include transition(all 0.4s ease-in-out);
+		}
+		&:after {
+			content: '';
+		    position: absolute;
+		    background: #fff;
+		    width: 100%;
+		    height: 2px;
+		    @include position(absolute, 5px null null 0);
+		    @include transition(all 0.4s ease-in-out);
+		}
+		&.active {
+			border-top: none;
+			&:before {
+				top: 6px;
+				@include transform(rotate(-135deg));
+			}
+			&:after {
+				@include transform(rotate(135deg));
+				top: 6px;
 			}
 		}
 	}

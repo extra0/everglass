@@ -1,0 +1,86 @@
+/*
+ * Core styles for PriorityNav.js
+ * These styles are not optional and should always be included
+ *
+ * Free to use under the MIT License.
+ * http://twitter.com/GijsRoge
+ */
+
+.priority-nav{
+
+  white-space: nowrap; // prevent flash of unstyled content
+
+  /*
+    * Makes sure the menu's are inline-block so they don't take up
+    * the entire width of its parent. This will break the plugin.
+    */
+  > ul{
+    display: inline-block;
+    > li{
+      display: inline-block;
+    }
+  }
+  &-has-dropdown{
+    .priority-nav{
+      &__dropdown{
+        &-toggle{
+          position: relative;
+        }
+      }
+    }
+  }
+  &__wrapper{
+    position: relative;
+  }
+  &__dropdown{
+    @include transition(opacity 0.4s ease-in-out);
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    &.show{
+      opacity: 1;
+      visibility: visible;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      margin: 0;
+      position: absolute;
+      top: 41px;
+      right: -29px;
+      width: auto;
+      border-radius: 3px;
+      background: #262627;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+      padding: 20px 20px 0px 20px;
+      z-index: 10;
+      &:before {
+        content: '';
+        height: 0;
+        width: 0;
+        border-bottom: 8.5px solid #262627;
+        border-left: 8.5px solid transparent;
+        border-right: 8.5px solid transparent;
+        position: absolute;
+        top: -7px;
+        right: 30px
+      }
+      .main-menu__list-item {
+        margin: 0 0 20px 0;
+        display: block;
+        &:before {
+          display: none;
+        }
+      }
+    }
+    &-toggle{
+      visibility: hidden;
+      position: absolute;
+    }
+  }
+  &-is-visible{
+    visibility: visible;
+  }
+  &-is-hidden{
+    visibility: hidden;
+  }
+}
