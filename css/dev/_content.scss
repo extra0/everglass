@@ -44,7 +44,7 @@
 		}
 	}
 	&__description {
-		width: 790px;
+		// width: 790px;
 		z-index: 1;
 		margin-left: -1030px;
 		@include transition(all 0.4s ease-in-out);
@@ -73,7 +73,7 @@
 			&-block {
 				text-align: left;
 				width: 620px;
-				margin: 0 auto 0 110px;
+			    margin: 0 auto 0 29%;
 			}
 		}
 	}
@@ -127,9 +127,14 @@
 				width: 30%;
 				margin: 0 1% 50px;
 				background: url(../img/product-bg.png) 100% 50% no-repeat;
+				@include clearfix;
 			}
 			&-img {
 				position: relative;
+				@include transition(all 0.4s ease-in-out);
+				&:hover {
+					@include filter(contrast(1.15));
+				}
 			}
 			&-img-wrap {
 				float: left;
@@ -147,7 +152,7 @@
 			}
 			&-description {
 				&-wrap {
-					margin: 52px 0 0 106px;
+					padding: 52px 15px 0 106px;
 				}
 				&-name {
 					text-transform: uppercase;
@@ -160,7 +165,7 @@
 					opacity: 0.4;
 					color: #fff;
 					font-family: "Arial";
-					margin: 0 0 19px 0;
+					margin: 0 0 40px 0;
 				}
 				&-link {
 					opacity: 0.4;
@@ -168,13 +173,16 @@
 					text-transform: uppercase;
 					@include transition(all 0.4s ease-in-out);
 					border-bottom: 1px solid transparent;
-					@include position(absolute,  null null 10px 107px);
+					@include position(absolute,  null null 9px 106px);
 					z-index: 2;
 					&:hover {
 						text-decoration: none;
 						opacity: 1;
 						color: #fff;
 						border-bottom: 1px solid;
+					}
+					&:focus {
+						color: #fff;
 					}
 				}
 			}

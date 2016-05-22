@@ -496,6 +496,7 @@
             toggleClass(_this.querySelector(navDropdown), "show");
             toggleClass(this, "is-open");
             toggleClass(_this, "is-open");
+            $('.main-menu__mob-btn').toggleClass('active');
         });
 
         /*

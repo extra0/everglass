@@ -1,18 +1,224 @@
-@media (max-width: 767px) {}
-@media (min-width: 768) and (max-width: 991px) {}
-@media (min-width: 992px) and (max-width: 1199px) {}
-
-@media (min-width: 1200px) and (max-width: 1600px) {
-	.slider__product-preview {
-		background: none!important;
-		bottom: 0;
-		padding-bottom: 0;
-		width: auto;
+// ================================================== MAX 767
+@media (max-width: 767px) {
+	.title {
+		font-size: 36px;
+	}
+	.slider {
+		&__description {
+			&-title {
+				background: none;
+				padding-top: 0;
+				&-text {
+					font-size: 14px
+				}
+			}
+		}
 	}
 }
+
+// ================================================== 500 - 767
+@media (min-width: 500px) and (max-width: 767px) {
+	.title {
+		font-size: 42px;
+
+	}
+	.slider {
+		&__description {
+			&-title {
+				padding-top: 12px;
+				background-size: 470px auto;
+				&-text {
+					font-size: 15px;
+					top: -14px;
+					left: -9px;
+				}
+			}
+		}
+		&__product {
+			&-list {
+				&-item {
+					width: 350px;
+				    margin: 0 auto 50px auto;
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+// ================================================== 768-991
+@media (min-width: 768px) and (max-width: 991px) {
+	.title {
+		font-size: 55px;
+	}
+	.slider {
+		&__description {
+			&-title {
+				background-size: 100% 82%;
+			}
+		}
+		&__product {
+			&-list {
+				&-item {
+					width: 54%;
+					margin: 0 -3% 50px;
+					padding: 0 3%;
+					background: url(../img/product-bg.png) 60% 50% no-repeat;
+				}
+				&-description {
+					&-link {
+						left: 127px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// ================================================== 991-1199
+@media (min-width: 992px) and (max-width: 1199px) {
+	.slider {
+		&__product {
+			&-list {
+				&-item {
+					width: 37%;
+					margin: 0 3% 50px;
+				}
+			}
+		}
+	}
+}
+
+// ================================================== 1200 - 1600
+@media (min-width: 1200px) and (max-width: 1600px) {
+	// для главного слайдера
+	.slider {
+		&__product {
+			&-preview {
+				background: none!important;
+				bottom: 0;
+				padding-bottom: 0;
+				width: auto;
+			}
+			&-list {
+				margin: 24px 0 0 0;
+				&-item {
+					width: 30%;
+					margin: 0 4% 50px;
+					&:not(:nth-child(-n+2)) {
+						display: none;
+					}
+				}
+				&-block {
+					margin: 100px auto 0 auto;
+				}
+			}
+		}
+	}
+}
+// ================================================== MIN 1200
 @media (min-width: 1200px) {
 	.container {
 		width: auto;
 		min-width: 1170px;
+	}
+}
+
+
+// ================================================== MAX 1199
+@media (max-width: 1199px) {
+	.slider {
+		&__list {
+			@include flex-wrap(wrap);
+			&-item {
+				width: 100%!important;
+				cursor: default!important;
+				padding: 40px 0;
+			}
+			&-video {
+				width: auto;
+				height: auto;
+			}
+		}
+		&__product {
+			&-list {
+				&-block {
+					opacity: 1;
+					width: auto;
+					margin:  0 auto;
+				}
+			}
+		}
+		&__description {
+			width: 100%;
+			margin: 0 auto!important;
+			&-text-block {
+				width: 70%;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+
+// ================================================== MAX 500
+@media (max-width: 500px) {
+	.header {
+		height: auto;
+		padding: 26px 15px;
+		&__logo {
+			display: inline-block;
+			margin: 0 auto 20px auto;
+		}
+		&__info {
+			float: none;
+			&-languages {
+				float: right;
+			}
+		}
+	}
+	.main-menu {
+		float: right;
+		margin-right: 12px;
+	}
+	.priority-nav__dropdown.show {
+		width: 100vw;
+		top: 36px;
+		right: -23px;
+		left: auto;
+		&:before {
+			right: 25px;
+		}
+	}
+	.title {
+		font-size: 28px;
+	}
+	.slider {
+		&__description {
+			&-text {
+				&-block {
+					width: 85%;
+				}
+			}
+		}
+		&__product {
+			&-list {
+				&-item {
+					width: 300px;
+					background: none;
+				}
+			}
+		}
+	}
+	.bottom-red-line {
+		&:after {
+			display: none;
+		}
+	}
+	.block-top-left-triangle {
+		&:before {
+			top: -28px;
+			left: -28px;
+		}
 	}
 }

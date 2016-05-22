@@ -139,7 +139,10 @@
 					opacity: 0;
 					@include transition(all 0.4s ease-in-out);
 				}
-				&:focus,
+				&:focus {
+					color: #a8adaf;
+					text-decoration: none;
+				}
 				&:hover {
 					color: #fff;
 					text-decoration: none;
@@ -215,5 +218,6 @@
 	}
 }
 #demo-canvas {
+	width: 100%!important;
 	@include position(absolute, null null null null);
 }

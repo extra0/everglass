@@ -1,6 +1,12 @@
 $(function(){
 
-	function menuResize() {
+	// инициализация респонсив меню
+	setTimeout(function(){
+		var nav = priorityNav.init();
+	}, 200);
+
+	// ресайзим меню
+	function menuResize() { 
 		var nav = $('.main-menu__wrapper'),
 			header = $('.header').width(),
 			logo = $('.header__logo img').outerWidth(),
@@ -8,17 +14,23 @@ $(function(){
 		nav.outerWidth(header - logo - infoBlock - 120); // добавлена константа 120 как сумма всех отступов хедера
 	}
 
-	setTimeout(function(){
-		var nav = priorityNav.init();
-	}, 200);
-	
+	// работа слайдера на главной
+	function sliderInit() {
+		$('.slider__list-item').click(function(){
+			$('.slider__list-item').removeClass('active');
+			$(this).addClass('active');
+		});
+	}
 
 	// меняем высоту слайдера
 	$(window).on('load resize', function(){
-		if ($(this).width() > 992 ) {
+		if ($(this).width() > 1199 ) {
 			$('.slider__list').height($(window).height() - $('.header').innerHeight()); // динамически изменяем высоту слайдера на главной
+			sliderInit();
+		} else {
+			$('.slider__list').height('100%');
 		}
-		menuResize(); // ресайзим меню
+		menuResize(); 
 	});
 
 	// канвас подложка под курсор
@@ -61,14 +73,8 @@ $(function(){
 	});
 
 
-	// обработка слайдера на главной
-	$('.slider__list-item').click(function(){
-		$('.slider__list-item').removeClass('active');
-		$(this).addClass('active');
-	});
-
 	$('.main-menu__mob-btn').on('click', function(){
-		$(this).toggleClass('active');
+		$(this).addClass('active');
 	});
 	
 
