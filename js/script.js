@@ -35,12 +35,12 @@ $(function(){
 	});
 
 	// канвас подложка под курсор
-	// CanvasBG.init({
-	//   Loc: {
-	//     x: window.innerWidth / 2.1,
-	//     y: window.innerHeight / 2.3
-	//   },
-	// });
+	CanvasBG.init({
+	  Loc: {
+	    x: window.innerWidth / 2.1,
+	    y: window.innerHeight / 2.3
+	  },
+	});
 
 	// вызов фенсибокса
 	$('[fancybox]').fancybox();
