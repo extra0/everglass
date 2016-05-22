@@ -67,8 +67,10 @@
       .main-menu__list-item {
         margin: 0 0 20px 0;
         display: block;
-        &:before {
-          display: none;
+        &-link {
+          &:before {
+            display: none;
+          }
         }
       }
     }

@@ -12,7 +12,7 @@ header.header
 					each item, indx in menu
 						li.main-menu__list-item
 							- if (indx == 2) {
-								a.main-menu__list-item-link.current(href="#!") #{item}
+								span.main-menu__list-item-link.current #{item}
 							- } else {
 								a.main-menu__list-item-link(href="#!") #{item}
 							- }

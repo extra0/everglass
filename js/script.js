@@ -1,5 +1,21 @@
 $(function(){
 
+	function menuResize() {
+		var nav = $('.main-menu__wrapper'),
+			header = $('.header').width(),
+			logo = $('.header__logo img').outerWidth(),
+			infoBlock = $('.header__info').outerWidth();
+		nav.outerWidth(header - logo - infoBlock - 120); // добавлена константа 120 как сумма всех отступов хедера
+	}
+
+	// меняем высоту слайдера
+	$(window).on('load resize', function(){
+		if ($(this).width() > 992 ) {
+			$('.slider__list').height($(window).height() - $('.header').innerHeight()); // динамически изменяем высоту слайдера на главной
+		}
+		menuResize(); // ресайзим меню
+	});
+
 	// канвас подложка под курсор
 	// CanvasBG.init({
 	//   Loc: {
@@ -50,25 +66,5 @@ $(function(){
 		$(this).toggleClass('active');
 	});
 	
-	
-	// меняем высоту слайдера
-	$(window).on('load resize', function(){
-		if ($(this).width() > 992 ) {
-			$('.slider__list').height($(window).height() - $('.header').innerHeight()); // динамически изменяем высоту слайдера на главной
-		}
-		
-		menuResize(); // ресайзим меню
-
-	});
-
-
-	function menuResize() {
-		var nav = $('.main-menu__wrapper'),
-			header = $('.header').width(),
-			logo = $('.header__logo img').outerWidth(),
-			infoBlock = $('.header__info').outerWidth();
-		nav.outerWidth(header - logo - infoBlock - 120); // добавлена константа 120 как сумма всех отступов хедера
-	}
-
 
 });
