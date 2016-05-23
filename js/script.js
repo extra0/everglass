@@ -2,7 +2,6 @@ $(function(){
 
 	// инициализация респонсив меню
 	setTimeout(function(){
-		
 		$('.main-menu').addClass('fadeIn'); // плавно показываем меню что бы скрыть возможные огрехи формирования респонсива
 	}, 200);
 
@@ -31,10 +30,17 @@ $(function(){
 		} else {
 			$('.slider__list').height('100%');
 		}
-		if ($(this).width() < 1500) {
-			var nav = priorityNav.init();
-		}
 		menuResize(); 
+	});
+
+
+	if ($(window).width() < 1300) {
+		var nav = priorityNav.init();
+	}
+	$(window).on('resize', function(){
+		if ($(this).width() > 1300) {
+			var nav = priorityNav.destroy();
+		}
 	});
 
 	// канвас подложка под курсор

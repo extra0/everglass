@@ -10,10 +10,11 @@ block content
 			// слайд
 			li.slider__list-item.active.dots-bg
 				// видео
-				video.slider__list-video(loop autoplay muted poster="/img/sl-bg-1.png")
+				video.slider__list-video-player(loop autoplay muted poster="img/video-frame.jpg")
 					source(src="video/video2.mp4" type="video/mp4")
 					source(src="video/video2.webm" type="video/webm")
 					source(src="video/video2.ogg" type="video/ogg")
+				img.slider__list-video-img(src="img/video-frame.jpg", alt="")
 				// конец видео
 				// описание на 1-м слайде
 				.container
@@ -77,8 +78,7 @@ block content
 					.slider__product-preview.bg-style-2.visible-lg
 						img.slider__product-preview-img(src="img/content/botel-2.png", alt="")
 						p.slider__product-preview-name Уход за салоном
-						p Надежная защита всех типов материалов интерьера автомобиля
-						p.slider__product-preview-description Последнее слово в защите лакокрасочного покрытия автомобиля
+						p.slider__product-preview-description Надежная защита всех типов материалов интерьера автомобиля
 					.slider__product-list-block
 						h2.title.text-center Уход за Салоном
 						ul.slider__product-list
