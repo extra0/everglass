@@ -125,7 +125,7 @@
 				display: inline-block;
 				vertical-align: top;
 				width: 30%;
-				margin: 0 1% 50px;
+				margin: 0 5% 30px;
 				background: url(../img/product-bg.png) 100% 50% no-repeat;
 				@include clearfix;
 			}
@@ -152,7 +152,7 @@
 			}
 			&-description {
 				&-wrap {
-					padding: 52px 15px 0 106px;
+					padding: 38px 15px 0 106px;
 				}
 				&-name {
 					text-transform: uppercase;
@@ -162,13 +162,13 @@
 					margin: 0 0 15px 0;
 				}
 				&-text {
-					opacity: 0.4;
+					opacity: 0.9;
 					color: #fff;
 					font-family: "Arial";
 					margin: 0 0 40px 0;
 				}
 				&-link {
-					opacity: 0.4;
+					opacity: 0.9;
 					color: #fff;
 					text-transform: uppercase;
 					@include transition(all 0.4s ease-in-out);

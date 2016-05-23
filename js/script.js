@@ -12,7 +12,7 @@ $(function(){
 			header = $('.header').width(),
 			logo = $('.header__logo img').outerWidth(),
 			infoBlock = $('.header__info').outerWidth();
-		nav.outerWidth(header - logo - infoBlock - 120); // добавлена константа 120 как сумма всех отступов хедера
+		nav.outerWidth(header - logo - infoBlock - 100); // добавлена константа 100 как сумма всех отступов хедера
 	}
 
 	// работа слайдера на главной

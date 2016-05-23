@@ -10,11 +10,7 @@ header.header
 				ul.main-menu__list.responsive-menu
 					each item, indx in menu
 						li.main-menu__list-item
-							- if (indx == 2) {
-								span.main-menu__list-item-link.current #{item}
-							- } else {
-								a.main-menu__list-item-link(href="#!") #{item}
-							- }
+							a.main-menu__list-item-link(href="#!") #{item}
 		// конец меню
 		// блок с инофрмацией
 		.header__info

@@ -16,6 +16,7 @@
 	}
 }
 
+
 // ================================================== 500 - 767
 @media (min-width: 500px) and (max-width: 767px) {
 	.title {
@@ -46,6 +47,7 @@
 	}
 }
 
+
 // ================================================== 768-991
 @media (min-width: 768px) and (max-width: 991px) {
 	.title {
@@ -75,6 +77,7 @@
 	}
 }
 
+
 // ================================================== 991-1199
 @media (min-width: 992px) and (max-width: 1199px) {
 	.slider {
@@ -89,8 +92,12 @@
 	}
 }
 
+
 // ================================================== 1200 - 1600
 @media (min-width: 1200px) and (max-width: 1600px) {
+	.title {
+		font-size: 56px;
+	}
 	// для главного слайдера
 	.slider {
 		&__product {
@@ -101,21 +108,16 @@
 				width: auto;
 			}
 			&-list {
-				margin: 24px 0 0 0;
-				&-item {
-					width: 30%;
-					margin: 0 4% 50px;
-					&:not(:nth-child(-n+2)) {
-						display: none;
-					}
-				}
+				margin: 14px 0 0 0;
 				&-block {
-					margin: 100px auto 0 auto;
+					margin: 0 auto;
 				}
 			}
 		}
 	}
 }
+
+
 // ================================================== MIN 1200
 @media (min-width: 1200px) {
 	.container {
