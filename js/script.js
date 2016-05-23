@@ -2,7 +2,7 @@ $(function(){
 
 	// инициализация респонсив меню
 	setTimeout(function(){
-		var nav = priorityNav.init();
+		
 		$('.main-menu').addClass('fadeIn'); // плавно показываем меню что бы скрыть возможные огрехи формирования респонсива
 	}, 200);
 
@@ -30,6 +30,9 @@ $(function(){
 			sliderInit();
 		} else {
 			$('.slider__list').height('100%');
+		}
+		if ($(this).width() < 1500) {
+			var nav = priorityNav.init();
 		}
 		menuResize(); 
 	});

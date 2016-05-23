@@ -114,7 +114,13 @@
 				}
 			}
 		}
+		&__list {
+			&-video {
+				@include transform(scale(1.33));
+			}
+		}
 	}
+
 }
 
 
