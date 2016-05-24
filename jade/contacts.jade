@@ -5,7 +5,7 @@ block append head
 	title Контакты
 block content
 	.flex-block
-		.flex-block__item.flex-block__item-flex-end.col-sm-6.dots-bg
+		.flex-block__item.flex-block__item-flex-end.col-md-6.col-sm-12.col-xs-12.col-slg-12.dots-bg
 			.contacts
 				img.contacts__bg-img(src="img/city-bg.png", alt="")
 				.contacts__address
@@ -28,5 +28,5 @@ block content
 							textarea.form-control(name="message" rows="5" required placeholder="Сообщение")
 						.form-group
 							button.btn.btn-block(type="submit") отправить
-		.flex-block__item.flex-block__item-flex-end.col-sm-6
+		.flex-block__item.flex-block__item-flex-end.col-md-6.col-sm-12.col-xs-12
 			#map

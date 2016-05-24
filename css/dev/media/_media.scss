@@ -14,8 +14,38 @@
 			}
 		}
 	}
+	.flex {
+		&-block {
+			@include flex-wrap(wrap);
+		}
+	}
+	#map {
+		position: relative;
+		height: 200px;
+	}
+	.contacts {
+		width: 100%;
+		&__address,
+		&__form {
+			margin: 60px auto 0px auto;
+			width: 290px;
+			display: block;
+		}
+	}
 }
 
+// ================================================== MAX 500
+@media (max-width: 500px) {
+	.contacts {
+		&__address,
+		&__form {
+			width: 255px;
+		}
+		&__title {
+			font-size: 27px;
+		}
+	}
+}
 
 // ================================================== 500 - 767
 @media (min-width: 500px) and (max-width: 767px) {
@@ -82,6 +112,27 @@
 			}
 		}
 	}
+	.flex {
+		&-block {
+			@include flex-wrap(wrap);
+			[class*="col-"] {
+				@include justify-content(space-around);	
+			}
+		}
+	}
+	.contacts {
+		&__address,
+		&__form {
+			margin: 40px 40px 0 40px;
+		}
+		&__form {
+			width: 290px;
+		}
+	}
+	#map {
+		position: relative;
+		height: 400px;
+	}
 }
 
 
@@ -95,6 +146,13 @@
 					margin: 0 3% 50px;
 				}
 			}
+		}
+	}
+	.contacts {
+		&__address,
+		&__form {
+			margin-top: 40px;
+			margin-left: 67px;
 		}
 	}
 }
@@ -127,6 +185,29 @@
 			}
 		}
 	}
+	// контакты
+	.contacts {
+		margin-bottom: 0;
+		&__form,
+		&__address {
+			margin-left: 77px;
+		}
+		&__form {
+			width: 290px;
+		}
+	}
+	.col-slg-12 {width: 100%}
+	.col-slg-11{width:91.66666667%}
+	.col-slg-10{width:83.33333333%}
+	.col-slg-9{width:75%}
+	.col-slg-8{width:66.66666667%}
+	.col-slg-7{width:58.33333333%}
+	.col-slg-6{width:50%}
+	.col-slg-5{width:41.66666667%}
+	.col-slg-4{width:33.33333333%}
+	.col-slg-3{width:25%}
+	.col-slg-2{width:16.66666667%}
+	.col-slg-1{width:8.33333333%}
 }
 
 // ================================================== 1300 - 1480
