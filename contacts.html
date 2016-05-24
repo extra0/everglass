@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&amp;subset=latin,cyrillic" type="text/css" rel="stylesheet" media="all">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <meta description="">
+    <meta keywords="">
+    <title>Контакты</title>
+  </head>
+  <body>
+    <div id="canvas-wrapper" class="main-wrapper">
+      <canvas id="demo-canvas"></canvas>
+      <header class="header">
+        <div class="container-fluid">
+          <!-- логотип--><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a>
+          <!-- конец логотипа-->
+          <!-- главное меню-->
+          <div class="main-menu">
+            <nav class="main-menu__wrapper priority-nav">
+              <ul class="main-menu__list responsive-menu">
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">О компании</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Продукция</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Партнерство</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Дилеры</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Центры нанесения</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Тесты</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Галерея</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Магазин</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- конец меню-->
+          <!-- блок с инофрмацией-->
+          <div class="header__info">
+            <!-- корзина в шапке-->
+            <div class="header__info-basket"><a href="#!" class="header__info-basket-link"><span class="header__info-basket-count">3</span></a></div>
+            <!-- конец корзины в шапке-->
+            <!-- блок с выбором языка-->
+            <div class="header__info-languages">
+              <div href="javascript:void(0);" class="header__info-languages-current"><img src="img/rus.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">RU</span></div>
+              <ul class="header__info-languages-list">
+                <li class="header__info-languages-item active"><img src="img/rus.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">RU</span></li>
+                <li class="header__info-languages-item"><img src="img/ukr.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">UA</span></li>
+                <li class="header__info-languages-item"><img src="img/eng.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">EN</span></li>
+              </ul>
+            </div>
+            <!-- конец блок с выбором языка-->
+          </div>
+          <!-- конец блока с информацией-->
+        </div>
+      </header>
+      <div class="content">
+        <div class="flex-block">
+          <div class="flex-block__item flex-block__item-flex-end col-sm-6 dots-bg">
+            <div class="contacts"><img src="img/city-bg.png" alt="" class="contacts__bg-img">
+              <div class="contacts__address">
+                <h3 class="contacts__title block-bottom-right-triangle">контакты</h3><img src="img/cont_img.png" alt="" class="contacts__address-img">
+                <p class="contacts__address-name">Москва, Волхонка 15</p>
+                <p class="contacts__address-note">Въезд с Пречистенской набережной.</p>
+                <p class="contacts__address-text contacts__address-text-phone">+7(903) 866-97-20</p>
+                <p class="contacts__address-text contacts__address-text-phone">+7(903) 866-97-20</p>
+                <p class="contacts__address-text contacts__address-text-phone">+7(903) 866-97-20</p>
+                <p class="contacts__address-text contacts__address-text-phone">+7(903) 866-97-20</p>
+                <p class="contacts__address-text contacts__address-text-email">everglass@eg.com</p>
+              </div>
+              <div class="contacts__form">
+                <h3 class="contacts__title block-bottom-right-triangle">обратная связь</h3>
+                <form action="#" method="POST" class="contacts__form-wrapper">
+                  <div class="form-group">
+                    <input type="text" name="name" required placeholder="Имя" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email" required placeholder="Emal" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <textarea name="message" rows="5" required placeholder="Сообщение" class="form-control"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-block">отправить</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="flex-block__item flex-block__item-flex-end col-sm-6">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid"><a href="http://www.studio-maximus.com/" class="footer__development"></a>
+          <p class="footer__copyright">&copy; Copyright 2016</p>
+        </div>
+      </footer>
+      <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+      <script src="js/canvas.js"></script>
+      <script src="js/plugins.js"></script>
+      <script src="js/script.js"></script>
+    </div>
+  </body>
+</html>

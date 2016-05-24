@@ -15,9 +15,11 @@
 	border-radius: 3px;
 	display: inline-block;
 	background: $red;
+	text-align: center;
 	position: relative;
 	font-weight: bold;
 	padding: 16px 53px;
+	border: none;
 	position: relative;
 	@include transition(all 0.4s ease-in-out);
 	&:active,
@@ -36,6 +38,10 @@
 		border-radius: 50%;
 		@include position(absolute, null 0 0 0);
 		z-index: -1;
+	}
+	&-block {
+		display: block;
+		width: 100%;
 	}
 }
 
@@ -59,6 +65,18 @@
 		background: url(../img/top-left-triangle.png) 0 0 no-repeat;
 	}
 }
+.block-bottom-right-triangle {
+	position: relative;
+	&:before {
+		content: '';
+		@include position(absolute,  null -32px -21px  null);
+		width: 30px;
+		height: 30px;
+		background: url(../img/bottom-right.png) 0 0 no-repeat;
+	}
+}
+
+
 // red line
 .bottom-red-line {
 	position: relative;
@@ -80,5 +98,48 @@
 		height: 100%;
 		background: url(../img/map_bg.png);
 		z-index: 0;
+	}
+}
+
+// flex layounts 
+.flex {
+	&-block {
+		height: 100%;
+		@include display(flex);
+		@include align-items(stretch);
+		&__item {
+			position: relative;
+			&-flex-center {
+				@include display(flex);
+				@include align-items(center);
+			}
+			&-flex-end {
+				@include display(flex);
+				@include align-items(flex-end);
+			}
+		}
+		[class*="col-"] {
+			padding: 0!important;
+		}
+	}
+}
+
+// form
+.form {
+	&-group {
+		margin-bottom: 15px;
+	}
+	&-control {
+		width: 100%;
+		border: none;
+		resize: none;
+		background: #2d2d2e;
+		color: #fff;
+		padding: 15px;
+		border-radius: 2px;
+		@include transition(all 0.4s ease-in-out);
+		&:focus {
+			box-shadow: 0 0 10px $red;
+		}
 	}
 }

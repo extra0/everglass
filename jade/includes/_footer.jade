@@ -1,5 +1,11 @@
-footer.footer.hidden-lg
-	.container-fluid
-		a.footer__development(href="http://www.studio-maximus.com/")
-		p.footer__copyright &copy; Copyright 2016
+- if (footer == false) {
+	footer.footer.hidden-lg
+		block footer
+			.container-fluid
+				a.footer__development(href="http://www.studio-maximus.com/")
+				p.footer__copyright &copy; Copyright 2016
+- } else {
+	footer.footer
+		block footer
+- }
 include _script

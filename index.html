@@ -12,9 +12,9 @@
     <meta keywords="">
     <title>Главная страница</title>
   </head>
-  <body id="canvas-wrapper">
-    <canvas id="demo-canvas"></canvas>
-    <div class="main-wrapper">
+  <body>
+    <div id="canvas-wrapper" class="main-wrapper">
+      <canvas id="demo-canvas"></canvas>
       <header class="header">
         <div class="container-fluid">
           <!-- логотип--><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a>
@@ -159,15 +159,15 @@
           </ul>
         </div>
       </div>
-      <div class="buffer"></div>
+      <footer class="footer hidden-lg">
+        <div class="container-fluid"><a href="http://www.studio-maximus.com/" class="footer__development"></a>
+          <p class="footer__copyright">&copy; Copyright 2016</p>
+        </div>
+      </footer>
+      <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+      <script src="js/canvas.js"></script>
+      <script src="js/plugins.js"></script>
+      <script src="js/script.js"></script>
     </div>
-    <footer class="footer hidden-lg">
-      <div class="container-fluid"><a href="http://www.studio-maximus.com/" class="footer__development"></a>
-        <p class="footer__copyright">&copy; Copyright 2016</p>
-      </div>
-    </footer>
-    <script src="js/canvas.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/script.js"></script>
   </body>
 </html>

@@ -26,21 +26,21 @@ $(function(){
 	// меняем высоту слайдера
 	$(window).on('load resize', function(){
 		if ($(this).width() > 1199 ) {
-			$('.slider__list').height($(window).height() - $('.header').innerHeight()); // динамически изменяем высоту слайдера на главной
+			$('.content').height($(window).height() - $('.header').innerHeight() - $('.footer').innerHeight()); // динамически изменяем высоту контентной части
 			sliderInit();
 		} else {
-			$('.slider__list').height('100%');
+			$('.content').height('100%');
 		}
 		menuResize(); 
 	});
 
 	// канвас подложка под курсор
-	CanvasBG.init({
-	  Loc: {
-	    x: window.innerWidth / 2.1,
-	    y: window.innerHeight / 2.3
-	  },
-	});
+	// CanvasBG.init({
+	//   Loc: {
+	//     x: window.innerWidth / 2.1,
+	//     y: window.innerHeight / 2.3
+	//   },
+	// });
 
 	// вызов фенсибокса
 	$('[fancybox]').fancybox();
@@ -71,6 +71,34 @@ $(function(){
 			currentLang.removeClass('open');
 			langList.removeClass('active');
 		}
+	});
+
+	// карта в контактах
+	ymaps.ready(function () {
+	    var myMap = new ymaps.Map('map', {
+	            center: [55.744566, 37.605499],
+	            zoom: 16,
+	            controls: []
+	        }, {
+	            searchControlProvider: 'yandex#search'
+	        }),
+	        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+	            //- hintContent: 'Собственный значок метки',
+	            //- balloonContent: 'Это красивая метка'
+	        }, {
+	            // Опции.
+	            // Необходимо указать данный тип макета.
+	            iconLayout: 'default#image',
+	            // Своё изображение иконки метки.
+	            iconImageHref: 'img/marker.png',
+	            // Размеры метки.
+	            iconImageSize: [44, 44],
+	            // Смещение левого верхнего угла иконки относительно
+	            // её "ножки" (точки привязки).
+	            iconImageOffset: [-22, -38]
+	        });
+        myMap.behaviors.disable('scrollZoom');
+	    myMap.geoObjects.add(myPlacemark);
 	});
 
 });

@@ -2,12 +2,11 @@ doctype html
 include includes/_vars
 html(lang="ru")
 	include includes/_head
-	body#canvas-wrapper
-		canvas#demo-canvas
+	body
 		include includes/_modals
-		.main-wrapper
+		.main-wrapper#canvas-wrapper
+			canvas#demo-canvas
 			include includes/_header
 			.content
 				block content
-			.buffer
-		include includes/_footer
+			include includes/_footer

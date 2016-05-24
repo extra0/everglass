@@ -1,0 +1,32 @@
+extends _layout
+block append head
+	meta(description="")
+	meta(keywords="")
+	title Контакты
+block content
+	.flex-block
+		.flex-block__item.flex-block__item-flex-end.col-sm-6.dots-bg
+			.contacts
+				img.contacts__bg-img(src="img/city-bg.png", alt="")
+				.contacts__address
+					h3.contacts__title.block-bottom-right-triangle контакты
+					img.contacts__address-img(src="img/cont_img.png", alt="")
+					p.contacts__address-name Москва, Волхонка 15
+					p.contacts__address-note Въезд с Пречистенской набережной.
+					- for (i =1 ; i<=4; i++) {
+						p.contacts__address-text.contacts__address-text-phone +7(903) 866-97-20
+					- }
+					p.contacts__address-text.contacts__address-text-email everglass@eg.com
+				.contacts__form
+					h3.contacts__title.block-bottom-right-triangle обратная связь
+					form.contacts__form-wrapper(action="#" method="POST")
+						.form-group
+							input.form-control(type="text" name="name" required placeholder="Имя")
+						.form-group
+							input.form-control(type="email" name="email" required placeholder="Emal")
+						.form-group
+							textarea.form-control(name="message" rows="5" required placeholder="Сообщение")
+						.form-group
+							button.btn.btn-block(type="submit") отправить
+		.flex-block__item.flex-block__item-flex-end.col-sm-6
+			#map

@@ -230,5 +230,6 @@
 }
 #demo-canvas {
 	width: 100%!important;
+	height: 100%;
 	@include position(absolute, null null null null);
 }
