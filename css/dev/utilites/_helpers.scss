@@ -121,6 +121,9 @@
 		[class*="col-"] {
 			padding: 0!important;
 		}
+		&-wrap {
+			@include flex-wrap(wrap);
+		}
 	}
 }
 

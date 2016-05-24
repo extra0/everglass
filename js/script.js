@@ -26,7 +26,7 @@ $(function(){
 	// меняем высоту слайдера
 	$(window).on('load resize', function(){
 		if ($(this).width() > 1199 ) {
-			$('.content').height($(window).height() - $('.header').innerHeight() - $('.footer').innerHeight()); // динамически изменяем высоту контентной части
+			$('[content-fix]').height($(window).height() - $('.header').innerHeight() - $('.footer').innerHeight()); // динамически изменяем высоту контентной части
 			sliderInit();
 		} else {
 			$('.content').height('100%');

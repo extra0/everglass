@@ -7,6 +7,11 @@ html(lang="ru")
 		.main-wrapper#canvas-wrapper
 			canvas#demo-canvas
 			include includes/_header
-			.content
-				block content
+			- if (contentHeight == 'auto') {
+				.content
+					block content
+			- } else {
+				.content(content-fix)
+					block content
+			- }
 			include includes/_footer

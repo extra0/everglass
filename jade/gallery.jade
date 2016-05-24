@@ -1,0 +1,14 @@
+extends _layout
+block append head
+	meta(description="")
+	meta(keywords="")
+	title Галерея
+	- contentHeight = 'auto';
+block content
+	.flex-block.flex-block-wrap
+		- for (i=1; i<=15;i++) {
+			.gallery__block
+				a.gallery__block-link(href="#")
+					img.gallery__block-img(src="img/content/car.jpg", alt="")
+					p.gallery__block-name everglass platinum
+		- }
