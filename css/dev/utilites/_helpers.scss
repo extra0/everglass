@@ -108,6 +108,7 @@
 		@include display(flex);
 		@include align-items(stretch);
 		&__item {
+			height: 100%;
 			position: relative;
 			&-flex-center {
 				@include display(flex);

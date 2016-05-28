@@ -1,0 +1,22 @@
+extends _layout
+block append head
+	meta(description="")
+	meta(keywords="")
+	title Страница 1 фотогаллереи
+block content
+	.flex-block.flex-wrap-to-md
+		.flex-block__item.col-lg-8.col-sm-12
+			.gallery__main-img-wrapper
+				img.gallery__main-img-wrapper-bg(large-img-holder src="/img/content/img.jpg", alt="")
+				img.gallery__main-img(src="/img/content/img.jpg", alt="" large-img-holder)
+		.flex-block__item.col-lg-4.col-sm-12
+			.gallery__thumbs-section
+				- for (i=1;i<=28;i++) {
+					- if (i%2) {
+						.gallery__thumbs-wrapper(large-img-trigger="/img/content/img-bk.jpg")
+							img.gallery__thumbs(src="/img/content/thumb.jpg", alt="")
+					- } else {
+						.gallery__thumbs-wrapper(large-img-trigger="/img/content/img.jpg")
+							img.gallery__thumbs(src="/img/content/thumb.jpg", alt="")
+					- }
+				- }

@@ -32,6 +32,13 @@
 			display: block;
 		}
 	}
+	.gallery {
+		&__thumbs {
+			&-wrapper {
+				flex-basis: 16%;
+			}
+		}
+	}
 }
 
 // ================================================== MAX 500
@@ -48,6 +55,11 @@
 	.gallery {
 		&__block {
 			width: 50%;
+		}
+		&__thumbs {
+			&-wrapper {
+				flex-basis: 27%;
+			}
 		}
 	}
 }
@@ -174,6 +186,9 @@
 		&__block {
 			width: 25%;
 		}
+		&__main-img {
+			max-width: 80%;
+		}
 	}
 }
 
@@ -286,6 +301,9 @@
 				margin: 0 auto;
 			}
 		}
+	}
+	.flex-wrap-to-md {
+		@include flex-wrap(wrap);
 	}
 }
 

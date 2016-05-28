@@ -101,4 +101,9 @@ $(function(){
 	    myMap.geoObjects.add(myPlacemark);
 	});
 
+	// замена изображений в галереи по клику
+	$('[large-img-trigger]').on('click', function(){
+		$('[large-img-holder]').attr('src', $(this).attr('large-img-trigger'));
+	});
+
 });
