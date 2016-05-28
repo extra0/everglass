@@ -278,6 +278,7 @@
 		border: 5px solid #000;
 		width: 20%;
 		overflow: hidden;
+		@include transition(all 0.4s ease-in-out);
 		&-name {
 			color: #fff;
 			font-size: 16px;

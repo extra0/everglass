@@ -45,6 +45,11 @@
 			font-size: 27px;
 		}
 	}
+	.gallery {
+		&__block {
+			width: 50%;
+		}
+	}
 }
 
 // ================================================== 500 - 767
@@ -73,6 +78,11 @@
 					display: block;
 				}
 			}
+		}
+	}
+	.gallery {
+		&__block {
+			width: 33%;
 		}
 	}
 }
@@ -133,6 +143,11 @@
 		position: relative;
 		height: 400px;
 	}
+	.gallery {
+		&__block {
+			width: 25%;
+		}
+	}
 }
 
 
@@ -153,6 +168,11 @@
 		&__form {
 			margin-top: 40px;
 			margin-left: 67px;
+		}
+	}
+	.gallery {
+		&__block {
+			width: 25%;
 		}
 	}
 }
