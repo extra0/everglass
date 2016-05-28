@@ -1,0 +1,29 @@
+extends _layout
+block append head
+	meta(description="")
+	meta(keywords="")
+	title Каталог товаров
+	//- - contentHeight = 'auto';
+block content
+	.flex-block
+		.flex-block__item
+			.catalog__menu
+				p.catalog__menu-title меню
+				ul.catalog__list
+					- for (i=1; i<=6; i++) {
+						- if (i == 1) {
+							li.catalog__list-item
+								span.catalog__list-item-link.current Для ремонта ЛКП
+									span.catalog__list-item-count 2354
+						- } else {
+							li.catalog__list-item
+								a.catalog__list-item-link(href="#!")  Спрей Детейлеры и Воски
+									span.catalog__list-item-count 2354
+							li.catalog__list-item
+								a.catalog__list-item-link(href="#!") Для ремонта ЛКП
+									span.catalog__list-item-count 123
+						- } 
+					- }
+		.flex-block__item
+			.catalog__section
+		
