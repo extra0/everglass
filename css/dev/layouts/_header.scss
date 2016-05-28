@@ -18,19 +18,25 @@
 				width: 24px;
 				height: 24px;
 				position: relative;
+				opacity: 0.5;
+				&.basket-item {
+					opacity: 1;
+				}
 			}
 			&-count {
 				color: #fff;
 				font-size: 11px;
 				border-radius: 50%;
-				@include position(absolute, -10px -10px null null);
+				@include position(absolute, -11px -13px null null);
 				background: $red;
 				text-align: center;
-				width: 19px;
-				height: 17px;
+				width: 17px;
+				height: 15px;
 				line-height: 15px;
 				padding: 1px;
-
+				border: 2px solid #1c1c1d;
+				display: block;
+				box-sizing: content-box;
 			}
 		}
 		&-languages {
