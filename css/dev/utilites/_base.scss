@@ -24,7 +24,8 @@ button, input, textarea {
 .main-wrapper {
     overflow: hidden;
 }
-.container-fluid {
-    position: relative;
-    @include box-sizing(border-box);
+.rubl {
+    display: inline-block;
+    margin-left: 5px;
+    font-family: 'Rubl';
 }
