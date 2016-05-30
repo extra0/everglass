@@ -43,7 +43,7 @@
             <!-- конец корзины в шапке-->
             <!-- блок с выбором языка-->
             <div class="header__info-languages">
-              <div href="javascript:void(0);" class="header__info-languages-current"><img src="img/rus.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">RU</span></div>
+              <div class="header__info-languages-current"><img src="img/rus.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">RU</span></div>
               <ul class="header__info-languages-list">
                 <li class="header__info-languages-item active"><img src="img/rus.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">RU</span></li>
                 <li class="header__info-languages-item"><img src="img/ukr.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">UA</span></li>
@@ -59,6 +59,7 @@
         <div class="flex-block">
           <div class="flex-block__item">
             <div class="catalog__menu">
+              <button type="button" class="catalog__menu-btn visible-xs pull-right"></button>
               <p class="catalog__menu-title">меню</p>
               <ul class="catalog__list">
                 <li class="catalog__list-item">
@@ -79,80 +80,105 @@
           </div>
           <div class="flex-block__item">
             <div class="catalog-section">
-              <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-1.jpg" alt="" class="catalog-section__item-img"></a>
-                <h2 class="catalog-section__item-title">Gyeon	</h2>
-                <p class="catalog-section__item-description">Q² MOHS+, 50мл	</p>
-                <p class="catalog-section__item-price">17,985<span class="rubl">a</span></p>
-                <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket pull-left">в корзину</a><a href="#!" class="catalog-section__item-footer-link pull-right">подробнее</a></div>
+              <div class="catalog-section__filter">
+                <form action="#!">
+                  <div range-parent class="catalog-section__filter-price-block">
+                    <label class="catalog-section__filter-label">Цена</label>
+                    <div class="catalog-section__filter-price-wrapper">
+                      <input type="text" range-min value="2000" only-numbers class="catalog-section__filter-price-input"><span class="rubl catalog-section__filter-price-currency">a</span>
+                    </div>
+                    <div ui-range class="catalog-section__filter-price-range"></div>
+                    <div class="catalog-section__filter-price-wrapper">
+                      <input type="text" range-max value="6000" only-numbers class="catalog-section__filter-price-input"><span class="rubl catalog-section__filter-price-currency">a</span>
+                    </div>
+                  </div>
+                  <div class="catalog-section__filter-select-block">
+                    <label class="catalog-section__filter-label">Отобразить по:</label>
+                    <select class="catalog-section__filter-select">
+                      <option value="1">Цене по возрастанию</option>
+                      <option value="2">Цене по убыванию</option>
+                      <option value="3">По типу</option>
+                      <option value="4">По бренду</option>
+                    </select>
+                  </div>
+                </form>
               </div>
-              <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-2.jpg" alt="" class="catalog-section__item-img"></a>
-                <h2 class="catalog-section__item-title">Gyeon	</h2>
-                <p class="catalog-section__item-description">Q² MOHS+, 50мл	</p>
-                <p class="catalog-section__item-price">17,985<span class="rubl">a</span></p>
-                <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket pull-left">в корзину</a><a href="#!" class="catalog-section__item-footer-link pull-right">подробнее</a></div>
+              <div class="catalog-section__list">
+                <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-1.jpg" alt="" class="catalog-section__item-img"></a>
+                  <h2 class="catalog-section__item-title">Gyeon</h2>
+                  <p class="catalog-section__item-description">Q² MOHS+, 50мл</p>
+                  <p replaced-number class="catalog-section__item-price">17985<span class="rubl">a</span></p>
+                  <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket">в корзину</a><a href="#!" class="catalog-section__item-footer-link">подробнее</a></div>
+                </div>
+                <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-2.jpg" alt="" class="catalog-section__item-img"></a>
+                  <h2 class="catalog-section__item-title">Gyeon</h2>
+                  <p class="catalog-section__item-description">Q² MOHS+, 50мл</p>
+                  <p replaced-number class="catalog-section__item-price">17985<span class="rubl">a</span></p>
+                  <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket">в корзину</a><a href="#!" class="catalog-section__item-footer-link">подробнее</a></div>
+                </div>
+                <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-3.jpg" alt="" class="catalog-section__item-img"></a>
+                  <h2 class="catalog-section__item-title">Gyeon</h2>
+                  <p class="catalog-section__item-description">Q² MOHS+, 50мл</p>
+                  <p replaced-number class="catalog-section__item-price">17985<span class="rubl">a</span></p>
+                  <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket">в корзину</a><a href="#!" class="catalog-section__item-footer-link">подробнее</a></div>
+                </div>
+                <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-4.jpg" alt="" class="catalog-section__item-img"></a>
+                  <h2 class="catalog-section__item-title">Gyeon</h2>
+                  <p class="catalog-section__item-description">Q² MOHS+, 50мл</p>
+                  <p replaced-number class="catalog-section__item-price">17985<span class="rubl">a</span></p>
+                  <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket">в корзину</a><a href="#!" class="catalog-section__item-footer-link">подробнее</a></div>
+                </div>
+                <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-1.jpg" alt="" class="catalog-section__item-img"></a>
+                  <h2 class="catalog-section__item-title">Gyeon</h2>
+                  <p class="catalog-section__item-description">Q² MOHS+, 50мл</p>
+                  <p replaced-number class="catalog-section__item-price">17985<span class="rubl">a</span></p>
+                  <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket">в корзину</a><a href="#!" class="catalog-section__item-footer-link">подробнее</a></div>
+                </div>
+                <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-2.jpg" alt="" class="catalog-section__item-img"></a>
+                  <h2 class="catalog-section__item-title">Gyeon</h2>
+                  <p class="catalog-section__item-description">Q² MOHS+, 50мл</p>
+                  <p replaced-number class="catalog-section__item-price">17985<span class="rubl">a</span></p>
+                  <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket">в корзину</a><a href="#!" class="catalog-section__item-footer-link">подробнее</a></div>
+                </div>
+                <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-3.jpg" alt="" class="catalog-section__item-img"></a>
+                  <h2 class="catalog-section__item-title">Gyeon</h2>
+                  <p class="catalog-section__item-description">Q² MOHS+, 50мл</p>
+                  <p replaced-number class="catalog-section__item-price">17985<span class="rubl">a</span></p>
+                  <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket">в корзину</a><a href="#!" class="catalog-section__item-footer-link">подробнее</a></div>
+                </div>
+                <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-4.jpg" alt="" class="catalog-section__item-img"></a>
+                  <h2 class="catalog-section__item-title">Gyeon</h2>
+                  <p class="catalog-section__item-description">Q² MOHS+, 50мл</p>
+                  <p replaced-number class="catalog-section__item-price">17985<span class="rubl">a</span></p>
+                  <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket">в корзину</a><a href="#!" class="catalog-section__item-footer-link">подробнее</a></div>
+                </div>
+                <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-1.jpg" alt="" class="catalog-section__item-img"></a>
+                  <h2 class="catalog-section__item-title">Gyeon</h2>
+                  <p class="catalog-section__item-description">Q² MOHS+, 50мл</p>
+                  <p replaced-number class="catalog-section__item-price">17985<span class="rubl">a</span></p>
+                  <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket">в корзину</a><a href="#!" class="catalog-section__item-footer-link">подробнее</a></div>
+                </div>
+                <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-2.jpg" alt="" class="catalog-section__item-img"></a>
+                  <h2 class="catalog-section__item-title">Gyeon</h2>
+                  <p class="catalog-section__item-description">Q² MOHS+, 50мл</p>
+                  <p replaced-number class="catalog-section__item-price">17985<span class="rubl">a</span></p>
+                  <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket">в корзину</a><a href="#!" class="catalog-section__item-footer-link">подробнее</a></div>
+                </div>
+                <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-3.jpg" alt="" class="catalog-section__item-img"></a>
+                  <h2 class="catalog-section__item-title">Gyeon</h2>
+                  <p class="catalog-section__item-description">Q² MOHS+, 50мл</p>
+                  <p replaced-number class="catalog-section__item-price">17985<span class="rubl">a</span></p>
+                  <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket">в корзину</a><a href="#!" class="catalog-section__item-footer-link">подробнее</a></div>
+                </div>
+                <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-4.jpg" alt="" class="catalog-section__item-img"></a>
+                  <h2 class="catalog-section__item-title">Gyeon</h2>
+                  <p class="catalog-section__item-description">Q² MOHS+, 50мл</p>
+                  <p replaced-number class="catalog-section__item-price">17985<span class="rubl">a</span></p>
+                  <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket">в корзину</a><a href="#!" class="catalog-section__item-footer-link">подробнее</a></div>
+                </div>
               </div>
-              <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-3.jpg" alt="" class="catalog-section__item-img"></a>
-                <h2 class="catalog-section__item-title">Gyeon	</h2>
-                <p class="catalog-section__item-description">Q² MOHS+, 50мл	</p>
-                <p class="catalog-section__item-price">17,985<span class="rubl">a</span></p>
-                <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket pull-left">в корзину</a><a href="#!" class="catalog-section__item-footer-link pull-right">подробнее</a></div>
-              </div>
-              <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-4.jpg" alt="" class="catalog-section__item-img"></a>
-                <h2 class="catalog-section__item-title">Gyeon	</h2>
-                <p class="catalog-section__item-description">Q² MOHS+, 50мл	</p>
-                <p class="catalog-section__item-price">17,985<span class="rubl">a</span></p>
-                <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket pull-left">в корзину</a><a href="#!" class="catalog-section__item-footer-link pull-right">подробнее</a></div>
-              </div>
-              <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-1.jpg" alt="" class="catalog-section__item-img"></a>
-                <h2 class="catalog-section__item-title">Gyeon	</h2>
-                <p class="catalog-section__item-description">Q² MOHS+, 50мл	</p>
-                <p class="catalog-section__item-price">17,985<span class="rubl">a</span></p>
-                <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket pull-left">в корзину</a><a href="#!" class="catalog-section__item-footer-link pull-right">подробнее</a></div>
-              </div>
-              <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-2.jpg" alt="" class="catalog-section__item-img"></a>
-                <h2 class="catalog-section__item-title">Gyeon	</h2>
-                <p class="catalog-section__item-description">Q² MOHS+, 50мл	</p>
-                <p class="catalog-section__item-price">17,985<span class="rubl">a</span></p>
-                <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket pull-left">в корзину</a><a href="#!" class="catalog-section__item-footer-link pull-right">подробнее</a></div>
-              </div>
-              <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-3.jpg" alt="" class="catalog-section__item-img"></a>
-                <h2 class="catalog-section__item-title">Gyeon	</h2>
-                <p class="catalog-section__item-description">Q² MOHS+, 50мл	</p>
-                <p class="catalog-section__item-price">17,985<span class="rubl">a</span></p>
-                <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket pull-left">в корзину</a><a href="#!" class="catalog-section__item-footer-link pull-right">подробнее</a></div>
-              </div>
-              <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-4.jpg" alt="" class="catalog-section__item-img"></a>
-                <h2 class="catalog-section__item-title">Gyeon	</h2>
-                <p class="catalog-section__item-description">Q² MOHS+, 50мл	</p>
-                <p class="catalog-section__item-price">17,985<span class="rubl">a</span></p>
-                <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket pull-left">в корзину</a><a href="#!" class="catalog-section__item-footer-link pull-right">подробнее</a></div>
-              </div>
-              <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-1.jpg" alt="" class="catalog-section__item-img"></a>
-                <h2 class="catalog-section__item-title">Gyeon	</h2>
-                <p class="catalog-section__item-description">Q² MOHS+, 50мл	</p>
-                <p class="catalog-section__item-price">17,985<span class="rubl">a</span></p>
-                <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket pull-left">в корзину</a><a href="#!" class="catalog-section__item-footer-link pull-right">подробнее</a></div>
-              </div>
-              <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-2.jpg" alt="" class="catalog-section__item-img"></a>
-                <h2 class="catalog-section__item-title">Gyeon	</h2>
-                <p class="catalog-section__item-description">Q² MOHS+, 50мл	</p>
-                <p class="catalog-section__item-price">17,985<span class="rubl">a</span></p>
-                <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket pull-left">в корзину</a><a href="#!" class="catalog-section__item-footer-link pull-right">подробнее</a></div>
-              </div>
-              <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-3.jpg" alt="" class="catalog-section__item-img"></a>
-                <h2 class="catalog-section__item-title">Gyeon	</h2>
-                <p class="catalog-section__item-description">Q² MOHS+, 50мл	</p>
-                <p class="catalog-section__item-price">17,985<span class="rubl">a</span></p>
-                <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket pull-left">в корзину</a><a href="#!" class="catalog-section__item-footer-link pull-right">подробнее</a></div>
-              </div>
-              <div class="catalog-section__item"><a href="#!" class="catalog-section__item-link"><img src="/img/content/item-4.jpg" alt="" class="catalog-section__item-img"></a>
-                <h2 class="catalog-section__item-title">Gyeon	</h2>
-                <p class="catalog-section__item-description">Q² MOHS+, 50мл	</p>
-                <p class="catalog-section__item-price">17,985<span class="rubl">a</span></p>
-                <div class="catalog-section__item-footer"><a href="#!" class="catalog-section__item-footer-basket pull-left">в корзину</a><a href="#!" class="catalog-section__item-footer-link pull-right">подробнее</a></div>
-              </div>
+              <div class="text-center"><a href="javascript(0);" class="catalog-section__more-btn">загрузить еще</a></div>
             </div>
-            <div class="text-center"><a href="javascript(0);" class="catalog-section__more-btn">загрузить еще</a></div>
           </div>
         </div>
       </div>

@@ -1,5 +1,17 @@
 $(function(){
 
+	// ф-я разбивки на разряды
+	function numberWithCommas(x) { return x.toString().replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "\$1,");}
+	
+	$('[replaced-number]').each(function(){	$(this).html(numberWithCommas($(this).html()));	});
+
+	// только цифры в инпутах
+	$('[only-numbers]').bind("change keyup input click", function() {
+		if (this.value.match(/[^0-9\.]/g, '')) {
+		    this.value = this.value.replace(/[^0-9]/g, '');
+		}
+	});
+
 	// инициализация респонсив меню
 	setTimeout(function(){
 		var nav = priorityNav.init();
@@ -25,11 +37,12 @@ $(function(){
 
 	// меняем высоту слайдера
 	$(window).on('load resize', function(){
-		if ($(this).width() > 1199 ) {
+		if ($(this).width() + 17 >= 768) { // контанта 17 необходима для того, чтобы учесть ширину полосы прокрутки
 			$('[content-fix]').height($(window).height() - $('.header').innerHeight() - $('.footer').innerHeight()); // динамически изменяем высоту контентной части
 			sliderInit();
 		} else {
 			$('.content').height('100%');
+			
 		}
 		menuResize(); 
 	});
@@ -105,5 +118,37 @@ $(function(){
 	$('[large-img-trigger]').on('click', function(){
 		$('[large-img-holder]').attr('src', $(this).attr('large-img-trigger'));
 	});
+
+	// показываем меню каталога
+	$('.catalog__menu-btn').on('click', function(){
+		$(this).toggleClass('active');
+		$('.catalog__list').slideToggle(400);
+	});
+
+	var min = $('[range-min]'),
+		max = $('[range-max]');
+	
+	// слайдер цены
+	$("[ui-range]").slider({
+		range: true,
+		min: 1,
+		max: 10000,
+		step: 1,
+		values: [2000, 6000],
+		slide: function(event, ui) {
+			$(this).parents('[range-parent]').find(min).val(ui.values[ 0 ]);
+			$(this).parents('[range-parent]').find(max).val(ui.values[ 1 ]);
+		}
+	});
+
+	min.on('keyup', function() {
+		$(this).parents('[range-parent]').find('[ui-range]').slider("values", 0, $(this).val());
+	});
+
+	max.on('keyup', function() {
+		$(this).parents('[range-parent]').find('[ui-range]').slider("values", 1, $(this).val());
+	});
+
+    $('select').selectmenu();
 
 });

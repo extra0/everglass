@@ -8,6 +8,7 @@ block content
 	.flex-block
 		.flex-block__item
 			.catalog__menu
+				button.catalog__menu-btn.visible-xs.pull-right(type="button")
 				p.catalog__menu-title меню
 				ul.catalog__list
 					- for (i=1; i<=6; i++) {
@@ -29,19 +30,38 @@ block content
 					- }
 		.flex-block__item
 			.catalog-section
-				- for (k=1; k<=3; k++) {
-					- for (i=1; i<=4; i++) {
-						.catalog-section__item
-							a.catalog-section__item-link(href="#!")
-								img.catalog-section__item-img(src="/img/content/item-#{i}.jpg", alt="")
-							h2.catalog-section__item-title Gyeon	
-							p.catalog-section__item-description Q² MOHS+, 50мл	
-							p.catalog-section__item-price 17,985
-								span.rubl a
-							.catalog-section__item-footer
-								a.catalog-section__item-footer-basket.pull-left(href="#!") в корзину
-								a.catalog-section__item-footer-link.pull-right(href="#!") подробнее
-					- }
-				-}
-			.text-center
-				a.catalog-section__more-btn(href="javascript(0);") загрузить еще
+				.catalog-section__filter
+					form(action="#!")
+						.catalog-section__filter-price-block(range-parent)
+							label.catalog-section__filter-label Цена
+							.catalog-section__filter-price-wrapper
+								input.catalog-section__filter-price-input(type="text" range-min value="2000" only-numbers)
+								span.rubl.catalog-section__filter-price-currency a
+							.catalog-section__filter-price-range(ui-range)
+							.catalog-section__filter-price-wrapper
+								input.catalog-section__filter-price-input(type="text" range-max value="6000" only-numbers)
+								span.rubl.catalog-section__filter-price-currency a
+						.catalog-section__filter-select-block
+							label.catalog-section__filter-label Отобразить по:
+							select.catalog-section__filter-select
+								option(value="1") Цене по возрастанию
+								option(value="2") Цене по убыванию
+								option(value="3") По типу
+								option(value="4") По бренду
+				.catalog-section__list
+					- for (k=1; k<=3; k++) {
+						- for (i=1; i<=4; i++) {
+							.catalog-section__item
+								a.catalog-section__item-link(href="#!")
+									img.catalog-section__item-img(src="/img/content/item-#{i}.jpg", alt="")
+								h2.catalog-section__item-title Gyeon
+								p.catalog-section__item-description Q² MOHS+, 50мл
+								p.catalog-section__item-price(replaced-number) 17985
+									span.rubl a
+								.catalog-section__item-footer
+									a.catalog-section__item-footer-basket(href="#!") в корзину
+									a.catalog-section__item-footer-link(href="#!") подробнее
+						- }
+					-}
+				.text-center
+					a.catalog-section__more-btn(href="javascript(0);") загрузить еще

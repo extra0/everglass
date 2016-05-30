@@ -1,11 +1,6 @@
 .text-center {text-align: center;}
 .text-right {text-align: right;}
 
-.pull-right {float: right;}
-.pull-left {float: left;}
-
-
-
 
 // Elements
 
@@ -105,6 +100,8 @@
 .flex {
 	&-block {
 		height: 100%;
+	    background: #181819;
+		overflow: hidden;
 		@include display(flex);
 		@include align-items(stretch);
 		&__item {
