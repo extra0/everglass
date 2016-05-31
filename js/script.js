@@ -20,7 +20,7 @@ $(function() {
 	setTimeout(function() {
 		var nav = priorityNav.init();
 		$('.main-menu').addClass('fadeIn'); // плавно показываем меню что бы скрыть возможные огрехи формирования респонсива
-	}, 200);
+	}, 500);
 
 	// ресайзим меню
 	function menuResize() {
