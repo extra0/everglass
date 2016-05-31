@@ -81,6 +81,28 @@
 			display: none;
 		}
 	}
+	.basket-block {
+		padding: 40px 20px;
+		&__inner {
+		    padding:9px 5.6%;
+		}
+		&__step {
+			&:before {
+				right: auto;
+				left: -40px;
+				top: 100px;
+				@include transform(rotate(90deg));
+			}
+		}
+		&__partner {
+			&-block-input {
+				padding-left: 15px;
+			}
+		}
+	}
+	.form-group-padding {
+		margin-bottom: 20px;
+	}
 }
 
 // ================================================== MAX 499
@@ -101,6 +123,18 @@
 		&__thumbs {
 			&-wrapper {
 				flex-basis: 27%;
+			}
+		}
+	}
+	.basket-block {
+		&__item {
+			&-img {
+				&-wrapper {
+					max-width: 70px;
+				}
+			}
+			&-description {
+				margin-left: 90px;
 			}
 		}
 	}
@@ -247,6 +281,16 @@
 			width: 275px;
 		}
 	}
+	.basket-block {
+		&__step {
+			&:before {
+				right: auto;
+				left: -16px;
+				top: 100px;
+				@include transform(rotate(90deg));
+			}
+		}
+	}
 }
 
 
@@ -293,6 +337,30 @@
 					margin: 0 auto;
 				}
 			}
+		}
+	}
+	.basket-block {
+		&__inner {
+			padding: 28px 1.6%
+		}
+		&__item {
+			&-img {
+				&-wrapper {
+					max-width: 70px;
+				}
+			}
+			&-description {
+				margin-left: 90px;
+				&-title {
+					font-size: 16px;
+				}
+			}
+			&-count-price {
+				margin: 6px -20px 0 15px
+			}
+		}
+		&__partner-block-input {
+			padding-left: 15px;
 		}
 	}
 }
@@ -370,6 +438,11 @@
 	.container {
 		width: auto;
 		min-width: 1170px;
+	}
+	.basket-block {
+		&__items-scroll {
+			max-height: 250px;
+		}
 	}
 }
 

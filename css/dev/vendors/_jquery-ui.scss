@@ -635,6 +635,7 @@ button.ui-button::-moz-focus-inner {
 	position: relative;
 	text-decoration: none;
 	cursor: pointer;
+	outline: none;
 }
 .ui-selectmenu-button span.ui-icon {
 	right: 0.5em;
