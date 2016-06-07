@@ -340,6 +340,7 @@
 		}
 	}
 	.basket-block {
+		padding: 40px 35px;
 		&__inner {
 			padding: 28px 1.6%
 		}
@@ -362,6 +363,9 @@
 		&__partner-block-input {
 			padding-left: 15px;
 		}
+	}
+	.flex-block__basket-bg {
+		height: auto;
 	}
 }
 
@@ -611,5 +615,35 @@
 		&__item {
 			flex-basis: 32.77%;
 		}
+	}
+}
+
+
+
+
+// ====================== HEIGHT 
+@media (min-width: 1200px) and (max-height: 840px) {
+	.basket {
+		&-block {
+			padding: 20px 35px;
+			&__inner {
+				padding: 0px 4.6% 0px 17.6%;
+				margin-top: -60px;
+				&-items {
+					margin: 25px -5px 40px -5px;
+				}
+				&-title {
+					&:before {
+						bottom: -25px;
+					}
+				}
+			}
+			&__items-scroll {
+				max-height: 200px;
+			}
+		}
+	}
+	.form-group {
+		margin-bottom: 10px;
 	}
 }

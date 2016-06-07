@@ -707,7 +707,7 @@
 				// margin: 109px 0 40px 0;
 				margin: 55px -5px 40px -5px;
 				padding: 0 5px;
-				overflow: hidden;
+				// overflow: hidden;
 			}
 			&-note {
 				color: #fff;
@@ -727,7 +727,9 @@
 				width: 11px;
 				height: 13px;
 				display: block;
+				position: relative;
 				margin: 7px 8px 0 0;
+				z-index: 100;
 				background: url(../img/delete.png) 0 0 no-repeat;
 			}
 			&-description {
@@ -821,7 +823,7 @@
 			padding: 22px 0;
 			margin: 11px 0;
 			border-top: 1px solid #2f2f2f;
-			border-bottom: 1px solid #2f2f2f;
+			// border-bottom: 1px solid #2f2f2f;
 			&-text {
 				opacity: 0.8;
 				color: #515151;
