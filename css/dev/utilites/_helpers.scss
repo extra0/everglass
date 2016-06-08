@@ -116,7 +116,7 @@
 				@include align-items(flex-end);
 			}
 		}
-		[class*="col-"] {
+		& > [class*="col-"] {
 			padding: 0!important;
 		}
 		&-wrap {

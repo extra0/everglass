@@ -18,7 +18,7 @@ $(function() {
 
 	// инициализация респонсив меню
 	setTimeout(function() {
-		var nav = priorityNav.init();
+		// var nav = priorityNav.init();
 		$('.main-menu').addClass('fadeIn'); // плавно показываем меню что бы скрыть возможные огрехи формирования респонсива
 	}, 500);
 
@@ -234,9 +234,21 @@ $(function() {
 	});
 	cart();
 
-	// кастонмый скролл
+	
 	$(window).load(function() {
+		// кастонмый скролл
 		$("[custom-scroll]").mCustomScrollbar();
+
+		// bxSlider
+		$('[slider]').bxSlider({
+			controls: false,
+			pagerCustom: '#product-thumbs'
+		});
+		
+	});
+
+	$('.product__block-img-thumbs-link').each(function(i){
+		$(this).attr('data-slide-index', i);
 	});
 
 });
