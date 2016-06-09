@@ -907,6 +907,7 @@
 			margin-top: 22%;
 			&-thumbs {
 				text-align: center;
+				padding: 0 20px;
 				&-link {
 					display: inline-block;
 					vertical-align: top;
@@ -1111,8 +1112,31 @@
 				margin: 0 0 13px 0;
 			}
 			&-basket {
-				@extend .catalog-section__item-footer-basket;
+				text-transform: uppercase;
+				border-radius: 3px;
+				@include transition(all 0.4s ease-in-out);
+				background: #efefef;
+				color: #868a8b;
+				float: left;
+				position: relative;
 				padding: 15px 31px 15px 55px;
+				&:before {
+					content: "";
+					@include position(absolute, 16px null null 20px);
+					width: 16px;
+					height: 16px;
+					background: url(../img/b-btn.png) 0px 0px no-repeat;
+					@include transition(all 0.4s ease-in-out);
+				}
+				&:hover {
+					text-decoration: none;
+					color: #fff;
+					background: $red;
+					&:before {
+						left: 15px;
+						background: url(../img/b-btn-hover.png) 0px 0px no-repeat;
+					}
+				}
 			}
 			&-link {
 				@extend .catalog-section__item-footer-link;
@@ -1121,5 +1145,8 @@
 				display: inline-block;
 			}
 		}
+	}
+	&__section {
+		@include display(flex);
 	}
 }

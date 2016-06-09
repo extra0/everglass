@@ -28,69 +28,70 @@ block content
 									span.catalog__list-item-name Для ремонта ЛКП
 						- } 
 					- }
-		.flex-block__item.product__block.product__block-bg-white
-			.product__block-img
-				ul.product__block-img-slider(slider)
-					- for (i=1;i<=4; i++) {
-						li.product__block-img-slider-item
-							a(href="img/content/item.jpg" fancybox rel="img")
-								img.product__block-img-slider-img(src="img/content/item.jpg", alt="")
-					-}
-				.product__block-img-thumbs#product-thumbs
-					- for (i=1;i<=4; i++) {
-						a.product__block-img-thumbs-link(href="#")
-							img.product__block-img-thumbs-img(src="img/content/item.jpg", alt="")
-					-}
-		.flex-block__item.product__block.product__block-bg-grey
-			.product__block-description
-				h1.product__block-description-name Gyeon
-				h2.product__block-description-article Q2 LeatherCoat- Кварцевая защита кожи
-				.product__block-characteristicks
-					.row
-						.col-sm-6
-							p.product__block-characteristicks-name Вес:
-						.col-sm-6
-							p.product__block-characteristicks-value 500 мл
-					.row
-						.col-sm-6
-							p.product__block-characteristicks-name Кол-во применений:
-						.col-sm-6
-							p.product__block-characteristicks-value 30
-					.row
-						.col-sm-6
-							p.product__block-characteristicks-name Материал тары:
-						.col-sm-6
-							p.product__block-characteristicks-value Пластик
-				form(action="#!")
-					.product__block-price(item-parent)
-						p.product__block-price-value 990
-							span.rubl a
-						.product__block-price-form
-							button.product__block-price-btn.up(type="button" data-val="1" item-changer)
-							input.product__block-price-input(type="text" only-numbers value="1" maxlength="2" item-max-val="13" item-val)
-							button.product__block-price-btn.down(type="button" data-val="-1" item-changer)
-					.product__block-btns
-						button.product__block-price-submit.btn(type="submit") в корзину
-						a.product__block-price-diller(href="#!") оптовая цена
-					.product__block-delivery
-						p.product__block-delivery-title Доставка
-						p.product__block-delivery-text Доставим в любую точку мира.
-		.flex-block__item.product__block.product__block-bg-white
-			.product__similar
-				h3.product__similar-title Похожие товары
-				- for (i = 1; i<=4; i++) {
-					.product__similar-block
+		.flex-block__item.product__section.flex-wrap-to-md
+			.flex-block__item.product__block.product__block-bg-white
+				.product__block-img
+					ul.product__block-img-slider(slider)
+						- for (i=1;i<=4; i++) {
+							li.product__block-img-slider-item
+								a(href="img/content/item.jpg" fancybox rel="img")
+									img.product__block-img-slider-img(src="img/content/item.jpg", alt="")
+						-}
+					.product__block-img-thumbs#product-thumbs
+						- for (i=1;i<=4; i++) {
+							a.product__block-img-thumbs-link(href="#")
+								img.product__block-img-thumbs-img(src="img/content/item.jpg", alt="")
+						-}
+			.flex-block__item.product__block.product__block-bg-grey
+				.product__block-description
+					h1.product__block-description-name Gyeon
+					h2.product__block-description-article Q2 LeatherCoat- Кварцевая защита кожи
+					.product__block-characteristicks
 						.row
-							.col-sm-3
-								.product__similar-block-img-wrap
-									a(href="#!")
-										img(src="img/content/item-#{i}.jpg", alt="").product__similar-block-img
-							.col-sm-9
-								.product__similar-block-description
-									p.product__similar-block-name 3D Ceramic
-									p.product__similar-block-prev Platinum, 100мл
-									p.product__similar-block-price 14,144
-										span.rubl a
-									a.product__similar-block-basket(href="#!") в корзину
-									a.product__similar-block-link(href="#!") подробнее
-				- }
+							.col-sm-6.col-xs-6.col-xxs-12
+								p.product__block-characteristicks-name Вес:
+							.col-sm-6.col-xs-6.col-xxs-12
+								p.product__block-characteristicks-value 500 мл
+						.row
+							.col-sm-6.col-xs-6.col-xxs-12
+								p.product__block-characteristicks-name Кол-во применений:
+							.col-sm-6.col-xs-6.col-xxs-12
+								p.product__block-characteristicks-value 30
+						.row
+							.col-sm-6.col-xs-6.col-xxs-12
+								p.product__block-characteristicks-name Материал тары:
+							.col-sm-6.col-xs-6.col-xxs-12
+								p.product__block-characteristicks-value Пластик
+					form(action="#!")
+						.product__block-price(item-parent)
+							p.product__block-price-value 3 990
+								span.rubl a
+							.product__block-price-form
+								button.product__block-price-btn.up(type="button" data-val="1" item-changer)
+								input.product__block-price-input(type="text" only-numbers value="1" maxlength="2" item-max-val="13" item-val)
+								button.product__block-price-btn.down(type="button" data-val="-1" item-changer)
+						.product__block-btns
+							button.product__block-price-submit.btn(type="submit") в корзину
+							a.product__block-price-diller(href="#!") оптовая цена
+						.product__block-delivery
+							p.product__block-delivery-title Доставка
+							p.product__block-delivery-text Доставим в любую точку мира.
+			.flex-block__item.product__block.product__block-bg-white
+				.product__similar
+					h3.product__similar-title Похожие товары
+					- for (i = 1; i<=4; i++) {
+						.product__similar-block
+							.row
+								.col-sm-3.col-xs-4.col-xxs-12
+									.product__similar-block-img-wrap
+										a(href="#!")
+											img(src="img/content/item-#{i}.jpg", alt="").product__similar-block-img
+								.col-sm-9.col-xs-8.col-xxs-12
+									.product__similar-block-description
+										p.product__similar-block-name 3D Ceramic
+										p.product__similar-block-prev Platinum, 100мл
+										p.product__similar-block-price 14,144
+											span.rubl a
+										a.product__similar-block-basket(href="#!") в корзину
+										a.product__similar-block-link(href="#!") подробнее
+					- }

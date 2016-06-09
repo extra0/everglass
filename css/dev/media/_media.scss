@@ -103,6 +103,25 @@
 	.form-group-padding {
 		margin-bottom: 20px;
 	}
+	.product {
+		&__block {
+			&-img {
+				margin-top: 0;
+				padding: 30px 0;
+			}
+			&-price {
+				&-diller {
+					float: none;
+					margin: 16px 20px;
+				}
+			}
+		}
+		&__section {
+			.product__block {
+				flex-basis: 100%;
+			}
+		}
+	}
 }
 
 // ================================================== MAX 499
@@ -135,6 +154,24 @@
 			}
 			&-description {
 				margin-left: 90px;
+			}
+		}
+	}
+	.product {
+		&__block {
+			&-description {
+				padding: 25px;
+			}
+			&-characteristicks {
+				&-name {
+					margin: 0 0 3px 0;
+				}
+			}
+			&_price {
+				&-value {
+					font-size: 36px;
+					margin: 14px 20px 0 0;
+				}
 			}
 		}
 	}
@@ -252,7 +289,6 @@
 	}
 	.catalog {
 		&-section {
-			width: calc(100vw - 292px);
 			&__item {
 				flex-basis: 50%;
 				&-footer {
@@ -288,6 +324,21 @@
 				left: -16px;
 				top: 100px;
 				@include transform(rotate(90deg));
+			}
+		}
+	}
+	.product {
+		&__section {
+			width: calc(100vw - 292px);
+		}
+		&__block {
+			flex-basis: 100%;
+			&:last-child {
+				flex-basis: 100%;
+			}
+			&-img {
+				margin-top: 0;
+				padding: 30px 0;
 			}
 		}
 	}
@@ -366,6 +417,24 @@
 	}
 	.flex-block__basket-bg {
 		height: auto;
+	}
+	.product {
+		&__section {
+			@include flex-wrap(wrap);
+			.product {
+				&__block {
+					flex-basis: 100%;
+					&-img {
+						padding-top: 3%;
+						padding-bottom: 5%;
+						margin-top: 0;
+					}
+					&-description {
+						padding: 26px 29px;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -487,6 +556,16 @@
 	.flex-wrap-to-md {
 		@include flex-wrap(wrap);
 	}
+	.product {
+		&__block {
+			&-price {
+				&-diller {
+					margin: 16px 20px;
+					float: none;
+				}
+			}
+		}
+	}
 }
 
 
@@ -577,6 +656,29 @@
 			}
 		}
 	}
+	.product {
+		&__block {
+			&-price {
+				&-submit {
+					padding: 16px 23px;
+					&:after {
+						display: none;
+					}
+				}
+				&-diller {
+					margin: 16px 0 0 16px;
+				}
+				&-value {
+					font-size: 36px;
+					margin: 12px 20px 0 0;
+				}
+			}
+		}
+		&__similar-title {
+			text-align: center;
+			padding: 20px;
+		}
+	}
 }
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
@@ -619,8 +721,6 @@
 }
 
 
-
-
 // ====================== HEIGHT 
 @media (min-width: 1200px) and (max-height: 840px) {
 	.basket {
@@ -645,5 +745,31 @@
 	}
 	.form-group {
 		margin-bottom: 10px;
+	}
+	.product__block {
+		flex-basis: 50%;
+		&-img {
+			margin-top: 2%;
+		}
+		&-description {
+			padding: 29px 49px;
+		}
+		&-characteristicks {
+			padding: 14px 0px 5px 0px;
+		    margin: 21px 0;
+		    &-name,
+		    &-value {
+		    	margin: 0 0 10px 0;
+		    }
+		}
+		&:first-child {
+			flex-basis: 50%;
+		}
+		&:nth-child(2) {
+			flex-basis: 54%;
+		}
+		&:last-child {
+			display: none;
+		}
 	}
 }
