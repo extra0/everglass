@@ -151,20 +151,23 @@ block content
 													a.diller__block-description-link(href="www.sdrsda.com") www.sdrsda.com
 										-}
 		// скрипт прямого геокодирования
+		script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
 		script.
 			$(function(){
+
 				var city = '';
 				$('.diller__block-description-address-link').on('click', function(){
 					city = $(this).parent().find('.diller__block-description-address').text();
+					ymaps.ready(init);
 				});
 
 				function init() {
-				    var myMap = new ymaps.Map('map', {
+				    var myMap = new ymaps.Map('diller_map', {
 				        center: [55.753994, 37.622093],
 				        zoom: 9
 				    });
 
-				    // Поиск координат
+				    // Поиск координат центра Нижнего Новгорода.
 				    ymaps.geocode(city, {
 				        results: 1
 				    }).then(function (res) {
@@ -184,7 +187,6 @@ block content
 				            });
 				        });
 				}
-				ymaps.ready(init);
 			});
 
 			

@@ -60,7 +60,11 @@ $(function() {
 	// });
 
 	// вызов фенсибокса
-	$('[fancybox]').fancybox();
+	$('[fancybox]').fancybox({
+		afterClose: function() {
+			$('#diller_map *').remove(); // удаляем ранее инициализированную карту на странице диллеров
+		}
+	});
 
 	// открываем языковую панель
 	var currentLang = $('.header__info-languages-current'),

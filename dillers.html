@@ -14,7 +14,7 @@
   </head>
   <body>
     <div id="map-wrap" class="modal">
-      <div id="map"></div>
+      <div id="diller_map"></div>
     </div>
     <div id="canvas-wrapper" class="main-wrapper">
       <canvas id="demo-canvas"></canvas>
@@ -389,20 +389,23 @@
             </li>
           </ul>
           <!-- скрипт прямого геокодирования-->
+          <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
           <script>
             $(function(){
+            
             	var city = '';
             	$('.diller__block-description-address-link').on('click', function(){
             		city = $(this).parent().find('.diller__block-description-address').text();
+            		ymaps.ready(init);
             	});
             
             	function init() {
-            	    var myMap = new ymaps.Map('map', {
+            	    var myMap = new ymaps.Map('diller_map', {
             	        center: [55.753994, 37.622093],
             	        zoom: 9
             	    });
             
-            	    // Поиск координат
+            	    // Поиск координат центра Нижнего Новгорода.
             	    ymaps.geocode(city, {
             	        results: 1
             	    }).then(function (res) {
@@ -422,7 +425,6 @@
             	            });
             	        });
             	}
-            	ymaps.ready(init);
             });
           </script>
         </div>

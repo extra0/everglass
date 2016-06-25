@@ -1377,10 +1377,10 @@
 }
 .modal {
 	display: none;
-	width: 500px;
-	height: 500px;
 }
-#map {
-	width: 500px;
-	height: 500px;
+#diller_map {
+	width: 650px;
+	height: 650px;
+	border: 2px solid $red;
+	border-radius: 4px;
 }
