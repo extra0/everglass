@@ -1,5 +1,7 @@
 $(function() {
 
+	priorityNav.init();
+
 	// ф-я разбивки на разряды
 	function numberWithCommas(x) {
 		return x.toString().replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "\$1 ");
@@ -16,20 +18,14 @@ $(function() {
 		}
 	});
 
-	// инициализация респонсив меню
-	setTimeout(function() {
-		// var nav = priorityNav.init();
-		$('.main-menu').addClass('fadeIn'); // плавно показываем меню что бы скрыть возможные огрехи формирования респонсива
-	}, 500);
-
 	// ресайзим меню
-	function menuResize() {
-		var nav = $('.main-menu__wrapper'),
-			header = $('.header').width(),
-			logo = $('.header__logo img').outerWidth(),
-			infoBlock = $('.header__info').outerWidth();
-		nav.outerWidth(header - logo - infoBlock - 100); // добавлена константа 100 как сумма всех отступов хедера
-	}
+	// function menuResize() {
+	// 	var nav = $('.main-menu__wrapper'),
+	// 		header = $('.header').width(),
+	// 		logo = $('.header__logo img').outerWidth(),
+	// 		infoBlock = $('.header__info').outerWidth();
+	// 	nav.outerWidth(header - logo - infoBlock - 100); // добавлена константа 100 как сумма всех отступов хедера
+	// }
 
 	// работа слайдера на главной
 	function sliderInit() {
@@ -48,7 +44,7 @@ $(function() {
 			$('.content').height('100%');
 
 		}
-		menuResize();
+		// menuResize();
 	});
 
 	// канвас подложка под курсор

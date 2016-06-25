@@ -118,17 +118,8 @@
 .main-menu {
 	display: inline-block;
 	vertical-align: top;
-	opacity: 0;
-	overflow: hidden;
-	max-height: 0;
-	width: 0;
+	width: calc(100% - 340px);
 	@include transition(all 0.4s ease-in-out);
-	&.fadeIn {
-		overflow: visible;
-		max-height: auto;
-		width: auto;
-		opacity: 1;
-	}
 	&__wrapper {
 		margin: 6px 0 0 48px;
 	}
