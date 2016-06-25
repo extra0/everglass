@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&amp;subset=latin,cyrillic" type="text/css" rel="stylesheet" media="all">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Диллеры</title>
+  </head>
+  <body>
+    <div id="map-wrap" class="modal">
+      <div id="map"></div>
+    </div>
+    <div id="canvas-wrapper" class="main-wrapper">
+      <canvas id="demo-canvas"></canvas>
+      <header class="header">
+        <div class="container-fluid">
+          <!-- логотип--><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a>
+          <!-- конец логотипа-->
+          <!-- главное меню-->
+          <div class="main-menu">
+            <nav class="main-menu__wrapper priority-nav">
+              <ul class="main-menu__list responsive-menu">
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">О компании</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Продукция</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Партнерство</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Дилеры</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Центры нанесения</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Тесты</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Галерея</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Магазин</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- конец меню-->
+          <!-- блок с инофрмацией-->
+          <div class="header__info">
+            <!-- корзина в шапке-->
+            <div class="header__info-basket"><a href="#!" class="header__info-basket-link basket-item"><span class="header__info-basket-count">3</span></a></div>
+            <!-- конец корзины в шапке-->
+            <!-- блок с выбором языка-->
+            <div class="header__info-languages">
+              <div class="header__info-languages-current"><img src="img/rus.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">RU</span></div>
+              <ul class="header__info-languages-list">
+                <li class="header__info-languages-item active"><img src="img/rus.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">RU</span></li>
+                <li class="header__info-languages-item"><img src="img/ukr.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">UA</span></li>
+                <li class="header__info-languages-item"><img src="img/eng.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">EN</span></li>
+              </ul>
+            </div>
+            <!-- конец блок с выбором языка-->
+          </div>
+          <!-- конец блока с информацией-->
+        </div>
+      </header>
+      <div content-fix class="content">
+        <div class="slider">
+          <ul class="slider__list">
+            <!-- слайд-->
+            <li style="background: #000 url(img/rus-flag.png) 0 0 no-repeat;" class="slider__list-item active dots-bg w-20 align-bottom">
+              <div class="container container-short">
+                <div class="flex-block no-bg">
+                  <div class="flex-block__item height-auto">
+                    <div class="diller__country">
+                      <div class="diller__country-block">
+                        <p class="diller__country-title">ru</p>
+                        <p class="diller__country-name">russia</p>
+                      </div>
+                      <div class="diller__counter">
+                        <div class="diller__counter-block">
+                          <p class="diller__counter-block-val">833</p>
+                          <p class="diller__counter-block-text">компании</p>
+                        </div>
+                        <div class="diller__counter-block">
+                          <p class="diller__counter-block-val">37</p>
+                          <p class="diller__counter-block-text">городов</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex-block__item height-auto">
+                    <div class="diller-search">
+                      <div class="diller-search-header">
+                        <form action="#!">
+                          <label for="search" class="diller-search-header__label">Ваш город</label>
+                          <input type="text" id="search" required class="diller-search-header__input">
+                          <button type="submit" class="diller-search-header__submit"></button>
+                        </form>
+                      </div>
+                      <div class="diller-search-body">
+                        <div custom-scroll class="diller-search-body-wrap">
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- конец слайда-->
+            <li style="background: #000 url(img/ukr-flag.jpg) 0 0 no-repeat;" class="slider__list-item dots-bg w-20 align-bottom">
+              <div class="container container-short">
+                <div class="flex-block no-bg">
+                  <div class="flex-block__item height-auto">
+                    <div class="diller__country">
+                      <div class="diller__country-block">
+                        <p class="diller__country-title">ua</p>
+                        <p class="diller__country-name">ukraine</p>
+                      </div>
+                      <div class="diller__counter">
+                        <div class="diller__counter-block">
+                          <p class="diller__counter-block-val">432</p>
+                          <p class="diller__counter-block-text">компании</p>
+                        </div>
+                        <div class="diller__counter-block">
+                          <p class="diller__counter-block-val">18</p>
+                          <p class="diller__counter-block-text">городов</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex-block__item height-auto">
+                    <div class="diller-search">
+                      <div class="diller-search-header">
+                        <form action="#!">
+                          <label for="search" class="diller-search-header__label">Ваш город</label>
+                          <input type="text" id="search" required class="diller-search-header__input">
+                          <button type="submit" class="diller-search-header__submit"></button>
+                        </form>
+                      </div>
+                      <div class="diller-search-body">
+                        <div custom-scroll class="diller-search-body-wrap">
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Донецк, ул.Артема, 198б</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Донецк, ул.Артема, 198б</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Донецк, ул.Артема, 198б</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Донецк, ул.Артема, 198б</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Донецк, ул.Артема, 198б</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Донецк, ул.Артема, 198б</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li style="background: #000 url(img/ukr-flag.jpg) 0 0 no-repeat;" class="slider__list-item dots-bg w-20 align-bottom">
+              <div class="container container-short">
+                <div class="flex-block no-bg">
+                  <div class="flex-block__item height-auto">
+                    <div class="diller__country">
+                      <div class="diller__country-block">
+                        <p class="diller__country-title">by</p>
+                        <p class="diller__country-name">belarus</p>
+                      </div>
+                      <div class="diller__counter">
+                        <div class="diller__counter-block">
+                          <p class="diller__counter-block-val">833</p>
+                          <p class="diller__counter-block-text">компании</p>
+                        </div>
+                        <div class="diller__counter-block">
+                          <p class="diller__counter-block-val">37</p>
+                          <p class="diller__counter-block-text">городов</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex-block__item height-auto">
+                    <div class="diller-search">
+                      <div class="diller-search-header">
+                        <form action="#!">
+                          <label for="search" class="diller-search-header__label">Ваш город</label>
+                          <input type="text" id="search" required class="diller-search-header__input">
+                          <button type="submit" class="diller-search-header__submit"></button>
+                        </form>
+                      </div>
+                      <div class="diller-search-body">
+                        <div custom-scroll class="diller-search-body-wrap">
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li style="background: #000 url(img/ukr-flag.jpg) 0 0 no-repeat;" class="slider__list-item dots-bg w-20 align-bottom">
+              <div class="container container-short">
+                <div class="flex-block no-bg">
+                  <div class="flex-block__item height-auto">
+                    <div class="diller__country">
+                      <div class="diller__country-block">
+                        <p class="diller__country-title">US</p>
+                        <p class="diller__country-name">usa</p>
+                      </div>
+                      <div class="diller__counter">
+                        <div class="diller__counter-block">
+                          <p class="diller__counter-block-val">75</p>
+                          <p class="diller__counter-block-text">компании</p>
+                        </div>
+                        <div class="diller__counter-block">
+                          <p class="diller__counter-block-val">3</p>
+                          <p class="diller__counter-block-text">городов</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex-block__item height-auto">
+                    <div class="diller-search">
+                      <div class="diller-search-header">
+                        <form action="#!">
+                          <label for="search" class="diller-search-header__label">Ваш город</label>
+                          <input type="text" id="search" required class="diller-search-header__input">
+                          <button type="submit" class="diller-search-header__submit"></button>
+                        </form>
+                      </div>
+                      <div class="diller-search-body">
+                        <div custom-scroll class="diller-search-body-wrap">
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                          <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                            <div class="diller__block-description">
+                              <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                              <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p><a href="#map-wrap" fancybox class="diller__block-description-address-link">На карте</a>
+                              <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- скрипт прямого геокодирования-->
+          <script>
+            $(function(){
+            	var city = '';
+            	$('.diller__block-description-address-link').on('click', function(){
+            		city = $(this).parent().find('.diller__block-description-address').text();
+            	});
+            
+            	function init() {
+            	    var myMap = new ymaps.Map('map', {
+            	        center: [55.753994, 37.622093],
+            	        zoom: 9
+            	    });
+            
+            	    // Поиск координат
+            	    ymaps.geocode(city, {
+            	        results: 1
+            	    }).then(function (res) {
+            	            // Выбираем первый результат геокодирования.
+            	            var firstGeoObject = res.geoObjects.get(0),
+            	                // Координаты геообъекта.
+            	                coords = firstGeoObject.geometry.getCoordinates(),
+            	                // Область видимости геообъекта.
+            	                bounds = firstGeoObject.properties.get('boundedBy');
+            
+            	            // Добавляем первый найденный геообъект на карту.
+            	            myMap.geoObjects.add(firstGeoObject);
+            	            // Масштабируем карту на область видимости геообъекта.
+            	            myMap.setBounds(bounds, {
+            	                // Проверяем наличие тайлов на данном масштабе.
+            	                checkZoomRange: true
+            	            });
+            	        });
+            	}
+            	ymaps.ready(init);
+            });
+          </script>
+        </div>
+      </div>
+      <footer class="footer hidden-lg">
+        <div class="container-fluid"><a href="http://www.studio-maximus.com/" class="footer__development"></a>
+          <p class="footer__copyright">&copy; Copyright 2016</p>
+        </div>
+      </footer>
+      <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+      <script src="js/canvas.js"></script>
+      <script src="js/plugins.js"></script>
+      <script src="js/script.js"></script>
+    </div>
+  </body>
+</html>

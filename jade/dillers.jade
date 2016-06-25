@@ -1,0 +1,190 @@
+extends _layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Диллеры
+	- contentHeight = 'true';
+block content
+	- footer = false;
+	.slider
+		ul.slider__list
+			// слайд
+			li.slider__list-item.active.dots-bg.w-20.align-bottom(style="background: #000 url(img/rus-flag.png) 0 0 no-repeat;")
+				.container.container-short
+					.flex-block.no-bg
+						.flex-block__item.height-auto
+							.diller__country
+								.diller__country-block
+									p.diller__country-title ru
+									p.diller__country-name russia
+								.diller__counter
+									.diller__counter-block
+										p.diller__counter-block-val 833
+										p.diller__counter-block-text компании
+									.diller__counter-block
+										p.diller__counter-block-val 37
+										p.diller__counter-block-text городов
+						.flex-block__item.height-auto
+							.diller-search
+								.diller-search-header
+									form(action="#!")
+										label.diller-search-header__label(for="search") Ваш город
+										input.diller-search-header__input(type="text" id="search" required)
+										button.diller-search-header__submit(type="submit")
+								.diller-search-body
+									.diller-search-body-wrap(custom-scroll)
+										-for (i=0; i<6; i++) {
+											.diller__block
+												img.diller__block-img(src="img/content/thumb.jpg", alt="")
+												.diller__block-description
+													p.diller__block-description-name Детейлинг Центр 360 Lab
+													p.diller__block-description-address Москва, пр. Промышленный, 3Бс5
+													a.diller__block-description-address-link(href="#map-wrap" fancybox) На карте
+													div.m-t-20
+														a.diller__block-description-phone(href="tel:+74957926848") +7 495 792-68-48
+													a.diller__block-description-link(href="www.sdrsda.com") www.sdrsda.com
+										-}
+			// конец слайда
+			li.slider__list-item.dots-bg.w-20.align-bottom(style="background: #000 url(img/ukr-flag.jpg) 0 0 no-repeat;")
+				.container.container-short
+					.flex-block.no-bg
+						.flex-block__item.height-auto
+							.diller__country
+								.diller__country-block
+									p.diller__country-title ua
+									p.diller__country-name ukraine
+								.diller__counter
+									.diller__counter-block
+										p.diller__counter-block-val 432
+										p.diller__counter-block-text компании
+									.diller__counter-block
+										p.diller__counter-block-val 18
+										p.diller__counter-block-text городов
+						.flex-block__item.height-auto
+							.diller-search
+								.diller-search-header
+									form(action="#!")
+										label.diller-search-header__label(for="search") Ваш город
+										input.diller-search-header__input(type="text" id="search" required)
+										button.diller-search-header__submit(type="submit")
+								.diller-search-body
+									.diller-search-body-wrap(custom-scroll)
+										-for (i=0; i<6; i++) {
+											.diller__block
+												img.diller__block-img(src="img/content/thumb.jpg", alt="")
+												.diller__block-description
+													p.diller__block-description-name Детейлинг Центр 360 Lab
+													p.diller__block-description-address Донецк, ул.Артема, 198б
+													a.diller__block-description-address-link(href="#map-wrap" fancybox) На карте
+													div.m-t-20
+														a.diller__block-description-phone(href="tel:+74957926848") +7 495 792-68-48
+													a.diller__block-description-link(href="www.sdrsda.com") www.sdrsda.com
+										-}
+			li.slider__list-item.dots-bg.w-20.align-bottom(style="background: #000 url(img/ukr-flag.jpg) 0 0 no-repeat;")
+				.container.container-short
+					.flex-block.no-bg
+						.flex-block__item.height-auto
+							.diller__country
+								.diller__country-block
+									p.diller__country-title by
+									p.diller__country-name belarus
+								.diller__counter
+									.diller__counter-block
+										p.diller__counter-block-val 833
+										p.diller__counter-block-text компании
+									.diller__counter-block
+										p.diller__counter-block-val 37
+										p.diller__counter-block-text городов
+						.flex-block__item.height-auto
+							.diller-search
+								.diller-search-header
+									form(action="#!")
+										label.diller-search-header__label(for="search") Ваш город
+										input.diller-search-header__input(type="text" id="search" required)
+										button.diller-search-header__submit(type="submit")
+								.diller-search-body
+									.diller-search-body-wrap(custom-scroll)
+										-for (i=0; i<6; i++) {
+											.diller__block
+												img.diller__block-img(src="img/content/thumb.jpg", alt="")
+												.diller__block-description
+													p.diller__block-description-name Детейлинг Центр 360 Lab
+													p.diller__block-description-address Москва, пр. Промышленный, 3Бс5
+													a.diller__block-description-address-link(href="#map-wrap" fancybox) На карте
+													div.m-t-20
+														a.diller__block-description-phone(href="tel:+74957926848") +7 495 792-68-48
+													a.diller__block-description-link(href="www.sdrsda.com") www.sdrsda.com
+										-}
+			li.slider__list-item.dots-bg.w-20.align-bottom(style="background: #000 url(img/ukr-flag.jpg) 0 0 no-repeat;")
+				.container.container-short
+					.flex-block.no-bg
+						.flex-block__item.height-auto
+							.diller__country
+								.diller__country-block
+									p.diller__country-title US
+									p.diller__country-name usa
+								.diller__counter
+									.diller__counter-block
+										p.diller__counter-block-val 75
+										p.diller__counter-block-text компании
+									.diller__counter-block
+										p.diller__counter-block-val 3
+										p.diller__counter-block-text городов
+						.flex-block__item.height-auto
+							.diller-search
+								.diller-search-header
+									form(action="#!")
+										label.diller-search-header__label(for="search") Ваш город
+										input.diller-search-header__input(type="text" id="search" required)
+										button.diller-search-header__submit(type="submit")
+								.diller-search-body
+									.diller-search-body-wrap(custom-scroll)
+										-for (i=0; i<6; i++) {
+											.diller__block
+												img.diller__block-img(src="img/content/thumb.jpg", alt="")
+												.diller__block-description
+													p.diller__block-description-name Детейлинг Центр 360 Lab
+													p.diller__block-description-address Москва, пр. Промышленный, 3Бс5
+													a.diller__block-description-address-link(href="#map-wrap" fancybox) На карте
+													div.m-t-20
+														a.diller__block-description-phone(href="tel:+74957926848") +7 495 792-68-48
+													a.diller__block-description-link(href="www.sdrsda.com") www.sdrsda.com
+										-}
+		// скрипт прямого геокодирования
+		script.
+			$(function(){
+				var city = '';
+				$('.diller__block-description-address-link').on('click', function(){
+					city = $(this).parent().find('.diller__block-description-address').text();
+				});
+
+				function init() {
+				    var myMap = new ymaps.Map('map', {
+				        center: [55.753994, 37.622093],
+				        zoom: 9
+				    });
+
+				    // Поиск координат
+				    ymaps.geocode(city, {
+				        results: 1
+				    }).then(function (res) {
+				            // Выбираем первый результат геокодирования.
+				            var firstGeoObject = res.geoObjects.get(0),
+				                // Координаты геообъекта.
+				                coords = firstGeoObject.geometry.getCoordinates(),
+				                // Область видимости геообъекта.
+				                bounds = firstGeoObject.properties.get('boundedBy');
+
+				            // Добавляем первый найденный геообъект на карту.
+				            myMap.geoObjects.add(firstGeoObject);
+				            // Масштабируем карту на область видимости геообъекта.
+				            myMap.setBounds(bounds, {
+				                // Проверяем наличие тайлов на данном масштабе.
+				                checkZoomRange: true
+				            });
+				        });
+				}
+				ymaps.ready(init);
+			});
+
+			

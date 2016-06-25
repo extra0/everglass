@@ -1,6 +1,10 @@
 .text-center {text-align: center;}
 .text-right {text-align: right;}
 
+.m-t-20 {
+	margin-top: 20px;
+}
+
 
 // Elements
 
@@ -110,6 +114,9 @@
 		overflow: hidden;
 		@include display(flex);
 		@include align-items(stretch);
+		&.no-bg {
+			background: none;
+		}
 		&__item {
 			height: 100%;
 			position: relative;

@@ -41,7 +41,7 @@ $(function() {
 
 	// меняем высоту слайдера
 	$(window).on('load resize', function() {
-		if ($(this).width() >= 1199) { // контанта 17 необходима для того, чтобы учесть ширину полосы прокрутки
+		if ($(this).width() >= 1199 -17) { // контанта 17 необходима для того, чтобы учесть ширину полосы прокрутки
 			$('[content-fix]').height($(window).height() - $('.header').innerHeight() - $('.footer').innerHeight()); // динамически изменяем высоту контентной части
 			sliderInit();
 		} else {
