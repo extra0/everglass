@@ -18,15 +18,6 @@ $(function() {
 		}
 	});
 
-	// ресайзим меню
-	// function menuResize() {
-	// 	var nav = $('.main-menu__wrapper'),
-	// 		header = $('.header').width(),
-	// 		logo = $('.header__logo img').outerWidth(),
-	// 		infoBlock = $('.header__info').outerWidth();
-	// 	nav.outerWidth(header - logo - infoBlock - 100); // добавлена константа 100 как сумма всех отступов хедера
-	// }
-
 	// работа слайдера на главной
 	function sliderInit() {
 		$('.slider__list-item').click(function() {
@@ -44,16 +35,15 @@ $(function() {
 			$('.content').height('100%');
 
 		}
-		// menuResize();
 	});
 
 	// канвас подложка под курсор
-	// CanvasBG.init({
-	//   Loc: {
-	//     x: window.innerWidth / 2.1,
-	//     y: window.innerHeight / 2.3
-	//   },
-	// });
+	CanvasBG.init({
+	  Loc: {
+	    x: window.innerWidth / 2.1,
+	    y: window.innerHeight / 2.3
+	  },
+	});
 
 	// вызов фенсибокса
 	$('[fancybox]').fancybox({
