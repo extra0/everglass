@@ -82,6 +82,12 @@
 		height: 2px;
 		@include position(absolute, null null 52px 0);
 	}
+	&-bottom {
+		@extend .bottom-red-line;
+		&:after {
+			bottom: -30px;
+		}
+	}
 }
 
 // dots bg
@@ -186,4 +192,29 @@
 		padding: 22px 15px 8px 20px;
 	}
 
+}
+.height-auto {
+	height: auto!important;
+}
+
+// video block shadow
+.right-shadow {
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 24%;
+		right: 0px;
+		box-shadow: 0px 0px 154px #fc0000;
+		width: 90px;
+		height: 50%;
+		border-radius: 50%;
+	}
+}
+.left-shadow {
+	@extend .right-shadow ;
+	&:before {
+		right: auto;
+		left: 0;
+	}
 }

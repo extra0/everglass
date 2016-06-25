@@ -1,0 +1,29 @@
+extends _layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Текстовая страница
+	- contentHeight = 'auto';
+block content
+	.flex-block.flex-block-wrap
+		.flex-block__item.col-lg-8.col-sm-12.col-md-6.height-auto 
+			.video-block.right-shadow
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/i2vR5yB4vQA" frameborder="0" allowfullscreen></iframe>
+		.flex-block__item.col-lg-4.col-sm-12.col-md-6.height-auto 
+			.text-block
+				img.text-block__img(src="img/everglass.png", alt="")
+				h2.title.text-block__title topcoat
+				.text-block__description.block-top-left-triangle.bottom-red-line-bottom
+					p Керамическое защитное покрытие для кузова Everglass Topcoat - это защита Вашего автомобиля от негативного воздействия окружающей среды на протяжении одного года. Everglass Topcoat - супергидрофобное покрытие обеспечивающее великолепный эффект самоочистки кузова автомобиля, автомобиль обработанный Everglass Topcoat намного меньше пачкается. 
+					p Everglass Topcoat это полноценное керамическое защитное покрытие премиум класса, не являющееся жидким стеклом.
+	.flex-block.flex-block-wrap
+		.flex-block__item.col-lg-4.col-sm-12.col-md-6.height-auto 
+			.text-block
+				img.text-block__img(src="img/everglass.png", alt="")
+				h2.title.text-block__title Platinum
+				.text-block__description.block-top-left-triangle.bottom-red-line-bottom
+					p Керамическое защитное покрытие для кузова Everglass Topcoat - это защита Вашего автомобиля от негативного воздействия окружающей среды на протяжении одного года. Everglass Topcoat - супергидрофобное покрытие обеспечивающее великолепный эффект самоочистки кузова автомобиля, автомобиль обработанный Everglass Topcoat намного меньше пачкается. 
+					p Everglass Topcoat это полноценное керамическое защитное покрытие премиум класса, не являющееся жидким стеклом.
+		.flex-block__item.col-lg-8.col-sm-12.col-md-6.height-auto 
+			.video-block.left-shadow
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/yCR1iXLEyBY" frameborder="0" allowfullscreen></iframe>

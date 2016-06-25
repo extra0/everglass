@@ -122,6 +122,15 @@
 			}
 		}
 	}
+	.text-block {
+		padding: 33px 66px 53px 66px;
+	}
+	.right-shadow,
+	.left-shadow {
+		&:before {
+			display: none;
+		}
+	}
 }
 
 // ================================================== MAX 499
@@ -506,6 +515,14 @@
 }
 
 
+// ================================================== MAX 991
+@media (max-width: 991px) {
+	.video-block {
+		height: 350px;
+	}
+}
+
+
 // ================================================== MIN 1200
 @media (min-width: 1200px) {
 	.container {
@@ -650,7 +667,7 @@
 				&-footer {
 					&-basket,
 					&-link {
-						float: 
+						// float: 
 					}
 				}
 			}

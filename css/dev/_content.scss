@@ -2,6 +2,7 @@
 	position: relative;
 	z-index: 2;
 }
+
 // слайдер на главной
 .slider {
 	height: 100%;
@@ -1148,5 +1149,44 @@
 	}
 	&__section {
 		@include display(flex);
+	}
+}
+.video-block {
+	height: 100%;
+	position: relative;
+	z-index: 10;
+	background: #000;
+	iframe {
+		@include position(absolute, 0 0 0 0);
+	}
+}
+.text-block {
+	color: #fff;
+	background: url(../img/cart-bg.png) 0 0 no-repeat;
+	background-size: cover;
+    padding: 93px 86px;
+	&__description {
+		margin: 53px 0 0 0;
+		position: relative;
+		& * {
+			font-size: 14px;
+			font-family: Arial;
+			line-height: 26px;
+		}
+	}
+	&__img {
+		display: block;
+		margin: 0 0 5px 0;
+	}
+	&__title {
+		display: inline-block;
+		&:before {
+			content: '';
+			@include position(absolute, null -36px -19px null);
+			background: url(../img/top-left-triangle.png) 0 0 no-repeat;
+			width: 40px;
+			height: 40px;
+			@include transform(rotate(180deg));
+		}
 	}
 }

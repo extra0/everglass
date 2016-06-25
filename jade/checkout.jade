@@ -1,7 +1,7 @@
 extends _layout
 block append head
-	meta(description="")
-	meta(keywords="")
+	meta(name="description" content="")
+	meta(name="keywords" content="")
 	title Корзина
 block content
 	form.basket-block__form(action="#")
@@ -106,12 +106,10 @@ block content
 							.form-group
 								.row
 									.col-sm-6
-										.form-group-padding
-											label.form-label Дом
-											input.form-control.form-input-label(type="text" required)
+										label.form-label Дом
+										input.form-control.form-input-label(type="text" required)
 									.col-sm-6
-										.form-group-padding
-											label.form-label Квартира
-											input.form-control.form-input-label(type="text")
+										label.form-label Квартира
+										input.form-control.form-input-label(type="text")
 							button.btn.btn-block(type="submit") оформить
 			// конец шаг 3 корзины
