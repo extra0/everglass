@@ -16,8 +16,10 @@
     <div id="map-wrap" class="modal">
       <div id="diller_map"></div>
     </div>
-    <div id="canvas-wrapper" class="main-wrapper">
-      <canvas id="demo-canvas"></canvas>
+    <div class="main-wrapper">
+      <div id="canvas-wrapper">
+        <canvas id="demo-canvas"></canvas>
+      </div>
       <header class="header">
         <div class="container-fluid">
           <!-- логотип--><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a>
@@ -212,12 +214,16 @@
                     <div class="form-group">
                       <div class="row">
                         <div class="col-sm-6">
-                          <label class="form-label">Дом</label>
-                          <input type="text" required class="form-control form-input-label">
+                          <div class="form-group">
+                            <label class="form-label">Дом</label>
+                            <input type="text" required class="form-control form-input-label">
+                          </div>
                         </div>
                         <div class="col-sm-6">
-                          <label class="form-label">Квартира</label>
-                          <input type="text" class="form-control form-input-label">
+                          <div class="form-group">
+                            <label class="form-label">Квартира</label>
+                            <input type="text" class="form-control form-input-label">
+                          </div>
                         </div>
                       </div>
                     </div>

@@ -2,6 +2,10 @@
 	position: relative;
 	z-index: 2;
 }
+#canvas-wrapper {
+	width: 100%;
+	@include position(absolute, null null null null);
+}
 
 // слайдер на главной
 .slider {

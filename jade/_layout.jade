@@ -4,8 +4,9 @@ html(lang="ru")
 	include includes/_head
 	body
 		include includes/_modals
-		.main-wrapper#canvas-wrapper
-			canvas#demo-canvas
+		.main-wrapper
+			#canvas-wrapper
+				canvas#demo-canvas
 			include includes/_header
 			- if (contentHeight == 'auto') {
 				.content
