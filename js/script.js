@@ -97,7 +97,7 @@ $(function() {
 				// Необходимо указать данный тип макета.
 				iconLayout: 'default#image',
 				// Своё изображение иконки метки.
-				iconImageHref: 'img/marker.png',
+				iconImageHref: 'site/img/marker.png',
 				// Размеры метки.
 				iconImageSize: [44, 44],
 				// Смещение левого верхнего угла иконки относительно
@@ -240,5 +240,34 @@ $(function() {
 	$('.product__block-img-thumbs-link').each(function(i){
 		$(this).attr('data-slide-index', i);
 	});
+
+
+	// определяем мобильный ли браузер
+	var isMobile = {
+		Android: function() {
+			return navigator.userAgent.match(/Android/i);
+		},
+		BlackBerry: function() {
+			return navigator.userAgent.match(/BlackBerry/i);
+		},
+		iOS: function() {
+			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		},
+		Opera: function() {
+			return navigator.userAgent.match(/Opera Mini/i);
+		},
+		Windows: function() {
+			return navigator.userAgent.match(/IEMobile/i);
+		},
+		any: function() {
+			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		}
+	};
+
+	// на мобильных удаляем видео
+	if (isMobile.any()) {
+		$('[mob-video-hide]').hide();
+		$('[mob-videoposter-show]').show();
+	}
 
 });

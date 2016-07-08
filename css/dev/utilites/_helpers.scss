@@ -225,3 +225,10 @@
 		left: 0;
 	}
 }
+
+a:not([class]) {
+	color: $red;
+	&:hover {
+		color: $red;
+	}
+}

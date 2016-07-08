@@ -6,15 +6,80 @@ block append head
 	- contentHeight = 'auto';
 block content
 	.flex-block.flex-block-wrap
-		.flex-block__item.col-lg-8.col-sm-12.col-md-6.height-auto
-			video(loop autoplay muted poster="img/video-frame.jpg")
-				source(src="video/video2.mp4" type="video/mp4")
-				source(src="video/video2.webm" type="video/webm")
-				source(src="video/video2.ogg" type="video/ogg")
-		.flex-block__item.col-lg-4.col-sm-12.col-md-6.height-auto
+		.flex-block__item.col-lg-8.col-sm-12.col-md-8.height-auto
+			.description__section
+				// видео фон блока
+				video.description__video-bg(mob-video-hide loop autoplay muted poster="img/video-frame.jpg")
+					source(src="video/video2.mp4" type="video/mp4")
+					source(src="video/video2.webm" type="video/webm")
+					source(src="video/video2.ogv" type="video/ogv")
+				// конец видео фон блока
+				// картинка фон блока для мобильных
+				img.description__video-poster(mob-videoposter-show src="img/content/p3-bg.jpg", alt="")
+				// конец 
+				.dots-bg
+				.row
+					.col-sm-4.text-center
+						img(src="img/content/botel-2.png", alt="")
+					.col-sm-8
+						.description__block.w85.bottom-red-line
+							img.text-block__img(src="img/everglass.png", alt="")
+							h2.title.text-block__title fabric
+							.text-block__description.block-top-left-triangle
+								p Керамическое защитное покрытие для кузова Everglass Topcoat - это защита Вашего автомобиля от негативного воздействия окружающей среды на протяжении одного года. Everglass Topcoat - супергидрофобное покрытие обеспечивающее великолепный эффект самоочистки кузова автомобиля, автомобиль обработанный Everglass Topcoat намного меньше пачкается. 
+								p Everglass Topcoat это полноценное керамическое защитное покрытие премиум класса, не являющееся жидким стеклом.
+							.text-right
+								p.description__price 22 990
+									span.rubl a
+								a.btn.description__btn(href="#!") в корзину
+		.flex-block__item.col-lg-4.col-sm-12.col-md-4.height-auto
+			// если в секции 2-а блока то ставим класс flex-end, иначе убираем
+			.preview__section.flex-end(style="background: url(../img/content/p-bg.jpg) 0 0 no-repeat;")
+				.preview__block
+					img.preview__img(src="img/protect.png", alt="")
+					p.preview__title защита
+					p.preview__text Обработка салона автомобиля защитным покрытием Everglass гарантировано сохранит напольное покрытие в первозданном виде длительный период времени.
+				.attention__block
+					p.attention__text Everglass Fabric - это продукт для профессионального применения, не используйте состав самостоятельно в домашних условиях!
+			// конец блока с описанием
 	.flex-block.flex-block-wrap
 		.flex-block__item.col-sm-12.col-md-6.height-auto
+			.preview__section(style="background: url(../img/content/p2-bg.jpg) 0 0 no-repeat;")
+				.description__block-margin.bottom-red-line-bottom
+					h2.title.text-block__title-md преимущества
+					.text-block__description.block-top-left-triangle
+						.advantages__block
+							ul.advantages__list
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a1.png", alt="")
+									p.advantages__list-title алергены и смола
+									p.advantages__list-text Отсутствие аллергенов и смолы в составе защитного покрытия.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a2.png", alt="")
+									p.advantages__list-title Как было
+									p.advantages__list-text Не изменяет цвет и тактильные ощущения обработанных поверхностей.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a3.png", alt="")
+									p.advantages__list-title Эффективен
+									p.advantages__list-text До 12-ти месяцев активной защиты.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a4.png", alt="")
+									p.advantages__list-title Мойка
+									p.advantages__list-text Устойчив к различным моющим средствам.
 		.flex-block__item.col-sm-12.col-md-6.height-auto
+			.preview__section.flex-end(style="background: url(../img/content/p3-bg.jpg) 0 0 no-repeat;")
+				.description__block-margin.bottom-red-line-bottom
+					h2.title.text-block__title Применение
+					.text-block__description.block-top-left-triangle
+						p ПрименениеЗащитное гидрофобное покрытие для ткани Everglass Fabric это концентрированный состав, который разводится с дистилированной водой в пропорции  200 мл Everglass Fabric и 1000 мл воды. Обработка поверхности должна осуществляться после полной очистки и сушки, если изделие уже находилось в эксплуатации. Используйте для нанесения аэрограф или minijet для получения лучшего эффекта. Ткань может быть обработана в два слоя для достижения более стойкого эффекта. Важно  наносить второй слой состава когда первый слой не высох полностью!
+						p Изделие можно эксплуатировать после полного высыхания состава на поверхности. 
+				.attention__block
+					p.attention__text Everglass Fabric - это продукт для профессионального применения, не используйте состав самостоятельно в домашних условиях!
+					p.attention__text Everglass Fabric - это продукт для профессионального применения, не используйте состав самостоятельно в домашних условиях!
 	// превьюшки фото
 	.thumb__section
 		- for (i=1; i<=8; i++) {
