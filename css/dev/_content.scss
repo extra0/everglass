@@ -1471,7 +1471,7 @@
 	&__block {
 		flex-basis: 100%;
 		background: #c71313 url(../img/attention.png) -50px -50px no-repeat;
-		padding: 25px 25px 15px 110px;
+		padding: 35px 25px 25px 110px;
 	}
 	&__text {
 		color: #fff;
@@ -1489,6 +1489,9 @@
 		margin: 0;
 		&-margin {
 			margin: 80px 110px;
+			.text-block__img {
+				margin: 0 0 5px 50px;
+			}
 		}
 		&.w85 {
 			width: 85%;
@@ -1540,6 +1543,7 @@
 .preview {
 	&__section {
 		height: 100%;
+		@include justify-content(center);
 		@include display(flex);
 		@include align-items(center);
 		@include flex-wrap(wrap);

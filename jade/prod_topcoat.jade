@@ -1,0 +1,129 @@
+extends _layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Страница товара TOPCOAT
+	- contentHeight = 'auto';
+block content
+	.flex-block.flex-block-wrap
+		.flex-block__item.col-lg-8.col-sm-12.col-md-8.height-auto
+			.description__section
+				// видео фон блока
+				video.description__video-bg(mob-video-hide loop autoplay muted poster="img/video-frame.jpg")
+					source(src="video/video2.mp4" type="video/mp4")
+					source(src="video/video2.webm" type="video/webm")
+					source(src="video/video2.ogv" type="video/ogv")
+				// конец видео фон блока
+				// картинка фон блока для мобильных
+				img.description__video-poster(mob-videoposter-show src="img/content/p3-bg.jpg", alt="")
+				// конец 
+				.dots-bg
+				.row
+					.col-sm-4.text-center
+						img(src="img/content/botel-2.png", alt="")
+					.col-sm-8
+						.description__block.w85.bottom-red-line
+							img.text-block__img(src="img/everglass.png", alt="")
+							h2.title.text-block__title fabric
+							.text-block__description.block-top-left-triangle
+								p Керамическое защитное покрытие для кузова Everglass Topcoat - это защита Вашего автомобиля от негативного воздействия окружающей среды на протяжении одного года. Everglass Topcoat - супергидрофобное покрытие обеспечивающее великолепный эффект самоочистки кузова автомобиля, автомобиль обработанный Everglass Topcoat намного меньше пачкается. 
+								p Everglass Topcoat это полноценное керамическое защитное покрытие премиум класса, не являющееся жидким стеклом.
+							.text-right
+								p.description__price 22 990
+									span.rubl a
+								a.btn.description__btn(href="#!") в корзину
+		.flex-block__item.col-lg-4.col-sm-12.col-md-4.height-auto
+			// если в секции 2-а блока то ставим класс flex-end, иначе убираем
+			.preview__section.flex-end(style="background: url(../img/content/p-bg.jpg) 0 0 no-repeat;")
+				.preview__block
+					img.preview__img(src="img/protect.png", alt="")
+					p.preview__title защита
+					p.preview__text Обработка салона автомобиля защитным покрытием Everglass гарантировано сохранит напольное покрытие в первозданном виде длительный период времени.
+				.attention__block
+					p.attention__text Everglass Fabric - это продукт для профессионального применения, не используйте состав самостоятельно в домашних условиях!
+			// конец блока с описанием
+	.flex-block.flex-block-wrap
+		.flex-block__item.col-sm-12.col-md-6.height-auto
+			.preview__section(style="background: url(../img/content/topcoat-bg.jpg) 0 0 no-repeat;")
+				.description__block-margin.bottom-red-line
+					img.text-block__img(src="img/everglass.png", alt="")
+					h2.title.text-block__title-md Профессионалам
+					.text-block__description.block-top-left-triangle
+						.advantages__block
+							ul.advantages__list
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a3.png", alt="")
+									p.advantages__list-title Цена
+									p.advantages__list-text Конкурентно-способная ценовая политика компании Everglass гарантирует специальные условия работы для центров нанесения защитных покрытий. Специальные условия для дилеров.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a13.png", alt="")
+									p.advantages__list-title экономия
+									p.advantages__list-text Средства нужно меньше, чем вы привыкли тратить.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a8.png", alt="")
+									p.advantages__list-title любое количество
+									p.advantages__list-text Отсутствие обязательных объёмов закупки товара для начала работы с нашей продукцией. Вам достаточно заполнить форму и наши менеджеры свяжутся с вами в кратчайшие сроки.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a9.png", alt="")
+									p.advantages__list-title специальные серии
+									p.advantages__list-text Возможность выпуска специальных серий продуктов исключительно для вашей компании. Мы ценим мнения специалистов и всегда готовы разработать состав отвечающий именно Вашим требованиям и пожеланиям.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a10.png", alt="")
+									p.advantages__list-title реклама
+									p.advantages__list-text Выпуск рекламных материалов исключительно для вашего центра.Размещение информации о Вашем центре на нашем рессурсе, что даст Вам возможность получения дополнительного трафика на Ваш сайт.
+					.text-right
+						a.btn(href="#!") партнерство
+		.flex-block__item.col-sm-12.col-md-6.height-auto
+			.preview__section(style="background: url(../img/content/precoat-bg.jpg) 0 0 no-repeat;")
+				.description__block-margin.bottom-red-line
+					img.text-block__img(src="img/everglass.png", alt="")
+					h2.title.text-block__title-md преимущества
+					.text-block__description.block-top-left-triangle
+						.advantages__block
+							ul.advantages__list
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a4.png", alt="")
+									p.advantages__list-title Гидрофобный эффект
+									p.advantages__list-text Способствует лучшей самоочистке автомобиля во время дождя.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a6.png", alt="")
+									p.advantages__list-title ультрафиолет
+									p.advantages__list-text Краска автомобиля больше не будет тускнеть в процессе эксплуатации.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a3.png", alt="")
+									p.advantages__list-title устойчивость
+									p.advantages__list-text Устойчив к влиянию кислот, солей, щёлочи, реагентов, птичьему помету и соку деревьев. Не смывается с использованием агрессивной химии.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a15.png", alt="")
+									p.advantages__list-title Царапины
+									p.advantages__list-text Обеспечивает защиту лакокрасочного покрытия автомобиля от мелких царапин, которые оставляют мойщики при использовании не качественных материалов и оборудования в процессе мойки Вашего автомобиля.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a14.png", alt="")
+									p.advantages__list-title Эстетика
+									p.advantages__list-text Защита ЛКП от тускнения и повышение насыщенности цвета автомобиля. Блеск и насыщенность которую обеспечивает нанокерамика Everglass в такой степени не даёт ни одно защитное покрытие существующее на рынке.
+					.text-right
+						a.btn(href="#!") Центры нанесения
+	// превьюшки фото
+	.thumb__section
+		- for (i=1; i<=8; i++) {
+			- if (i==1) {
+				.thumb__block
+					a.thumb__link.video(href="https://www.youtube.com/embed/i2vR5yB4vQA" class="fancybox.iframe" fancybox rel="thumbs")
+						img.thumb__img(src="img/content/thumb-prod.jpg", alt="")
+			- } else {
+				.thumb__block
+					a.thumb__link(href="img/content/thumb-prod.jpg" fancybox rel="thumbs")
+						img.thumb__img(src="img/content/thumb-prod.jpg", alt="")
+			- }
+		- }
+	// конец превьюшки фото

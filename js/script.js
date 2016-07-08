@@ -264,7 +264,7 @@ $(function() {
 		}
 	};
 
-	// на мобильных удаляем видео
+	// на мобильных скрываем видео
 	if (isMobile.any()) {
 		$('[mob-video-hide]').hide();
 		$('[mob-videoposter-show]').show();

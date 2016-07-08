@@ -2,7 +2,7 @@ extends _layout
 block append head
 	meta(name="description" content="")
 	meta(name="keywords" content="")
-	title Страница товара FABRIC
+	title Страница товара PRECOAT
 	- contentHeight = 'auto';
 block content
 	.flex-block.flex-block-wrap
@@ -46,40 +46,64 @@ block content
 		.flex-block__item.col-sm-12.col-md-6.height-auto
 			.preview__section(style="background: url(../img/content/p2-bg.jpg) 0 0 no-repeat;")
 				.description__block-margin.bottom-red-line-bottom
+					img.text-block__img(src="img/everglass.png", alt="")
+					h2.title.text-block__title-md Профессионалам
+					.text-block__description.block-top-left-triangle
+						.advantages__block
+							ul.advantages__list
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a3.png", alt="")
+									p.advantages__list-title Цена
+									p.advantages__list-text Конкурентно-способная ценовая политика компании Everglass гарантирует специальные условия работы для центров нанесения защитных покрытий. Специальные условия для дилеров.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a13.png", alt="")
+									p.advantages__list-title экономия
+									p.advantages__list-text Средства нужно меньше, чем вы привыкли тратить.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a8.png", alt="")
+									p.advantages__list-title любое количество
+									p.advantages__list-text Отсутствие обязательных объёмов закупки товара для начала работы с нашей продукцией. Вам достаточно заполнить форму и наши менеджеры свяжутся с вами в кратчайшие сроки.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a9.png", alt="")
+									p.advantages__list-title специальные серии
+									p.advantages__list-text Возможность выпуска специальных серий продуктов исключительно для вашей компании. Мы ценим мнения специалистов и всегда готовы разработать состав отвечающий именно Вашим требованиям и пожеланиям.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a10.png", alt="")
+									p.advantages__list-title реклама
+									p.advantages__list-text Выпуск рекламных материалов исключительно для вашего центра.Размещение информации о Вашем центре на нашем рессурсе, что даст Вам возможность получения дополнительного трафика на Ваш сайт.
+		.flex-block__item.col-sm-12.col-md-6.height-auto
+			.preview__section(style="background: url(../img/content/precoat-bg.jpg) 0 0 no-repeat;")
+				.description__block-margin.bottom-red-line-bottom
+					img.text-block__img(src="img/everglass.png", alt="")
 					h2.title.text-block__title-md преимущества
 					.text-block__description.block-top-left-triangle
 						.advantages__block
 							ul.advantages__list
 								li.advantages__list-item
 									.advantages__list-img-wrap
-										img.advantages__list-img(src="img/a1.png", alt="")
-									p.advantages__list-title алергены и смола
-									p.advantages__list-text Отсутствие аллергенов и смолы в составе защитного покрытия.
-								li.advantages__list-item
-									.advantages__list-img-wrap
 										img.advantages__list-img(src="img/a2.png", alt="")
-									p.advantages__list-title Как было
-									p.advantages__list-text Не изменяет цвет и тактильные ощущения обработанных поверхностей.
+									p.advantages__list-title очистка
+									p.advantages__list-text Эффективная очистка любых загрязнений.
 								li.advantages__list-item
 									.advantages__list-img-wrap
-										img.advantages__list-img(src="img/a3.png", alt="")
-									p.advantages__list-title Эффективен
-									p.advantages__list-text До 12-ти месяцев активной защиты.
+										img.advantages__list-img(src="img/a6.png", alt="")
+									p.advantages__list-title активатор
+									p.advantages__list-text Является активатором адгезии для любых защитных покрытий на основе керамических соединений.
 								li.advantages__list-item
 									.advantages__list-img-wrap
-										img.advantages__list-img(src="img/a4.png", alt="")
-									p.advantages__list-title Мойка
-									p.advantages__list-text Устойчив к различным моющим средствам.
-		.flex-block__item.col-sm-12.col-md-6.height-auto
-			.preview__section.flex-end(style="background: url(../img/content/p3-bg.jpg) 0 0 no-repeat;")
-				.description__block-margin.bottom-red-line-bottom
-					h2.title.text-block__title Применение
-					.text-block__description.block-top-left-triangle
-						p Применение Защитное гидрофобное покрытие для ткани Everglass Fabric это концентрированный состав, который разводится с дистилированной водой в пропорции  200 мл Everglass Fabric и 1000 мл воды. Обработка поверхности должна осуществляться после полной очистки и сушки, если изделие уже находилось в эксплуатации. Используйте для нанесения аэрограф или minijet для получения лучшего эффекта. Ткань может быть обработана в два слоя для достижения более стойкого эффекта. Важно  наносить второй слой состава когда первый слой не высох полностью!
-						p Изделие можно эксплуатировать после полного высыхания состава на поверхности. 
-				.attention__block
-					p.attention__text Everglass Fabric - это продукт для профессионального применения, не используйте состав самостоятельно в домашних условиях!
-					p.attention__text Everglass Fabric - это продукт для профессионального применения, не используйте состав самостоятельно в домашних условиях!
+										img.advantages__list-img(src="img/a11.png", alt="")
+									p.advantages__list-title Не требует выдержки
+									p.advantages__list-text Наносить защитное покрытие после обработки поверхности Everglass Precoat можно уже через 10 минут.
+								li.advantages__list-item
+									.advantages__list-img-wrap
+										img.advantages__list-img(src="img/a12.png", alt="")
+									p.advantages__list-title сильнее
+									p.advantages__list-text Улучшает сцепные свойства основного состава при нанесении базового слоя и не содержит абразивных частиц
 	// превьюшки фото
 	.thumb__section
 		- for (i=1; i<=8; i++) {
