@@ -1381,10 +1381,69 @@
 }
 .modal {
 	display: none;
+	&__title {
+		font-size: 25px;
+		margin: 0 0 17px 0;
+		font-weight: bold;
+	}
+	&__form-wrap {
+		position: relative;
+	}
+	&__label {
+		display: block;
+		color: #868a8b;
+		margin: 0 0 5px 0;
+	}
+	&__input {
+		border: none;
+		border-radius: 3px; 
+		background: #ebebeb;
+		width: 100%;
+		padding: 14px 45px 14px 22px;
+		font-size: 16px;
+		color: #868a8b;
+	}
+	&__submit {
+		@include position(absolute, 0 0 null null);
+		width: 53px;
+	    height: 50px;
+	    padding: 7px;
+	    background: url(../img/modal-submit.png) center center no-repeat;
+	    border: none;
+	}
+}
+#enter {
+	background: #fff;
+	width: 480px;
+	padding: 33px 38px 40px 38px;
 }
 #diller_map {
 	width: 650px;
 	height: 650px;
 	border: 2px solid $red;
 	border-radius: 4px;
+}
+.thumb {
+	&__section {
+		@include display(flex);
+	}
+	&__block {
+		flex-basis: 12.5%;
+	}
+	&__link {
+		display: block;
+		position: relative;
+		&.video {
+			&:before {
+				content: '';
+				@include position(absolute, 0 0 0 0);
+				width: 100%;
+				height: 100%;
+				background: url(../img/play.png) center center no-repeat;
+			}
+		}
+	}
+	&__img {
+
+	}
 }

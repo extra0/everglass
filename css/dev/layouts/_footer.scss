@@ -1,6 +1,6 @@
 .footer {
 	text-align: right;
-	padding: 10px;
+	padding: 20px 10px;
 	&__copyright {
 		color: #fff;
 		opacity: 0.4;
@@ -42,5 +42,54 @@
     		&:after {height: 35px;}
     		&:before {left: 0}
     	}
+    }
+    &__partner {
+        &-link {
+           text-transform: uppercase;
+           position: relative;
+           z-index: 200;
+           color: #fff;
+           padding: 10px 14px;
+           border: 1px solid $red;
+           border-radius: 3px;
+           display: inline-block;
+           margin: -2px 20px 0 0;
+           @include transition(all 0.2s ease-in-out);
+           &:focus,
+           &:hover {
+               color: #fff;
+               background: $red;
+               text-decoration: none;
+           } 
+        }
+        &-block {
+            position: relative;
+            z-index: 200;
+            display: inline-block;
+            border-radius: 3px;
+            padding: 6px 12px;
+            text-align: left;
+            margin: -7px 20px 0 0;
+            border: 1px dashed #616161;
+        }
+        &-text {
+            color: #fff;
+            margin: 0;
+        }
+        &-exit-link {
+            text-transform: uppercase;
+            display: inline-block;
+            border-bottom: 1px dotted;
+            font-size: 12px;
+            opacity: 0.7;
+            color: #fff;
+            &:hover,
+            &:focus {
+                opacity: 0.7;
+                text-decoration: none;
+                color: #fff;
+                border-bottom: 1px solid transparent;
+            }
+        }
     }
 }

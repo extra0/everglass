@@ -1,2 +1,13 @@
+// карта для страницы диллеров
 .modal#map-wrap
 	#diller_map
+// конец карты для страницы диллеров
+// окно входа для партнеров
+.modal#enter
+	p.modal__title Партнерский вход
+	form(action="#!")
+		label.modal__label Код партнера
+		.modal__form-wrap
+			input.modal__input(type="text" required placeholder="Введите код партнера")
+			button.modal__submit(type="submit")
+// конец окно входа для партнеров

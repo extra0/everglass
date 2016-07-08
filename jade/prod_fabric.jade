@@ -1,0 +1,31 @@
+extends _layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Страница товара FABRIC
+	- contentHeight = 'auto';
+block content
+	.flex-block.flex-block-wrap
+		.flex-block__item.col-lg-8.col-sm-12.col-md-6.height-auto
+			video(loop autoplay muted poster="img/video-frame.jpg")
+				source(src="video/video2.mp4" type="video/mp4")
+				source(src="video/video2.webm" type="video/webm")
+				source(src="video/video2.ogg" type="video/ogg")
+		.flex-block__item.col-lg-4.col-sm-12.col-md-6.height-auto
+	.flex-block.flex-block-wrap
+		.flex-block__item.col-sm-12.col-md-6.height-auto
+		.flex-block__item.col-sm-12.col-md-6.height-auto
+	// превьюшки фото
+	.thumb__section
+		- for (i=1; i<=8; i++) {
+			- if (i==1) {
+				.thumb__block
+					a.thumb__link.video(href="https://www.youtube.com/embed/i2vR5yB4vQA" class="fancybox.iframe" fancybox rel="thumbs")
+						img.thumb__img(src="img/content/thumb-prod.jpg", alt="")
+			- } else {
+				.thumb__block
+					a.thumb__link(href="img/content/thumb-prod.jpg" fancybox rel="thumbs")
+						img.thumb__img(src="img/content/thumb-prod.jpg", alt="")
+			- }
+		- }
+	// конец превьюшки фото
