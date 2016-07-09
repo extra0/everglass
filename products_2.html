@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&amp;subset=latin,cyrillic" type="text/css" rel="stylesheet" media="all">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Страница продуктов</title>
+  </head>
+  <body>
+    <!-- карта для страницы диллеров-->
+    <div id="map-wrap" class="modal">
+      <div id="diller_map"></div>
+    </div>
+    <!-- конец карты для страницы диллеров-->
+    <!-- окно входа для партнеров-->
+    <div id="enter" class="modal">
+      <p class="modal__title">Партнерский вход</p>
+      <form action="#!">
+        <label class="modal__label">Код партнера</label>
+        <div class="modal__form-wrap">
+          <input type="text" required placeholder="Введите код партнера" class="modal__input">
+          <button type="submit" class="modal__submit"></button>
+        </div>
+      </form>
+    </div>
+    <!-- конец окно входа для партнеров-->
+    <div class="main-wrapper">
+      <div id="canvas-wrapper">
+        <canvas id="demo-canvas"></canvas>
+      </div>
+      <header class="header">
+        <div class="container-fluid">
+          <!-- логотип--><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a>
+          <!-- конец логотипа-->
+          <!-- главное меню-->
+          <div class="main-menu">
+            <nav class="main-menu__wrapper priority-nav">
+              <ul class="main-menu__list responsive-menu">
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">О компании</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Продукция</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Партнерство</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Дилеры</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Центры нанесения</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Тесты</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Галерея</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Магазин</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- конец меню-->
+          <!-- блок с инофрмацией-->
+          <div class="header__info">
+            <!-- корзина в шапке-->
+            <div class="header__info-basket"><a href="#!" class="header__info-basket-link basket-item"><span class="header__info-basket-count">3</span></a></div>
+            <!-- конец корзины в шапке-->
+            <!-- блок с выбором языка-->
+            <div class="header__info-languages">
+              <div class="header__info-languages-current"><img src="img/rus.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">RU</span></div>
+              <ul class="header__info-languages-list">
+                <li class="header__info-languages-item active"><img src="img/rus.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">RU</span></li>
+                <li class="header__info-languages-item"><img src="img/ukr.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">UA</span></li>
+                <li class="header__info-languages-item"><img src="img/eng.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">EN</span></li>
+              </ul>
+            </div>
+            <!-- конец блок с выбором языка-->
+          </div>
+          <!-- конец блока с информацией-->
+        </div>
+      </header>
+      <div class="content">
+        <div class="flex-block flex-block-wrap">
+          <div class="flex-block__item col-sm-12">
+            <div style="background: #000 url(img/pr_1.jpg) 0 0 no-repeat;">
+              <div class="container">
+                <!-- блок со списком товаров-->
+                <div class="slider__product-list-block products">
+                  <h2 class="title text-center">Уход за Кузовом</h2>
+                  <ul class="slider__product-list">
+                    <li class="slider__product-list-item">
+                      <div class="slider__product-list-img-wrap"><a href="#!"><img src="img/content/product.png" alt="" class="slider__product-list-img"></a></div>
+                      <div class="slider__product-list-description-wrap">
+                        <p class="slider__product-list-description-name">Everglass Precoat</p>
+                        <p class="slider__product-list-description-text">Продукт для подготовки лакокрасочной поверхности к нанесению керамических защитных покрытий</p><a href="#!" class="slider__product-list-description-link">Подробнее</a>
+                      </div>
+                    </li>
+                    <li class="slider__product-list-item">
+                      <div class="slider__product-list-img-wrap"><a href="#!"><img src="img/content/product.png" alt="" class="slider__product-list-img"></a></div>
+                      <div class="slider__product-list-description-wrap">
+                        <p class="slider__product-list-description-name">Everglass Platinum</p>
+                        <p class="slider__product-list-description-text">Защитное покрытие последнего поколения, для максимальной защиты лакокрасочного покрытия</p><a href="#!" class="slider__product-list-description-link">Подробнее</a>
+                      </div>
+                    </li>
+                    <li class="slider__product-list-item">
+                      <div class="slider__product-list-img-wrap"><a href="#!"><img src="img/content/product.png" alt="" class="slider__product-list-img"></a></div>
+                      <div class="slider__product-list-description-wrap">
+                        <p class="slider__product-list-description-name">Everglass Refresh</p>
+                        <p class="slider__product-list-description-text">Продукт созданный для поддержки работы защитного покрытия на кузове автомобиля.</p><a href="#!" class="slider__product-list-description-link">Подробнее</a>
+                      </div>
+                    </li>
+                    <li class="slider__product-list-item">
+                      <div class="slider__product-list-img-wrap"><a href="#!"><img src="img/content/product.png" alt="" class="slider__product-list-img"></a></div>
+                      <div class="slider__product-list-description-wrap">
+                        <p class="slider__product-list-description-name">Everglass TOPcoat</p>
+                        <p class="slider__product-list-description-text">Защита автомобиля от негативного воздействия окружающей среды на протяжении одного года.</p><a href="#!" class="slider__product-list-description-link">Подробнее</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- конец блок со списком товаров-->
+              </div>
+            </div>
+          </div>
+          <div class="flex-block__item col-sm-12">
+            <div style="background: #000 url(img/pr_2.jpg) 0 0 no-repeat;">
+              <div class="container">
+                <div class="slider__product-list-block products">
+                  <h2 class="title text-center">Уход за Салоном</h2>
+                  <ul class="slider__product-list">
+                    <li class="slider__product-list-item">
+                      <div class="slider__product-list-img-wrap"><a href="#!"><img src="img/content/product.png" alt="" class="slider__product-list-img"></a></div>
+                      <div class="slider__product-list-description-wrap">
+                        <p class="slider__product-list-description-name">Everglass Fabric</p>
+                        <p class="slider__product-list-description-text">Защитное покрытие для изделий из ткани, замши, велюра, алькантары.</p><a href="#!" class="slider__product-list-description-link">Подробнее</a>
+                      </div>
+                    </li>
+                    <li class="slider__product-list-item">
+                      <div class="slider__product-list-img-wrap"><a href="#!"><img src="img/content/product.png" alt="" class="slider__product-list-img"></a></div>
+                      <div class="slider__product-list-description-wrap">
+                        <p class="slider__product-list-description-name">Everglass Leather Coat</p>
+                        <p class="slider__product-list-description-text">Защитное покрытие для кожаных салонов элитных автомобилей.</p><a href="#!" class="slider__product-list-description-link">Подробнее</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+          <!-- .footer__partner-block
+          p.footer__partner-text Вы вошли как партнер
+          a.footer__partner-exit-link(href="#!") Выйти
+          --><a href="#enter" fancybox class="footer__partner-link">Партнерский вход</a><a href="http://www.studio-maximus.com/" class="footer__development"></a>
+          <p class="footer__copyright">&copy; Copyright 2016</p>
+        </div>
+      </footer>
+      <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+      <script src="js/canvas.js"></script>
+      <script src="js/plugins.js"></script>
+      <script src="js/script.js"></script>
+    </div>
+  </body>
+</html>

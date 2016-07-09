@@ -13,6 +13,16 @@
 				}
 			}
 		}
+		&__product-list-block {
+			&.products {
+				margin: 65px auto 100px auto;
+				.slider__product-list-item {
+					width: 350px;
+					min-width: 1px;
+					margin: 0 auto 50px auto;
+				}
+			}
+		}
 	}
 	.flex {
 		&-block {
@@ -276,6 +286,16 @@
 				line-height: normal;
 			}
 		} 
+	}
+	.slider {
+		&__product-list-block {
+			&.products {
+				margin: 65px auto 0px auto;
+				.slider__product-list-item {
+					width: auto;
+				}
+			}
+		}
 	}
 }
 

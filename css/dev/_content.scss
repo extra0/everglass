@@ -142,6 +142,16 @@
 				position: relative;
 				width: 1170px;
 				@include transition(opacity 0.2s ease-in-out);
+				&.products {
+					opacity: 1;
+					width: auto;
+					margin: 195px auto 130px auto;
+					.slider__product-list-item {
+						margin: 0 1% 30px;
+						width: 19%;
+						min-width: 365px;
+					}
+				}
 			}
 			&-item {
 				position: relative;

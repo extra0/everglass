@@ -1,0 +1,70 @@
+extends _layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Страница продуктов
+	- contentHeight = 'auto';
+block content
+	.flex-block.flex-block-wrap
+		.flex-block__item.col-sm-12
+			div(style="background: #000 url(img/pr_1.jpg) 0 0 no-repeat;")
+				.container
+					// блок со списком товаров
+					.slider__product-list-block.products
+						h2.title.text-center Уход за Кузовом
+						ul.slider__product-list
+							li.slider__product-list-item
+								.slider__product-list-img-wrap
+									a(href="#!")
+										img.slider__product-list-img(src="img/content/product.png", alt="")
+								.slider__product-list-description-wrap
+									p.slider__product-list-description-name Everglass Precoat
+									p.slider__product-list-description-text Продукт для подготовки лакокрасочной поверхности к нанесению керамических защитных покрытий
+									a.slider__product-list-description-link(href="#!") Подробнее
+							li.slider__product-list-item
+								.slider__product-list-img-wrap
+									a(href="#!")
+										img.slider__product-list-img(src="img/content/product.png", alt="")
+								.slider__product-list-description-wrap
+									p.slider__product-list-description-name Everglass Platinum
+									p.slider__product-list-description-text Защитное покрытие последнего поколения, для максимальной защиты лакокрасочного покрытия
+									a.slider__product-list-description-link(href="#!") Подробнее
+							li.slider__product-list-item
+								.slider__product-list-img-wrap
+									a(href="#!")
+										img.slider__product-list-img(src="img/content/product.png", alt="")
+								.slider__product-list-description-wrap
+									p.slider__product-list-description-name Everglass Refresh
+									p.slider__product-list-description-text Продукт созданный для поддержки работы защитного покрытия на кузове автомобиля.
+									a.slider__product-list-description-link(href="#!") Подробнее
+							li.slider__product-list-item
+								.slider__product-list-img-wrap
+									a(href="#!")
+										img.slider__product-list-img(src="img/content/product.png", alt="")
+								.slider__product-list-description-wrap
+									p.slider__product-list-description-name Everglass TOPcoat
+									p.slider__product-list-description-text Защита автомобиля от негативного воздействия окружающей среды на протяжении одного года.
+									a.slider__product-list-description-link(href="#!") Подробнее
+					// конец блок со списком товаров
+		.flex-block__item.col-sm-12
+			div(style="background: #000 url(img/pr_2.jpg) 0 0 no-repeat;")
+				.container
+					.slider__product-list-block.products
+						h2.title.text-center Уход за Салоном
+						ul.slider__product-list
+							li.slider__product-list-item
+								.slider__product-list-img-wrap
+									a(href="#!")
+										img.slider__product-list-img(src="img/content/product.png", alt="")
+								.slider__product-list-description-wrap
+									p.slider__product-list-description-name Everglass Fabric
+									p.slider__product-list-description-text Защитное покрытие для изделий из ткани, замши, велюра, алькантары.
+									a.slider__product-list-description-link(href="#!") Подробнее
+							li.slider__product-list-item
+								.slider__product-list-img-wrap
+									a(href="#!")
+										img.slider__product-list-img(src="img/content/product.png", alt="")
+								.slider__product-list-description-wrap
+									p.slider__product-list-description-name Everglass Leather Coat
+									p.slider__product-list-description-text Защитное покрытие для кожаных салонов элитных автомобилей.
+									a.slider__product-list-description-link(href="#!") Подробнее
