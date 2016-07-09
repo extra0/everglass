@@ -1,0 +1,365 @@
+extends _layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Центры нанесения
+block content
+	.flex-block.flex-block-wrap
+		.flex-block__item.col-sm-12.col-lg-8.col-md-6.height-auto
+			script.
+				$(function(){
+				// карта в контактах
+					function init() {
+						var MapPlaces = new ymaps.Map('center-map', {
+							center: offices[0].center,
+							zoom: 8,
+							controls: ['zoomControl']
+						});
+
+						MapPlaces.geoObjects
+							.add(new ymaps.Placemark([55.777697023347606, 37.70197299999995], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.6701370232536, 37.77420299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.6701370232536, 37.57420299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([54.6701370232536, 37.77420299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.6701370232536, 37.77440299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.6501370232536, 37.77420299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.6401370232536, 37.77420299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.81326802337879, 37.48407599999996], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.6701370232536, 37.77440299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.1501370232536, 37.77420299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.5501370232536, 37.77420299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.51326802337879, 37.48407599999996], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([54.777697023347606, 37.70197299999995], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([54.5701370232536, 37.77420299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.6701370232536, 36.57420299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([54.6701370232536, 36.23420299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([54.6701370232536, 34.77440299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.0501370232536, 37.17420299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.4401370232536, 37.47420299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.86326802337879, 37.68407599999996], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.6301370232536, 37.87440299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.6601370232536, 37.17420299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.2201370232536, 37.17420299999994], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+							.add(new ymaps.Placemark([55.71326802337879, 37.45407599999996], {
+								//- hintContent: 'Собственный значок метки'
+							}, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							}))
+
+						for (var i = 0, l = offices.length; i < l; i++) {
+							createGroup(offices[i]);
+						}
+
+						function createGroup(office) {
+							collection = new ymaps.GeoObjectCollection(null, {
+								iconLayout: 'default#image',
+								iconImageHref: 'img/marker.png',
+								iconImageSize: [44, 44],
+								iconImageOffset: [-22, -38]
+							});
+
+							MapPlaces.geoObjects.add(collection);
+
+							for (var j = 0, m = office.address.length; j < m; j++) {
+								createPlacemark(office.address[j], collection);
+							}
+						}
+
+						function createPlacemark(item, collection) {
+							placemark = new ymaps.Placemark(item.center, {
+								balloonContent: item.contacts
+							});
+
+							collection.add(placemark);
+
+						}
+
+						// изменение города по клику на главной 
+						$( ".searchinput" ).combobox({
+							create: function( event, ui ) {
+								$('.diller-search-header__input').keydown(); // костыль для формирования списка при загрузке страницы
+							},
+							// делаем что то после выбора
+							select: function( event, ui ) {
+								var city = $(this).val();
+								for (var i = 0, l = offices.length; i < l; i++) {
+									if (city == offices[i].city) {
+										MapPlaces.panTo(offices[i].center, {
+											delay: 1500
+										});
+									}
+								}
+							}
+						});
+
+						// сокрытие выпадающего меню при загрузке страницы
+						setTimeout(function(){
+							$('.ui-autocomplete').hide();
+						}, 100);
+						if ($('.ui-autocomplete').length >= 1) {
+							$('.ui-autocomplete').hide();
+						}
+
+						// открываем список городов по фокусу
+						$('.diller-search-header__input').on('focus', function(){
+							$(this).keydown();
+						});
+
+						MapPlaces.behaviors.disable('scrollZoom');
+						MapPlaces.setBounds(MapPlaces.geoObjects);
+
+					};
+
+					var offices = [
+						// ВАЖНО ПРОПИСЫВАТЬ название городов как в HTML
+						{
+							city: 'Москва',
+							center: [55.725045, 37.646961],
+							address: [{
+								center: [55.725045, 37.646961],
+							}, ]
+						}, {
+							city: 'Санкт-Петербург',
+							center: [59.934439, 30.301115],
+							address: [{
+								center: [59.934439, 30.301115],
+							}, ]
+						},
+						{
+							city: 'Барнаул',
+							center: [53.277283, 83.532717],
+							address: [{
+								center: [53.277283, 83.532717],
+							}, ]
+						}, {
+							city: 'Москва',
+							center: [55.725045, 37.646961],
+							address: [{
+								center: [55.725045, 37.646961],
+							}, ]
+						}, {
+							city: 'Балашиха',
+							center: [55.769323, 37.910039],
+							address: [{
+								center: [55.769323, 37.910039],
+							}, ]
+						}, {
+							city: 'Асбест',
+							center: [53.277283, 83.532717],
+							address: [{
+								center: [53.277283, 83.532717],
+							}, ]
+						}
+					];
+
+					ymaps.ready(init);
+
+				});
+			#center-map
+		.flex-block__item.col-sm-12.col-lg-4.col-md-6.height-auto
+			.diller-search.full-width
+				.diller-search-header
+					form(action="#!")
+						label.diller-search-header__label(for="search") Ваш город
+						select.searchinput
+							option(value='')
+							option(value='Москва') Москва
+							option(value='Барнаул') Барнаул
+							option(value='Asp') Asp
+							option(value='BASIC') BASIC
+							option(value='C') C
+							option(value='C++') C++
+							option(value='Clojure') Clojure
+							option(value='COBOL') COBOL
+							option(value='ColdFusion') ColdFusion
+							option(value='Erlang') Erlang
+							option(value='Fortran') Fortran
+							option(value='Groovy') Groovy
+							option(value='Haskell') Haskell
+							option(value='Java') Java
+							option(value='JavaScript') JavaScript
+							option(value='Lisp') Lisp
+							option(value='Perl') Perl
+							option(value='PHP') PHP
+							option(value='Python') Python
+							option(value='Ruby') Ruby
+							option(value='Scala') Scala
+							option(value='Scheme') Scheme
+						button.diller-search-header__submit(type="submit" disabled)
+				.diller-search-body
+					.diller-search-body-wrap(custom-scroll)
+						-for (i=0; i<6; i++) {
+							.diller__block
+								img.diller__block-img(src="img/content/thumb.jpg", alt="")
+								.diller__block-description
+									p.diller__block-description-name Детейлинг Центр 360 Lab
+									p.diller__block-description-address Москва, пр. Промышленный, 3Бс5
+									//- a.diller__block-description-address-link(href="#map-wrap" fancybox) На карте
+									div.m-t-20
+										a.diller__block-description-phone(href="tel:+74957926848") +7 495 792-68-48
+									a.diller__block-description-link(href="www.sdrsda.com") www.sdrsda.com
+						-}			

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&amp;subset=latin,cyrillic" type="text/css" rel="stylesheet" media="all">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Центры нанесения</title>
+  </head>
+  <body>
+    <!-- карта для страницы диллеров-->
+    <div id="map-wrap" class="modal">
+      <div id="diller_map"></div>
+    </div>
+    <!-- конец карты для страницы диллеров-->
+    <!-- окно входа для партнеров-->
+    <div id="enter" class="modal">
+      <p class="modal__title">Партнерский вход</p>
+      <form action="#!">
+        <label class="modal__label">Код партнера</label>
+        <div class="modal__form-wrap">
+          <input type="text" required placeholder="Введите код партнера" class="modal__input">
+          <button type="submit" class="modal__submit"></button>
+        </div>
+      </form>
+    </div>
+    <!-- конец окно входа для партнеров-->
+    <div class="main-wrapper">
+      <div id="canvas-wrapper">
+        <canvas id="demo-canvas"></canvas>
+      </div>
+      <header class="header">
+        <div class="container-fluid">
+          <!-- логотип--><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a>
+          <!-- конец логотипа-->
+          <!-- главное меню-->
+          <div class="main-menu">
+            <nav class="main-menu__wrapper priority-nav">
+              <ul class="main-menu__list responsive-menu">
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">О компании</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Продукция</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Партнерство</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Дилеры</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Центры нанесения</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Тесты</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Галерея</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Магазин</a></li>
+                <li class="main-menu__list-item"><a href="#!" class="main-menu__list-item-link">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- конец меню-->
+          <!-- блок с инофрмацией-->
+          <div class="header__info">
+            <!-- корзина в шапке-->
+            <div class="header__info-basket"><a href="#!" class="header__info-basket-link basket-item"><span class="header__info-basket-count">3</span></a></div>
+            <!-- конец корзины в шапке-->
+            <!-- блок с выбором языка-->
+            <div class="header__info-languages">
+              <div class="header__info-languages-current"><img src="img/rus.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">RU</span></div>
+              <ul class="header__info-languages-list">
+                <li class="header__info-languages-item active"><img src="img/rus.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">RU</span></li>
+                <li class="header__info-languages-item"><img src="img/ukr.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">UA</span></li>
+                <li class="header__info-languages-item"><img src="img/eng.png" alt="" class="header__info-languages-img"><span class="header__info-languages-name">EN</span></li>
+              </ul>
+            </div>
+            <!-- конец блок с выбором языка-->
+          </div>
+          <!-- конец блока с информацией-->
+        </div>
+      </header>
+      <div content-fix class="content">
+        <div class="flex-block flex-block-wrap">
+          <div class="flex-block__item col-sm-12 col-lg-8 col-md-6 height-auto">
+            <script>
+              $(function(){
+              // карта в контактах
+              	function init() {
+              		var MapPlaces = new ymaps.Map('center-map', {
+              			center: offices[0].center,
+              			zoom: 8,
+              			controls: ['zoomControl']
+              		});
+              
+              		MapPlaces.geoObjects
+              			.add(new ymaps.Placemark([55.777697023347606, 37.70197299999995], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.6701370232536, 37.77420299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.6701370232536, 37.57420299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([54.6701370232536, 37.77420299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.6701370232536, 37.77440299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.6501370232536, 37.77420299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.6401370232536, 37.77420299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.81326802337879, 37.48407599999996], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.6701370232536, 37.77440299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.1501370232536, 37.77420299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.5501370232536, 37.77420299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.51326802337879, 37.48407599999996], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([54.777697023347606, 37.70197299999995], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([54.5701370232536, 37.77420299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.6701370232536, 36.57420299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([54.6701370232536, 36.23420299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([54.6701370232536, 34.77440299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.0501370232536, 37.17420299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.4401370232536, 37.47420299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.86326802337879, 37.68407599999996], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.6301370232536, 37.87440299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.6601370232536, 37.17420299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.2201370232536, 37.17420299999994], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              			.add(new ymaps.Placemark([55.71326802337879, 37.45407599999996], {
+              				//- hintContent: 'Собственный значок метки'
+              			}, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			}))
+              
+              		for (var i = 0, l = offices.length; i < l; i++) {
+              			createGroup(offices[i]);
+              		}
+              
+              		function createGroup(office) {
+              			collection = new ymaps.GeoObjectCollection(null, {
+              				iconLayout: 'default#image',
+              				iconImageHref: 'img/marker.png',
+              				iconImageSize: [44, 44],
+              				iconImageOffset: [-22, -38]
+              			});
+              
+              			MapPlaces.geoObjects.add(collection);
+              
+              			for (var j = 0, m = office.address.length; j < m; j++) {
+              				createPlacemark(office.address[j], collection);
+              			}
+              		}
+              
+              		function createPlacemark(item, collection) {
+              			placemark = new ymaps.Placemark(item.center, {
+              				balloonContent: item.contacts
+              			});
+              
+              			collection.add(placemark);
+              
+              		}
+              
+              		// изменение города по клику на главной 
+              		$( ".searchinput" ).combobox({
+              			create: function( event, ui ) {
+              				$('.diller-search-header__input').keydown(); // костыль для формирования списка при загрузке страницы
+              			},
+              			// делаем что то после выбора
+              			select: function( event, ui ) {
+              				var city = $(this).val();
+              				for (var i = 0, l = offices.length; i < l; i++) {
+              					if (city == offices[i].city) {
+              						MapPlaces.panTo(offices[i].center, {
+              							delay: 1500
+              						});
+              					}
+              				}
+              			}
+              		});
+              
+              		// сокрытие выпадающего меню при загрузке страницы
+              		setTimeout(function(){
+              			$('.ui-autocomplete').hide();
+              		}, 100);
+              		if ($('.ui-autocomplete').length >= 1) {
+              			$('.ui-autocomplete').hide();
+              		}
+              
+              		// открываем список городов по фокусу
+              		$('.diller-search-header__input').on('focus', function(){
+              			$(this).keydown();
+              		});
+              
+              		MapPlaces.behaviors.disable('scrollZoom');
+              		MapPlaces.setBounds(MapPlaces.geoObjects);
+              
+              	};
+              
+              	var offices = [
+              		// ВАЖНО ПРОПИСЫВАТЬ название городов как в HTML
+              		{
+              			city: 'Москва',
+              			center: [55.725045, 37.646961],
+              			address: [{
+              				center: [55.725045, 37.646961],
+              			}, ]
+              		}, {
+              			city: 'Санкт-Петербург',
+              			center: [59.934439, 30.301115],
+              			address: [{
+              				center: [59.934439, 30.301115],
+              			}, ]
+              		},
+              		{
+              			city: 'Барнаул',
+              			center: [53.277283, 83.532717],
+              			address: [{
+              				center: [53.277283, 83.532717],
+              			}, ]
+              		}, {
+              			city: 'Москва',
+              			center: [55.725045, 37.646961],
+              			address: [{
+              				center: [55.725045, 37.646961],
+              			}, ]
+              		}, {
+              			city: 'Балашиха',
+              			center: [55.769323, 37.910039],
+              			address: [{
+              				center: [55.769323, 37.910039],
+              			}, ]
+              		}, {
+              			city: 'Асбест',
+              			center: [53.277283, 83.532717],
+              			address: [{
+              				center: [53.277283, 83.532717],
+              			}, ]
+              		}
+              	];
+              
+              	ymaps.ready(init);
+              
+              });
+            </script>
+            <div id="center-map"></div>
+          </div>
+          <div class="flex-block__item col-sm-12 col-lg-4 col-md-6 height-auto">
+            <div class="diller-search full-width">
+              <div class="diller-search-header">
+                <form action="#!">
+                  <label for="search" class="diller-search-header__label">Ваш город</label>
+                  <select class="searchinput">
+                    <option value=""></option>
+                    <option value="Москва">Москва</option>
+                    <option value="Барнаул">Барнаул</option>
+                    <option value="Asp">Asp</option>
+                    <option value="BASIC">BASIC</option>
+                    <option value="C">C</option>
+                    <option value="C++">C++</option>
+                    <option value="Clojure">Clojure</option>
+                    <option value="COBOL">COBOL</option>
+                    <option value="ColdFusion">ColdFusion</option>
+                    <option value="Erlang">Erlang</option>
+                    <option value="Fortran">Fortran</option>
+                    <option value="Groovy">Groovy</option>
+                    <option value="Haskell">Haskell</option>
+                    <option value="Java">Java</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Lisp">Lisp</option>
+                    <option value="Perl">Perl</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Python">Python</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="Scala">Scala</option>
+                    <option value="Scheme">Scheme</option>
+                  </select>
+                  <button type="submit" disabled class="diller-search-header__submit"></button>
+                </form>
+              </div>
+              <div class="diller-search-body">
+                <div custom-scroll class="diller-search-body-wrap">
+                  <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                    <div class="diller__block-description">
+                      <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                      <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p>
+                      <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                    </div>
+                  </div>
+                  <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                    <div class="diller__block-description">
+                      <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                      <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p>
+                      <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                    </div>
+                  </div>
+                  <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                    <div class="diller__block-description">
+                      <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                      <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p>
+                      <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                    </div>
+                  </div>
+                  <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                    <div class="diller__block-description">
+                      <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                      <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p>
+                      <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                    </div>
+                  </div>
+                  <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                    <div class="diller__block-description">
+                      <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                      <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p>
+                      <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                    </div>
+                  </div>
+                  <div class="diller__block"><img src="img/content/thumb.jpg" alt="" class="diller__block-img">
+                    <div class="diller__block-description">
+                      <p class="diller__block-description-name">Детейлинг Центр 360 Lab</p>
+                      <p class="diller__block-description-address">Москва, пр. Промышленный, 3Бс5</p>
+                      <div class="m-t-20"><a href="tel:+74957926848" class="diller__block-description-phone">+7 495 792-68-48</a></div><a href="www.sdrsda.com" class="diller__block-description-link">www.sdrsda.com</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+          <!-- .footer__partner-block
+          p.footer__partner-text Вы вошли как партнер
+          a.footer__partner-exit-link(href="#!") Выйти
+          --><a href="#enter" fancybox class="footer__partner-link">Партнерский вход</a><a href="http://www.studio-maximus.com/" class="footer__development"></a>
+          <p class="footer__copyright">&copy; Copyright 2016</p>
+        </div>
+      </footer>
+      <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+      <script src="js/canvas.js"></script>
+      <script src="js/plugins.js"></script>
+      <script src="js/script.js"></script>
+    </div>
+  </body>
+</html>
