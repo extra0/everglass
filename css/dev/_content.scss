@@ -1,6 +1,7 @@
 .content {
 	position: relative;
 	z-index: 2;
+	min-height: calc(100vh - 160px); // тестовый вариант прижатия футера, константа 160 сумма высот футера и хедера 
 }
 #canvas-wrapper {
 	width: 100%;
@@ -727,6 +728,12 @@
 					height: 40px;
 					@include transform(rotate(180deg));
 				}
+				&.no-bg {
+					margin-bottom: 15px;
+					&:before {
+						display: none;
+					}
+				}
 			}
 			&-items {
 				// margin: 109px 0 40px 0;
@@ -1368,6 +1375,8 @@
 				position: relative;
 				margin-left: 20px;
 				color: #616161;
+				display: inline-block;
+				margin-bottom: 5px;
 				&:hover,
 				&:focus {
 					color: #616161;
@@ -1613,5 +1622,11 @@
 			font-family: Arial;
 			margin: 0 0 0 50px;
 		}
+	}
+}
+.registration {
+	&__wrapper {
+		margin: 40px auto;
+		max-width: 700px;
 	}
 }

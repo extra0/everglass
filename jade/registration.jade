@@ -1,0 +1,28 @@
+extends _layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Регистрация
+	- contentHeight = 'auto';
+block content
+	form.basket-block__form(action="#")
+		.flex-block
+			.flex-block__item.col-sm-12.flex-block__basket-bg
+				.basket-block.object-style-1-bg
+					.registration__wrapper
+						.text-center
+							h3.basket-block__inner-title.no-bg Хотите стать нашим дилером?
+							p.basket-block__inner-note Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eius deserunt autem nobis sed ut nihil est natus fugit non!
+							p.subtitle Подать заявку
+						.basket-block__inner-items
+							.form-group
+								input.form-control(type="text" placeholder="Ф.И.О." required)
+							.form-group
+								input.form-control(type="tel" only-numbers placeholder="Телефон" required)
+							.form-group
+								input.form-control(type="email" placeholder="Email" required)
+							.form-group
+								input.form-control(type="text" placeholder="Название кампании" required)
+							.form-group
+								textarea.form-control(placeholder="Комментарии" rows="3" required)
+							button.btn.btn-block(type="submit") Отправить заявку
