@@ -1,0 +1,18 @@
+extends _layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Ошибка 404
+block content
+	form.basket-block__form(action="#")
+		.flex-block
+			.flex-block__item.col-sm-12.flex-block__basket-bg
+				.basket-block.object-style-2-bg.error-page
+					.text-center
+						p.title Ошибка 404
+						p.subtitle Страница не найдена
+						br
+						img.m-30(src="img/404.png", alt="")
+						br
+						br
+						a.btn(href="/") на главную
