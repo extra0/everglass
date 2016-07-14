@@ -399,8 +399,9 @@
 			overflow: hidden;
 			position: relative;
 			@include transition(all 0.4s ease-in-out);
-			opacity: 0.6;
+			opacity: 0.3;
 			display: block;
+			&.active,
 			&:hover {
 				opacity: 1;
 			}
