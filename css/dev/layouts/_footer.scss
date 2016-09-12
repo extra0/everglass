@@ -1,12 +1,11 @@
 .footer {
-	text-align: right;
-	padding: 20px 10px;
+	padding: 10px;
 	&__copyright {
 		color: #fff;
 		opacity: 0.4;
 		display: inline-block;
 		vertical-align: top;
-		margin: 9px 0 0 30px;
+		margin: 9px 0 0 0;
 	}
     &__development {
     	width: 88px;
@@ -42,6 +41,9 @@
     		&:after {height: 35px;}
     		&:before {left: 0}
     	}
+      &-wrap {
+        text-align: right;
+      }
     }
     &__partner {
         &-link {
@@ -53,7 +55,7 @@
            border: 1px solid $red;
            border-radius: 3px;
            display: inline-block;
-           margin: -2px 20px 0 0;
+           margin: -2px 0 0 0;
            @include transition(all 0.2s ease-in-out);
            &:focus,
            &:hover {
@@ -69,7 +71,7 @@
             border-radius: 3px;
             padding: 6px 12px;
             text-align: left;
-            margin: -7px 20px 0 0;
+            margin: -7px 0 0 0;
             border: 1px dashed #616161;
         }
         &-text {

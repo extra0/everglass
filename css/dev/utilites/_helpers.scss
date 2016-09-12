@@ -23,6 +23,7 @@
 	padding: 16px 53px;
 	border: none;
 	position: relative;
+	z-index: 5;
 	@include transition(all 0.4s ease-in-out);
 	&:active,
 	&:focus,
@@ -123,6 +124,7 @@
 		height: 100%;
 	    background: #181819;
 		overflow: hidden;
+		width: 100%;
 		@include display(flex);
 		@include align-items(stretch);
 		&.no-bg {
@@ -149,6 +151,7 @@
 		&__basket-bg {
 			background: url(../img/cart-bg.png) 0 0 no-repeat;
 			background-size: cover;
+			min-height: calc(100vh - 120px);
 		}
 	}
 }
@@ -158,6 +161,7 @@
 	&-group {
 		margin-bottom: 20px;
 		position: relative;
+		z-index: 5;
 		&-padding {
 			padding: 0 15px;
 			.form-label {
@@ -203,6 +207,7 @@
 		color: #989898;
 		margin-left: 0.5em;
 		font-size: 12px;
+		z-index: 12;
 		display: block;
 		@include position(absolute, 5px null null 14px);
 	}
@@ -242,4 +247,8 @@ a:not([class]) {
 	&:hover {
 		color: $red;
 	}
+}
+a, input, textarea, p, strong, table td, table th, img, button, h1, h2, h3, h4, h5 {
+	position: relative;
+	z-index: 5;
 }

@@ -176,6 +176,19 @@
 	#center-map {
 		height: 350px;
 	}
+	.footer {
+		text-align: center;
+		&__development-wrap {
+			text-align: center;
+		}
+		&__copyright {
+			margin: 9px 0 20px 0;
+		}
+		&__partner-block,
+		&__partner-link {
+			margin: -2px 0 20px 0;
+		}
+	}
 }
 
 // ================================================== MAX 499
