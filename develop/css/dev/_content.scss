@@ -800,6 +800,9 @@
 					float: left;
 					max-width: 100px;
 					display: inline-block;
+					img {
+						max-height: 150px;
+					}
 				}
 			}
 			&-count {
