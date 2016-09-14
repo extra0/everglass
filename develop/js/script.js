@@ -270,4 +270,12 @@ $(function() {
 		$('[mob-videoposter-show]').show();
 	}
 
+
+	// UPD 14/09
+	$('.form-radio-label').on('click', function(){
+		$('.form-group.delivery-company, .form-group.delivery-self').addClass('hide');
+		$('.form-group.'+ $(this).attr('for') +'').removeClass('hide');
+	});
+
+
 });

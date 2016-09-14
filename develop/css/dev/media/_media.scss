@@ -189,6 +189,9 @@
 			margin: -2px 0 20px 0;
 		}
 	}
+	#enter {
+		width: 450px;
+	}
 }
 
 // ================================================== MAX 499
@@ -339,6 +342,17 @@
 		&__block-description {
 			margin-left: 50px;
 		}
+	}
+	#enter {
+		width: 100%;
+		padding: 23px 18px 30px 18px;
+	}
+	.fancybox-close {
+		top: -25px;
+		right: -25px;
+	}
+	.form-radio-label {
+		font-size: 12px;
 	}
 }
 
@@ -838,6 +852,7 @@
 		top: 36px;
 		right: -23px;
 		left: auto;
+		z-index: 200;
 		padding: 20px 20px 0 30px;
 		&:before {
 			right: 25px;
@@ -857,7 +872,8 @@
 		&__product {
 			&-list {
 				&-item {
-					width: 300px;
+					width: 100%;
+					margin: 0 auto 30px auto;
 					background: none;
 					padding-bottom: 50px;
 					&:not(:last-child) {

@@ -80,38 +80,33 @@ block content
 						p.basket-block__inner-note Укажите свои контактные данные.
 						.basket-block__inner-items
 							.form-group
+								.form-radio-group
+									input.form-radio-input#delivery-self(type="radio" name="delivery" checked)
+									label.form-radio-label(for="delivery-self") Самовывоз
+									input.form-radio-input#delivery-company(type="radio" name="delivery")
+									label.form-radio-label(for="delivery-company") Доставка
+							.form-group.delivery-self
+								p.form-note Cклад для самовывоза находися по адресу Москва, ул. Большая, д. 5. пн-пт. с 9 до 19.
+							.form-group.hide.delivery-company
 								.form-select-wrapper
-									label.form-label Страна
+									label.form-label Транспортная компания
 									select.form-control
-										option(value="1") Россия
+										option(value="1") ЕМС
 										option(value="2") 1
 										option(value="3") 1
+							.form-group.hide.delivery-company
+								label.form-label Город
+								input.form-control.form-input-label(type="text")
+							.form-group.hide.delivery-company
+								label.form-label Адрес
+								input.form-control.form-input-label(type="text")
 							.form-group
-								.form-select-wrapper
-									label.form-label Способ Доставки
-									select.form-control
-										option(value="1") Курьер
-										option(value="2") 1
-										option(value="3") 1
-							.form-group
-								.form-select-wrapper
-									label.form-label Город
-									select.form-control
-										option(value="1") Тула
-										option(value="2") 1
-										option(value="3") 1
-							.form-group
-								label.form-label Улица
-								input.form-control.form-input-label(type="text" required)
-							.form-group
-								.row
-									.col-sm-6
-										.form-group
-											label.form-label Дом
-											input.form-control.form-input-label(type="text" required)
-									.col-sm-6
-										.form-group
-											label.form-label Квартира
-											input.form-control.form-input-label(type="text")
+								.form-radio-group
+									input.form-radio-input#pay-1(type="radio" name="pay" checked)
+									label.form-radio-label(for="pay-1") При получении
+									input.form-radio-input#pay-2(type="radio" name="pay")
+									label.form-radio-label(for="pay-2") На карту
+									input.form-radio-input#pay-3(type="radio" name="pay")
+									label.form-radio-label(for="pay-3") Оплата онлайн
 							button.btn.btn-block(type="submit") оформить
 			// конец шаг 3 корзины

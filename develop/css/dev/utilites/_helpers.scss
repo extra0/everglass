@@ -189,6 +189,7 @@
 		padding: 5px 15px 15px 15px;
 		.ui-selectmenu-button {
 			margin-top: 12px;
+			width: 100%!important;
 		}
 		.ui-icon.ui-icon-triangle-1-s {
 			width: 11px;
@@ -214,7 +215,54 @@
 	&-input-label {
 		padding: 22px 15px 8px 20px;
 	}
-
+	&-radio {
+		&-label {
+			vertical-align: top;
+			cursor: pointer;
+			text-align: center;
+			flex-basis: 100%;
+			width: 100%;
+			color: #fff;
+			position: relative;
+			@include display(flex);
+			@include align-items(center);
+			@include justify-content(center);
+			@include transition(all 0.2s ease);
+			&.label-half {
+				width: 50%;
+			}
+			&:not(:last-child) {
+				&:before {
+					content: '';
+					@include position(absolute, 10px 0 null null);
+					width: 1px;
+					height: 30px;
+					background: #4b4b4c;
+				}
+			}
+		}
+		&-input {
+			display: none;
+			&:checked + label {
+				background: $red;
+				&:before {
+					display: none;
+				}
+			}
+		}
+		&-group {
+			@include display(flex);
+			@include align-items(stretch);
+			border-radius: 2px;
+			background: #2d2d2e;
+			overflow: hidden;
+			height: 50px;
+		}
+	}
+	&-note {
+		color: #a8adaf;
+		font-family: Arial;
+	}
 }
 .height-auto {
 	height: auto!important;
