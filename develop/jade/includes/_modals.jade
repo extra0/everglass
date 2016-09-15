@@ -11,3 +11,24 @@
 			input.modal__input(type="text" required placeholder="Введите код партнера")
 			button.modal__submit(type="submit")
 // конец окно входа для партнеров
+// окно входа в ЛК
+.modal#lk-enter
+	p.modal__title Вход
+	form(action="#!")
+		.modal__form-wrap.m-b-20
+			input.modal__input(type="email" required placeholder="Email")
+		.modal__form-wrap.m-b-20
+			input.modal__input(type="password" required placeholder="Пароль")
+		.row
+			.col-sm-12
+				a.modal__remember(href="#lk-remember" fancybox) Не помню пароль
+				button.btn.pull-right(type="submit" style="padding: 16px 35px;") Войти
+// конец окно входа в ЛК
+// напомнить пароль
+.modal#lk-remember
+	p.modal__title Напомнить пароль
+	form(action="#!")
+		.modal__form-wrap.m-b-20
+			input.modal__input(type="email" required placeholder="Email")
+		button.btn.btn-block(type="submit") Отправить мне пароль
+// конец напомнить пароль

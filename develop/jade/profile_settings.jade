@@ -1,0 +1,112 @@
+extends _layout
+block append head
+	- profile = 'Мой профиль'
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title #{profile}
+	- contentHeight = 'auto'; 
+block content
+	.flex-block.gray-bg
+		.container
+			.m-30
+				.row
+					.flex-block__item.col-sm-4.col-md-3
+						.profile__menu
+							ul.profile__menu-list
+								li.profile__menu-item
+									span.profile__menu-link.active #{profile}
+								li.profile__menu-item
+									a.profile__menu-link(href="#!") История заказов
+					.flex-block__item.col-sm-8.col-md-9
+						.breadcrumbs
+							ul.breadcrumbs__list
+								li.breadcrumbs__item
+									a.breadcrumbs__link(href="#!") Главная
+								li.breadcrumbs__item
+									span.breadcrumbs__link.active Мои профиль
+						h1.profile__title #{profile}
+						.profile__section
+							form(action="#!" method="POST")
+								.row
+									.col-sm-4.col-md-3
+										h3.profile__subtitle.sm-text-right Контакты
+								.form-group.m-b-20
+									.row
+										.col-sm-4.col-md-3
+											label.form-inline-label.sm-text-right Имя
+										.col-sm-8.col-md-7
+											input.form-control.inline-control(type="text" required)
+								.form-group.m-b-20
+									.row
+										.col-sm-4.col-md-3
+											label.form-inline-label.sm-text-right Фамилия
+										.col-sm-8.col-md-7
+											input.form-control.inline-control(type="text" required)
+								.form-group.m-b-20
+									.row
+										.col-sm-4.col-md-3
+											label.form-inline-label.sm-text-right Телефон
+										.col-sm-8.col-md-7
+											input.form-control.inline-control(type="tel" onlu-numbers required)
+								.form-group.m-b-20
+									.row
+										.col-sm-4.col-md-3
+											label.form-inline-label.sm-text-right Email
+										.col-sm-8.col-md-7
+											input.form-control.inline-control(type="email" required)
+								hr(style="margin: 60px -20px 40px -20px;")
+								.row
+									.col-sm-4
+										h3.profile__subtitle.sm-text-right Доставка
+								.form-group.m-b-20
+									.row
+										.col-sm-4.col-md-3
+											label.form-inline-label.sm-text-right Способ доставки
+										.col-sm-8.col-md-7
+											.form-radio-group.light-type
+												input.form-radio-input#delivery-self(type="radio" name="delivery" checked)
+												label.form-radio-label(for="delivery-self") Самовывоз
+												input.form-radio-input#delivery-company(type="radio" name="delivery")
+												label.form-radio-label(for="delivery-company") Доставка
+								.form-group.m-b-20.delivery-self
+									.row
+										.col-sm-8.col-md-7.col-sm-offset-4.col-md-offset-3
+											p.form-note Cклад для самовывоза находися по адресу Москва, ул. Большая, д. 5. пн-пт. с 9 до 19.
+								.form-group.m-b-20.delivery-company.hide
+									.row
+										.col-sm-4.col-md-3
+											label.form-inline-label.sm-text-right Транспортная компания
+										.col-sm-8.col-md-7
+											.form-select-wrapper.light-wrapper
+												select.form-control
+													option(value="1") ЕМС
+													option(value="2") 1
+													option(value="3") 1
+								.form-group.m-b-20.delivery-company.hide
+									.row
+										.col-sm-4.col-md-3
+											label.form-inline-label.sm-text-right Город
+										.col-sm-8.col-md-7
+											input.form-control.inline-control(type="text" required)
+								.form-group.m-b-20.delivery-company.hide
+									.row
+										.col-sm-4.col-md-3
+											label.form-inline-label.sm-text-right Адрес
+										.col-sm-8.col-md-7
+											input.form-control.inline-control(type="text" required)
+								.form-group.m-b-20
+									.row
+										.col-sm-4.col-md-3
+											label.form-inline-label.sm-text-right Оплата
+										.col-sm-8.col-md-7
+											.form-radio-group.light-type
+												input.form-radio-input#pay-1(type="radio" name="pay" checked)
+												label.form-radio-label(for="pay-1") При получении
+												input.form-radio-input#pay-2(type="radio" name="pay")
+												label.form-radio-label(for="pay-2") На карту
+												input.form-radio-input#pay-3(type="radio" name="pay")
+												label.form-radio-label(for="pay-3") Оплата онлайн
+								hr(style="margin: 60.col-md-3px -20px 40px -20px;")
+								.row
+									.col-sm-8.col-md-7.col-sm-offset-4.col-md-offset-3.sm-text-right
+										button.btn(type="submit") Сохранить

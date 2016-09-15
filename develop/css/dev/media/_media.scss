@@ -192,6 +192,18 @@
 	#enter {
 		width: 450px;
 	}
+
+	.container {
+		width: 100%;
+	}
+	.profile {
+		&__table {
+			overflow: auto;
+			&-row {
+				min-width: 600px;
+			}
+		}
+	}
 }
 
 // ================================================== MAX 499
@@ -343,6 +355,8 @@
 			margin-left: 50px;
 		}
 	}
+	#lk-remember,
+	#lk-enter,
 	#enter {
 		width: 100%;
 		padding: 23px 18px 30px 18px;
@@ -353,6 +367,11 @@
 	}
 	.form-radio-label {
 		font-size: 12px;
+	}
+	.modal {
+		&__remember {
+			font-size: 12px;
+		}
 	}
 }
 
@@ -1039,6 +1058,12 @@
 				margin-left: 82px;
 			}
 		}
+	}
+}
+
+@media (min-width: 768px) {
+	.sm-text-right {
+		text-align: right;
 	}
 }
 

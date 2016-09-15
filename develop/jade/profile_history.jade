@@ -1,0 +1,66 @@
+extends _layout
+block append head
+	- profile = 'История заказов'
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title #{profile}
+	- contentHeight = 'auto'; 
+block content
+	.flex-block.gray-bg
+		.container
+			.m-30
+				.row
+					.flex-block__item.col-sm-4.col-md-3
+						.profile__menu
+							ul.profile__menu-list
+								li.profile__menu-item
+									a.profile__menu-link(href="#!") Мой профиль
+								li.profile__menu-item
+									span.profile__menu-link.active #{profile}
+					.flex-block__item.col-sm-8.col-md-9
+						.breadcrumbs
+							ul.breadcrumbs__list
+								li.breadcrumbs__item
+									a.breadcrumbs__link(href="#!") Главная
+								li.breadcrumbs__item
+									span.breadcrumbs__link.active #{profile}
+						h1.profile__title #{profile}
+						.profile__section
+							// таблица с историей
+							.profile__table
+								.profile__table-row.table-header
+									.row
+										.col-sm-6.col-xs-6
+											.row
+												.col-md-4.col-sm-6.col-xs-4
+													div Заказ
+												.col-sm-4.hidden-sm.col-xs-4
+													div Дата
+												.col-md-4.col-sm-6.col-xs-4
+													div Сумма
+										.col-sm-6.col-xs-6
+											.row
+												.col-sm-6.col-xs-6
+													div Оплата
+												.col-sm-6.col-xs-6
+													div Состояние
+								- for (i=1;i<=3;i++) {
+									a(href="#!")
+										.profile__table-row
+											.row
+												.col-sm-6.col-xs-6
+													.row
+														.col-md-4.col-sm-6.col-xs-4
+															div AG123456
+														.col-sm-4.hidden-sm.col-xs-4
+															div 12.12.2014
+														.col-md-4.col-sm-6.col-xs-4
+															div 128,12
+												.col-sm-6.col-xs-6
+													.row
+														.col-sm-6.col-xs-6
+															div Наложенный платеж
+														.col-sm-6.col-xs-6
+															div Доставлен
+								- }
+							// конец таблица с историей

@@ -1,6 +1,9 @@
 .text-center {text-align: center;}
 .text-right {text-align: right;}
 
+.m-b-20 {
+	margin-bottom: 20px!important;
+}
 .m-t-20 {
 	margin-top: 20px;
 }
@@ -130,6 +133,10 @@
 		&.no-bg {
 			background: none;
 		}
+		&.gray-bg {
+			background: #fcfcfc;
+			min-height: calc(100vh - 120px);
+		}
 		&__item {
 			height: 100%;
 			position: relative;
@@ -178,6 +185,10 @@
 		padding: 15px;
 		border-radius: 2px;
 		@include transition(all 0.4s ease-in-out);
+		&.inline-control {
+			background: #f4f4f4;
+			color: #2d2d2e;
+		}
 		&:focus {
 			box-shadow: 0 0 10px $red;
 		}
@@ -202,6 +213,19 @@
 		}
 		.ui-selectmenu-button span.ui-selectmenu-text {
 			padding: 0.4em 2.1em 0.4em 0.5em;
+		}
+
+		&.light-wrapper {
+		    background: #f4f4f4;
+			.ui-selectmenu-button span.ui-selectmenu-text {
+				padding-top: 0;
+				padding-left: 0;
+				color: #2d2d2e;
+			}
+			.ui-icon.ui-icon-triangle-1-s {
+				@include filter(brightness(0));
+				top: 56%;
+			}
 		}
 	}
 	&-label {
@@ -228,9 +252,6 @@
 			@include align-items(center);
 			@include justify-content(center);
 			@include transition(all 0.2s ease);
-			&.label-half {
-				width: 50%;
-			}
 			&:not(:last-child) {
 				&:before {
 					content: '';
@@ -257,11 +278,28 @@
 			background: #2d2d2e;
 			overflow: hidden;
 			height: 50px;
+			&.light-type {
+				background: #f4f4f4;
+				.form-radio-input {
+					&:not(:checked) + label {
+						color: #2d2d2e;	
+					}
+				}
+			}
 		}
 	}
 	&-note {
 		color: #a8adaf;
 		font-family: Arial;
+		margin: 0;
+	}
+	&-inline {
+		&-label {
+			color: #989898;
+			font-size: 13px;
+			display: block;
+			margin: 18px 0 10px 0;
+		}
 	}
 }
 .height-auto {
