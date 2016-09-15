@@ -200,8 +200,22 @@
 		&__table {
 			overflow: auto;
 			&-row {
-				min-width: 600px;
+				min-width: 500px;
+				overflow: hidden;
+				&-product {
+					width: auto;
+					display: block;
+					min-width: 500px;
+					// padding: 20px 0px 20px 15px;
+					& .row {
+						width: auto;
+						display: block;
+					}
+				}
 			}
+		}
+		&__product-info {
+			margin: 30px 40px;
 		}
 	}
 }
@@ -371,6 +385,35 @@
 	.modal {
 		&__remember {
 			font-size: 12px;
+		}
+	}
+}
+
+@media (max-width: 650px) and (min-width: 500px) {
+	.header {
+		&__lk {
+			&-btn {
+				span {
+					display: none;
+				}
+				img {
+					margin: 0;
+				}
+			}
+			&-menu {
+				left: -102px;
+			}
+		}
+		&__logo {
+			img {
+				max-width: 120px;
+				margin-top: 5px;	
+			}
+		}
+	}
+	.main-menu {
+		&__wrapper {
+			margin: 6px 0 0 18px;
 		}
 	}
 }
@@ -759,7 +802,7 @@
 		}
 		&__list {
 			&-item {
-				margin-right: 13px;
+				margin-right: 8px;
 			}
 		}
 	}
@@ -854,6 +897,16 @@
 			float: none;
 			&-languages {
 				float: right;
+				margin-left: 0
+			}
+		}
+		&__lk {
+			margin: -11px 10px 0 0;
+			&-menu {
+				left: 0;
+				&:before {
+					left: 17px;
+				}
 			}
 		}
 	}

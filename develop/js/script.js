@@ -55,7 +55,7 @@ $(function() {
 	// открываем языковую панель
 	var currentLang = $('.header__info-languages-current'),
 		langItem = $('.header__info-languages-item');
-	langList = $('.header__info-languages-list');
+		langList = $('.header__info-languages-list');
 
 	currentLang.on('click', function() {
 		$(this).toggleClass('open');
@@ -276,6 +276,18 @@ $(function() {
 		if ($(this).is('[for^="delivery"]')) {
 			$('.delivery-company, .delivery-self').addClass('hide');
 			$('.'+ $(this).attr('for') +'').removeClass('hide');
+		}
+	});
+
+	// toggle header lk menu
+	$('.js-toggle').on('click', function() {
+		$('.header__lk-menu').slideToggle(200);
+	});
+
+	// закрываем языковую панель по клику вне области
+	$(document).mouseup(function(e) {
+		if ($('.header__lk-menu').has(e.target).length === 0 && $('.js-toggle').has(e.target).length === 0) {
+			$('.header__lk-menu').slideUp(200);
 		}
 	});
 

@@ -1,0 +1,50 @@
+extends _layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title О Компании
+	- contentHeight = 'auto';
+block content
+	.flex-block.flex-block-wrap
+		.flex-block__item.col-sm-12.height-auto
+			.description__section.about-bg
+				.dots-bg
+				.row
+					.col-md-6.col-md-offset-4.col-sm-8.col-sm-offset-3
+						.description__block.w85.bottom-red-line-bottom
+							img.text-block__img(src="img/everglass.png", alt="")
+							h2.title.text-block__title O КОМПАНИИ
+							.text-block__description.block-top-left-triangle
+								p Компания Everglass основана в 2012м году. 
+								p Мы являемся производителями инновационных защитных покрытий на основе керамических соединений. Защитные составы Everglass разработаны специалистами –химиками с колоссальным опытом работы в сфере нано технологий.
+	.flex-block.flex-block-wrap
+		.flex-block__item.col-lg-8.col-sm-12.col-md-8.height-auto
+			// если в секции 2-а блока то ставим класс flex-end, иначе убираем
+			.preview__section(style="background: url(../img/audi.jpg) 0 0 no-repeat;")
+				.preview__block
+					p.preview__title Мы профессионалы
+					p.preview__text Являясь профессионалами в сфере детейлинга, мы использовали в своей работе различные защитные покрытия на основе нанокерамики, именно этот опыт позволил создать продукцию, отвечающую всем требованиям и стандартам качества. Компания Эвергласс начала выпуск защитных покрытий для металла, текстиля, лакокрасочных изделий, алюминия, стекла и кожаных поверхностей.
+					p.preview__text Наши ключевые преимущества:
+					p.preview__text Отсутствие обязательного условия приобретения франшизы для начала работы с Everglass
+					p.preview__text Сертификация центров нанесения, торговых точек, автосалонов
+					p.preview__text Регулярное обновление и усовершенствование всей линейки выпускаемой продукции
+					p.preview__text Отсутствие обязательной минимальной суммы заказа
+					p.preview__text Техническая поддержка клиентов и консультирование в любое время
+					p.preview__text Оперативная отгрузка товара, любая форма оплаты
+			// конец блока с описанием
+		.flex-block__item.col-lg-4.col-sm-12.col-md-4.height-auto
+			// если в секции 2-а блока то ставим класс flex-end, иначе убираем
+			.preview__section(style="background: #1c1c1d;")
+				.preview__block
+					p.preview__title Рынок
+					p.preview__text Исследуя этапы развития рынка защитных покрытий Вы можете увидеть процесс роста требований к продукции различных производителей со стороны потребителя, именно поэтому специалисты Everglass постоянно совершенствуют формулу составов, тем самым мы обеспечиваем себе лидерство среди конкурентов.
+					p.preview__text Компания Everglass активно развивает сеть партнёров, дилеров и авторизированных центров нанесения защитных составов по всему миру. Основными нашими преимуществами является честная маркетинговая политика, проведение бесплатных семинаров и тренингов.
+			// конец блока с описанием
+	.flex-block.flex-block-wrap
+		.flex-block__item.col-sm-12.col-md-6.height-auto
+			.preview__section(style="background: #1c1c1d;")
+				.preview__block
+					p.preview__title Сертификат
+					p.preview__text Выпуская продукцию премиум-сегмента, компания Everglass гарантирует соблюдение всех стандартов качества на производстве, мы единственные на рынке, кто обеспечивает полное выполнение заявленных гарантийных обязательств во всех дилерских центрах на территории страны.
+		.flex-block__item.col-sm-12.col-md-6.height-auto
+			img(src="/img/certificate.jpg", alt="")

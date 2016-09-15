@@ -14,6 +14,23 @@ header.header
 		// конец меню
 		// блок с инофрмацией
 		.header__info
+			// кнопка входа в ЛК
+			.header__lk
+				//- a.btn.header__lk-btn(href="#lk-enter" fancybox) Вход
+				// если залогинен
+				a.btn.header__lk-btn.js-toggle(href="javascript:void(0);") 
+					img(src="/img/user.png", alt="")
+					span Профиль
+				.header__lk-menu
+					ul.header__lk-menu-list
+						li.header__lk-menu-item
+							span.header__lk-menu-link.active Мой профиль
+						li.header__lk-menu-item
+							a.header__lk-menu-link(href="#!") История заказов
+						li.header__lk-menu-item
+							a.header__lk-menu-link(href="#!") Выйти
+				// конец если залогинен
+			// конец кнопка входа в ЛК
 			// корзина в шапке
 			.header__info-basket
 				a.header__info-basket-link.basket-item(href="#!")

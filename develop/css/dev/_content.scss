@@ -1558,6 +1558,10 @@
 	&__section {
 		padding: 95px 40px;
 		overflow: hidden;
+		&.about-bg {
+			background: url(../img/about.jpg) center no-repeat;
+			background-size: cover;
+		}
 	}
 	&__block {
 		margin: 0;
@@ -1703,6 +1707,7 @@
 		background: #fff;
 		border: 1px solid #efefef;
 		padding: 40px 20px;
+		margin-bottom: 30px;
 	}
 	&__menu {
 		margin-bottom: 30px;
@@ -1762,6 +1767,24 @@
 			&:first-of-type {
 				border-bottom: 1px solid #efefef;
 			}
+			&-product {
+				overflow: hidden;
+				padding: 20px 10px 20px 40px;
+				border-bottom: 1px solid #efefef;
+				@include display(flex);
+				@include align-items(center);
+				& .row {
+					width: 110%;
+					@include display(flex);
+					@include align-items(center);
+				}
+				img {
+					max-height: 100px;
+					display: block;
+					margin: auto;
+				}
+			}
+
 		}
 		a {
 			color: inherit;
@@ -1774,6 +1797,33 @@
 				}
 			}
 		}
+		&-header {
+			color: #868a8b;
+		}
+		&-price {
+			color: $red;
+			margin: 0;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 22px;
+			&-text {
+				color: #212123;
+				font-size: 13px;
+				margin: 0;
+				text-transform: uppercase;
+			}
+		}
+	}
+	&__note {
+		color: #868a8b;
+		margin: 10px 0;
+	}
+	&__value {
+		margin: 10px 0;
+		color: #222;
+	}
+	&__product-info {
+		margin: 30px 0;
 	}
 }
 .breadcrumbs {

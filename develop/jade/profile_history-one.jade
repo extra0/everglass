@@ -1,0 +1,117 @@
+extends _layout
+block append head
+	- profile = 'История одного заказа'
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title #{profile}
+	- contentHeight = 'auto'; 
+block content
+	.flex-block.gray-bg
+		.container
+			.m-30
+				.row
+					.flex-block__item.col-sm-4.col-md-3
+						.profile__menu
+							ul.profile__menu-list
+								li.profile__menu-item
+									a.profile__menu-link(href="#!") Мой профиль
+								li.profile__menu-item
+									span.profile__menu-link.active История заказов
+					.flex-block__item.col-sm-8.col-md-9
+						.breadcrumbs
+							ul.breadcrumbs__list
+								li.breadcrumbs__item
+									a.breadcrumbs__link(href="#!") Главная
+								li.breadcrumbs__item
+									a.breadcrumbs__link(href="#!") История заказов
+								li.breadcrumbs__item
+									span.breadcrumbs__link.active AG123456
+						h1.profile__title AG123456
+						.profile__section
+							// таблица с историей
+							.profile__table
+								.profile__table-row.table-header
+									.row
+										.col-lg-6.col-md-5.col-sm-4.col-xs-8
+											.row
+												.col-sm-4.col-xs-4.hidden-sm
+													.profile__table-header Фото
+												.col-sm-8.col-xs-8
+													.profile__table-header Название
+										.col-lg-6.col-md-7.col-sm-8.col-xs-4
+											.row
+												.col-md-4.col-sm-4.hidden-xs
+													.profile__table-header Цена
+												.col-md-3.col-sm-4.hidden-xs
+													.profile__table-header Кол-во
+												.col-md-5.col-sm-4.col-xs-12
+													.profile__table-header Сумма
+								- for (i=1;i<=3;i++) {
+									.profile__table-row-product
+										.row
+											.col-lg-6.col-md-5.col-sm-4.col-xs-8
+												.row
+													.col-sm-4.col-xs-4.hidden-sm
+														a(href="#!")
+															img(src="/img/content/product.png", alt="")
+													.col-sm-12.col-md-8.col-xs-8
+														div Lorem Ipsaum Garden
+											.col-lg-6.col-md-7.col-sm-8.col-xs-4
+												.row
+													.col-md-4.col-sm-4.hidden-xs
+														div 1233,12
+													.col-md-3.col-sm-4.hidden-xs
+														div x2
+													.col-md-4.col-sm-4.col-xs-12
+														div 3,000
+								- }
+								.profile__table-row-product
+									.row
+										.col-md-6.col-sm-8.col-lg-8.col-sm-offset-4.col-xs-12.col-lg-offset-4
+											.row
+												.col-lg-4.col-md-6.col-sm-8.col-lg-offset-8.col-md-offset-6.col-sm-offset-4.col-xs-12
+													p.profile__table-price-text Итого
+													p.profile__table-price 6,000 UAH
+							// конец таблица с историей
+						.profile__section
+							.profile__table
+								.profile__table-row.table-header
+									.row
+										.col-sm-12
+											h3.profile__subtitle.m-0 Доставка и оплата
+								.profile__product-info
+									.row
+										.col-md-5.col-sm-6.sm-text-right
+											p.profile__note Заказ
+										.col-md-7.col-sm-6
+											p.profile__value AG12486
+									.row
+										.col-md-5.col-sm-6.sm-text-right
+											p.profile__note Оплата
+										.col-md-7.col-sm-6
+											p.profile__value Оплата Онлайн
+									.row
+										.col-md-5.col-sm-6.sm-text-right
+											p.profile__note Дата
+										.col-md-7.col-sm-6
+											p.profile__value 12.08.16
+									.row
+										.col-md-5.col-sm-6.sm-text-right
+											p.profile__note Сумма
+										.col-md-7.col-sm-6
+											p.profile__value 6,000
+									.row
+										.col-md-5.col-sm-6.sm-text-right
+											p.profile__note Состояние
+										.col-md-7.col-sm-6
+											p.profile__value Доставлен
+									.row
+										.col-md-5.col-sm-6.sm-text-right
+											p.profile__note Транспортная компания
+										.col-md-7.col-sm-6
+											p.profile__value EMC
+									.row
+										.col-md-5.col-sm-6.sm-text-right
+											p.profile__note Адрес
+										.col-md-7.col-sm-6
+											p.profile__value Москва, Сталеваров 5
