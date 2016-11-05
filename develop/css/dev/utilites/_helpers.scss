@@ -53,6 +53,12 @@
 		display: block;
 		width: 100%;
 	}
+	&[disabled] {
+		background:#ddd;
+		&:before {
+			display: none;
+		}
+	}
 }
 
 .title {

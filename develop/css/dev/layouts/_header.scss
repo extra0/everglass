@@ -43,7 +43,7 @@
 			}
 		}
 		&-languages {
-			margin-left: 43px;
+			margin-left: 20px;
 			display: inline-block;
 			vertical-align: top;
 			position: relative;
@@ -194,6 +194,7 @@
 .main-menu {
 	display: inline-block;
 	vertical-align: top;
+	opacity: 0;
 	width: calc(100% - 475px);
 	@include transition(all 0.4s ease-in-out);
 	&__wrapper {
