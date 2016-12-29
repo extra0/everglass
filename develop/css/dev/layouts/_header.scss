@@ -43,10 +43,11 @@
 			}
 		}
 		&-languages {
-			margin-left: 20px;
 			display: inline-block;
 			vertical-align: top;
 			position: relative;
+			z-index: 10;
+			margin: 10px 0;
 			&-current {
 				color: #fff;
 				font-weight: bold;
@@ -115,7 +116,35 @@
 						color: #fff;
 					}
 				}
+				a {
+					&:hover {
+						text-decoration: none;
+					}
+				}
 			}
+		}
+	}
+	&__phone {
+		color: #fff;
+		font-size: 15px;
+		position: relative;
+		&:hover,
+		&:focus {
+			color: #fff;
+			text-decoration: none;
+		}
+		&:after {
+			content: '';
+			@include position(absolute, 0 null null -25px);
+			width: 20px;
+			height: 40px;
+			background: url(../img/phone.svg) 0 0 no-repeat;
+
+			background-size: 100%;
+		}
+		&-wrap {
+			display: inline-block;
+			margin-right: 15px;
 		}
 	}
 	&__lk {
@@ -195,7 +224,7 @@
 	display: inline-block;
 	vertical-align: top;
 	opacity: 0;
-	width: calc(100% - 475px);
+	width: calc(100% - 545px);
 	@include transition(all 0.4s ease-in-out);
 	&__wrapper {
 		margin: 6px 0 0 48px;
